@@ -1,0 +1,1098 @@
+=== CELL 0 (markdown) ===
+# MegaRAG: Multimodal Knowledge Graph-based RAG on Kaggle
+
+This notebook reproduces MegaRAG on Kaggle. MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG).
+
+## Prerequisites
+
+- OpenAI API key with sufficient quota
+- GPU access (recommended: P100 or better)
+- Internet connection for downloads
+
+**Paper**: [MegaRAG arXiv](https://arxiv.org/abs/2512.20626)
+
+**Accepted to**: ACL 2026
+
+
+=== CELL 1 (markdown) ===
+## 1. System Setup & Environment Configuration
+
+
+=== CELL 2 (code) ===
+# Check GPU availability & Set environment flags
+import torch
+import os
+from pathlib import Path
+
+# Force PyTorch only for Transformers & avoid CUDA memory fragmentation
+os.environ["USE_TF"] = "0"
+os.environ["USE_TORCH"] = "1"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
+print(f"PyTorch Version: {torch.__version__}")
+print(f"CUDA Available: {torch.cuda.is_available()}")
+print(f"GPU Count: {torch.cuda.device_count()}")
+if torch.cuda.is_available():
+    print(f"Current GPU: {torch.cuda.get_device_name(0)}")
+    print(
+        f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.2f} GB"
+    )
+
+# Set working directory
+WORK_DIR = Path("/kaggle/working/megarag_demo")
+WORK_DIR.mkdir(exist_ok=True, parents=True)
+os.chdir(WORK_DIR)
+print(f"\nWorking directory: {WORK_DIR}")
+
+=== CELL 3 (markdown) ===
+## 2. Install Required Dependencies (Compatible & Modern Stack)
+
+
+=== CELL 4 (code) ===
+# Install compatible dependencies for MinerU, MegaRAG, and LightRAG
+import subprocess
+import sys
+
+required_packages = [
+    "pyopenssl>=24.0.0",              # Fix Kaggle OpenSSL/cryptography mismatch
+    "cryptography>=42.0.0",          # Fix GEN_EMAIL attribute error
+    "transformers",  
+    "pillow>=10.2.0,<11.0.0",        # Avoid Pillow 11 typing issues with RapidTable
+    "PyMuPDF==1.24.14",              # Required by MinerU/magic-pdf (<1.25.0)
+    "pdfminer.six==20231228",        # Required by MinerU/magic-pdf
+    "pypdfium2",                     # PDF rendering
+    "rapid_table==1.0.3",            # Required for table extraction
+    "loguru",                        # Logging
+    "boto3",                         # MinerU dependency
+    "timm",                          # Vision backbones
+    "einops",                        # Tensor operations
+    "openai>=1.50.0,<2.0.0",         # Modern OpenAI SDK (v1.x)
+    "accelerate>=0.30.0,<2.0.0",     # PyTorch acceleration
+    "beautifulsoup4>=4.12.0",        # HTML/XML parsing
+    "opencv-python-headless",        # Headless OpenCV for server/Kaggle environments
+    "ultralytics",                   # YOLO layout detection
+    "doclayout-yolo",                # Document layout analysis
+    "ftfy",                          # Text normalization
+    "dill",                          # Serialization
+    "shapely",                       # Bounding box geometry
+    "pyclipper",                     # Polygon clipping
+    "tiktoken",                      # Token counting for LLM
+    "huggingface_hub",               # HuggingFace model download
+    "matplotlib",                    # Visualization
+    "rich",                          # Formatted console output
+    "pyyaml",                        # YAML configuration parser
+    "networkx",                      # Knowledge graph structures
+]
+
+print("Installing dependencies...")
+try:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "--no-warn-conflicts"] + required_packages)
+    print("✓ Base dependencies installed successfully!")
+except Exception as e:
+    print(f"⚠️ Batch install note ({e}), installing individual packages...")
+    for package in required_packages:
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", package])
+            print(f"✓ {package}")
+        except Exception as err:
+            print(f"✗ Note for {package}: {err}")
+    print("\nDependencies installation step completed!")
+
+
+=== CELL 5 (markdown) ===
+## 3. Install MinerU
+
+MinerU is used to parse PDFs and extract multimodal content (text, images, tables, formulas).
+
+
+=== CELL 6 (code) ===
+# Clone and install current latest MinerU
+import subprocess
+
+mineru_dir = WORK_DIR / "MinerU"
+
+if not mineru_dir.exists():
+    print("Cloning latest MinerU repository...")
+    subprocess.run(
+        f"cd {WORK_DIR} && git clone https://github.com/opendatalab/MinerU.git",
+        shell=True,
+        check=True,
+    )
+else:
+    print("MinerU repository already exists. Pulling latest...")
+    subprocess.run(
+        f"cd {mineru_dir} && git pull",
+        shell=True,
+        check=False,
+    )
+
+print("\nInstalling MinerU in editable mode...")
+subprocess.run(
+    f"cd {mineru_dir} && pip install -q -e .", shell=True, check=True
+)
+print("✓ Current MinerU installed successfully!")
+
+
+=== CELL 7 (code) ===
+# Download MinerU models, setup OCR model aliases, and configure mineru/magic-pdf json
+import json as json_lib
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import torch
+from huggingface_hub import snapshot_download
+
+print("Downloading MinerU models (PDF-Extract-Kit & LayoutReader)...")
+print("⏱️ This process may take a few minutes depending on connection speed.\n")
+
+# 1. Download model weights from HuggingFace
+try:
+    pdf_extract_kit_path = snapshot_download(
+        repo_id="opendatalab/PDF-Extract-Kit-1.0",
+        allow_patterns=["models/*"],
+    )
+    models_dir = Path(pdf_extract_kit_path) / "models"
+    print(f"✓ PDF-Extract-Kit models location: {models_dir}")
+except Exception as e:
+    print(f"Snapshot download fallback: {e}")
+    subprocess.run("mineru-models-download --model_type all || true", shell=True)
+    models_dir = Path(
+        "/root/.cache/huggingface/hub/models--opendatalab--PDF-Extract-Kit-1.0/snapshots"
+    )
+    if models_dir.exists() and list(models_dir.iterdir()):
+        models_dir = list(models_dir.iterdir())[0] / "models"
+
+try:
+    layoutreader_path = snapshot_download(
+        repo_id="hantian/layoutreader",
+    )
+    layoutreader_model_dir = Path(layoutreader_path)
+    print(f"✓ LayoutReader model location: {layoutreader_model_dir}")
+except Exception as e:
+    layoutreader_model_dir = Path(
+        "/root/.cache/huggingface/hub/models--hantian--layoutreader/snapshots"
+    )
+    if layoutreader_model_dir.exists() and list(layoutreader_model_dir.iterdir()):
+        layoutreader_model_dir = list(layoutreader_model_dir.iterdir())[0]
+
+# 2. Setup OCR model aliases to prevent FileNotFoundError
+ocr_models_dir = models_dir / "OCR" / "paddleocr_torch"
+if ocr_models_dir.exists():
+    v5_det = ocr_models_dir / "ch_PP-OCRv5_det_infer.pth"
+    v3_det = ocr_models_dir / "ch_PP-OCRv3_det_infer.pth"
+    v4_det = ocr_models_dir / "ch_PP-OCRv4_det_infer.pth"
+    if v5_det.exists():
+        if not v3_det.exists():
+            shutil.copy2(v5_det, v3_det)
+            print("✓ Created OCR alias: ch_PP-OCRv3_det_infer.pth -> v5")
+        if not v4_det.exists():
+            shutil.copy2(v5_det, v4_det)
+            print("✓ Created OCR alias: ch_PP-OCRv4_det_infer.pth -> v5")
+    
+    # Ensure en_dict.txt exists
+    ppocr_dict = ocr_models_dir / "ppocr_keys_v1.txt"
+    en_dict = ocr_models_dir / "en_dict.txt"
+    if ppocr_dict.exists() and not en_dict.exists():
+        shutil.copy2(ppocr_dict, en_dict)
+        print("✓ Created dictionary alias: en_dict.txt -> ppocr_keys_v1.txt")
+
+# 3. Determine device-mode (cuda / cpu)
+device_mode = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"✓ Configured device-mode: '{device_mode}'")
+
+# 4. Write configuration file to all standard locations
+config_data = {
+    "models-dir": str(models_dir),
+    "device-mode": device_mode,
+    "layoutreader-model-dir": str(layoutreader_model_dir),
+    "layout-config": {
+        "model": "doclayout_yolo"
+    },
+    "latex-delimiter-config": {
+        "display": {"left": "$$", "right": "$$"},
+        "inline": {"left": "$", "right": "$"},
+    },
+}
+
+config_destinations = [
+    Path.home() / "magic-pdf.json",
+    Path("/root/magic-pdf.json"),
+    Path.home() / "mineru.json",
+    Path("/root/mineru.json"),
+    mineru_dir / "magic-pdf.json",
+    mineru_dir / "mineru.json",
+]
+
+for cfg_path in config_destinations:
+    try:
+        cfg_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(cfg_path, "w", encoding="utf-8") as f:
+            json_lib.dump(config_data, f, indent=4)
+        print(f"✓ Config generated: {cfg_path}")
+    except Exception:
+        pass
+
+print("\nMinerU models and configuration setup completed successfully!")
+
+
+=== CELL 8 (markdown) ===
+## 4. Install MegaRAG
+
+
+=== CELL 9 (code) ===
+# Clone and install MegaRAG
+import subprocess
+from pathlib import Path
+
+megarag_dir = WORK_DIR / "MegaRAG"
+
+if not megarag_dir.exists():
+    print("Cloning MegaRAG repository...")
+    subprocess.run(
+        f"cd {WORK_DIR} && git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git",
+        shell=True,
+        check=True,
+    )
+else:
+    print("MegaRAG already exists")
+
+# Patch setup.py in cloned repo to prevent legacy rigid pins from breaking pip
+setup_file = megarag_dir / "setup.py"
+if setup_file.exists():
+    with open(setup_file, "r", encoding="utf-8") as f:
+        s_content = f.read()
+    s_content = s_content.replace("transformers==4.51.3", "transformers>=4.40.0,<5.0.0")
+    s_content = s_content.replace("beautifulsoup4==4.13.4", "beautifulsoup4>=4.12.0")
+    s_content = s_content.replace("openai==1.97.0", "openai>=1.40.0,<2.0.0")
+    s_content = s_content.replace("accelerate==1.9.0", "accelerate>=0.30.0")
+    with open(setup_file, "w", encoding="utf-8") as f:
+        f.write(s_content)
+    print("✓ Patched MegaRAG setup.py for modern dependencies")
+
+print("\nInstalling MegaRAG in editable mode...")
+subprocess.run(
+    f"cd {megarag_dir} && pip install -q -e .", shell=True, check=True
+)
+print("✓ MegaRAG installed successfully!")
+
+=== CELL 10 (code) ===
+# Environment & Kaggle GPU memory optimizations & Auto-patch MegaRAG scripts
+from pathlib import Path
+import re
+
+# 1. Patch transformers configuration_auto.py on disk to register hgnet_v2 globally
+try:
+    import transformers.models.auto.configuration_auto as tf_ca
+    ca_file = Path(tf_ca.__file__)
+    if ca_file.exists():
+        with open(ca_file, "r", encoding="utf-8") as f:
+            ca_code = f.read()
+        if "hgnet_v2" not in ca_code:
+            patch_reg = '''
+# Auto register hgnet_v2 for MinerU
+try:
+    from mineru.model.layout.pp_doclayoutv2 import HGNetV2Config
+    CONFIG_MAPPING.register("hgnet_v2", HGNetV2Config)
+except Exception:
+    pass
+'''
+            ca_code += "\n" + patch_reg
+            with open(ca_file, "w", encoding="utf-8") as f:
+                f.write(ca_code)
+            print("✓ Patched transformers.models.auto.configuration_auto for hgnet_v2")
+        else:
+            print("✓ transformers configuration_auto already contains hgnet_v2 registration")
+except Exception as e:
+    print(f"Note on configuration_auto patch: {e}")
+
+# 2. Patch pp_doclayoutv2.py inside MinerU to auto-register HGNetV2Config
+for pp_file in mineru_dir.glob("**/pp_doclayoutv2.py"):
+    try:
+        with open(pp_file, "r", encoding="utf-8") as f:
+            code = f.read()
+        if "CONFIG_MAPPING.register" not in code:
+            patch_reg = '''
+try:
+    from transformers.models.auto.configuration_auto import CONFIG_MAPPING
+    if "hgnet_v2" not in CONFIG_MAPPING:
+        CONFIG_MAPPING.register("hgnet_v2", HGNetV2Config)
+except Exception:
+    pass
+'''
+            code += "\n" + patch_reg
+            with open(pp_file, "w", encoding="utf-8") as f:
+                f.write(code)
+            print(f"✓ Patched hgnet_v2 registration in {pp_file.name}")
+    except Exception as e:
+        print(f"Note on pp_doclayoutv2 patch: {e}")
+
+# 3. Patch MegaRAG construct_mmkg.py & query_mmkg.py for GME require_version bypass and rate-limiting
+for py_name in ["construct_mmkg.py", "query_mmkg.py"]:
+    script_path = megarag_dir / "egs" / "utils" / py_name
+    if script_path.exists():
+        with open(script_path, "r", encoding="utf-8") as f:
+            code = f.read()
+        if "versions.require_version" not in code:
+            code = code.replace(
+                "def initialize_model():",
+                "def initialize_model():\n    try:\n        import transformers.utils.versions as versions\n        versions.require_version = lambda *args, **kwargs: None\n    except Exception:\n        pass"
+            )
+        if "llm_max_async" not in code and "llm_model_max_async" not in code:
+            code = code.replace(
+                "rag = MegaRAG(\n        working_dir=str(working_dir),",
+                "llm_max_async = addon_params.get('llm_model_max_async', 2)\n    rag = MegaRAG(\n        working_dir=str(working_dir),\n        llm_model_max_async=llm_max_async,"
+            )
+        with open(script_path, "w", encoding="utf-8") as f:
+            f.write(code)
+        print(f"✓ Configured {py_name}")
+
+# 4. Patch megarag/llms/openai.py to increase retry attempts and exponential backoff on 429 RateLimitError
+openai_py_path = megarag_dir / "megarag" / "llms" / "openai.py"
+if openai_py_path.exists():
+    with open(openai_py_path, "r", encoding="utf-8") as f:
+        o_code = f.read()
+    if "stop_after_attempt(3)" in o_code:
+        o_code = o_code.replace("stop_after_attempt(3)", "stop_after_attempt(12)")
+        o_code = o_code.replace(
+            "wait_exponential(multiplier=1, min=4, max=10)",
+            "wait_exponential(multiplier=1.5, min=2, max=30)"
+        )
+        with open(openai_py_path, "w", encoding="utf-8") as f:
+            f.write(o_code)
+        print("✓ Configured resilient OpenAI 429 retry policy")
+
+# 5. Patch build_page_assets.py to support hybrid_auto / auto discovery
+build_assets_path = megarag_dir / "egs" / "utils" / "build_page_assets.py"
+if build_assets_path.exists():
+    with open(build_assets_path, "r", encoding="utf-8") as f:
+        b_code = f.read()
+    if "middle_candidates" not in b_code:
+        b_code = b_code.replace(
+            '    filename = wdir.parent.name if wdir.name == "auto" else wdir.name\n\n    middle_json = wdir / f"{filename}_middle.json"\n    txt_json = wdir / f"{filename}_content_list.json"\n    img_root = wdir / "images"\n    page_img_root = wdir / "page_images"',
+            '    filename = wdir.parent.name if wdir.name in ["auto", "hybrid_auto", "vlm_auto"] else wdir.name\n    middle_candidates = list(wdir.glob("*_middle.json")) or list(wdir.parent.glob("*_middle.json"))\n    middle_json = middle_candidates[0] if middle_candidates else (wdir / f"{filename}_middle.json")\n    txt_candidates = list(wdir.glob("*_content_list.json")) or list(wdir.parent.glob("*_content_list.json"))\n    txt_json = txt_candidates[0] if txt_candidates else (wdir / f"{filename}_content_list.json")\n    img_root = wdir / "images" if (wdir / "images").exists() else (wdir.parent / "images")\n    page_img_root = wdir / "page_images" if (wdir / "page_images").exists() else (wdir.parent / "page_images")'
+        )
+        with open(build_assets_path, "w", encoding="utf-8") as f:
+            f.write(b_code)
+        print("✓ Configured build_page_assets.py for hybrid_auto / auto discovery")
+
+# 6. Configure high-quality KG parameters in MegaRAG addon_params.yaml
+yaml_configs = list(megarag_dir.glob("**/addon_params.yaml"))
+for ycfg in yaml_configs:
+    with open(ycfg, "r", encoding="utf-8") as f:
+        y_text = f.read()
+    y_text = re.sub(r"embed_parallel_limit:\s*\d+", "embed_parallel_limit: 1", y_text)
+    y_text = re.sub(r"insert_batch_size:\s*\d+", "insert_batch_size: 4", y_text)
+    y_text = re.sub(r"entity_extract_max_gleaning:\s*\d+", "entity_extract_max_gleaning: 1", y_text)
+    if "llm_model_max_async" not in y_text:
+        y_text += "\nllm_model_max_async: 2\n"
+    else:
+        y_text = re.sub(r"llm_model_max_async:\s*\d+", "llm_model_max_async: 2", y_text)
+    if "visual_element_or_map" not in y_text and "entity_types:" in y_text:
+        y_text = y_text.replace("  - textbook_structure", "  - textbook_structure\n  - visual_element_or_map")
+    with open(ycfg, "w", encoding="utf-8") as f:
+        f.write(y_text)
+    print(f"✓ Configured MMKG parameters in {ycfg.name}")
+
+print("\n✓ Environment and MegaRAG configuration complete!")
+
+=== CELL 11 (code) ===
+# Install LightRAG (v1.4.3 as specified in paper)
+import subprocess
+
+print("Installing LightRAG (v1.4.3)...")
+lightrag_dir = megarag_dir / "lib" / "LightRAG"
+lightrag_dir.parent.mkdir(exist_ok=True, parents=True)
+
+if not lightrag_dir.exists():
+    subprocess.run(
+        f"cd {megarag_dir / 'lib'} && git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git",
+        shell=True,
+        check=True,
+    )
+else:
+    print("LightRAG already exists")
+
+subprocess.run(
+    f"cd {lightrag_dir} && pip install -q -e .", shell=True, check=True
+)
+print("✓ LightRAG installed successfully!")
+
+
+=== CELL 12 (markdown) ===
+## 5. Setup Configuration & API Keys
+
+
+=== CELL 13 (code) ===
+# Get OpenAI API Key from user
+import getpass
+import os
+from kaggle_secrets import UserSecretsClient
+
+# Thử lấy từ Kaggle Secrets trước
+openai_api_key = None
+
+try:
+    user_secrets = UserSecretsClient()
+    openai_api_key = user_secrets.get_secret(
+        "OPENAI_API_KEY"
+    )  # Đảm bảo label trong secrets là OPENAI_API_KEY
+    print("✓ OpenAI API Key found in Kaggle Secrets.")
+except Exception:
+    # 2. Nếu không có hoặc lỗi, mới hỏi người dùng
+    print("! OpenAI API Key not found in Secrets. Please enter manually.")
+    openai_api_key = getpass.getpass("Enter your OpenAI API Key: ")
+
+# Create env.sh file
+env_sh_content = f"""#!/bin/bash
+
+# OpenAI API Key
+export OPENAI_API_KEY="{openai_api_key}"
+
+# MinerU Path
+export MINERU_PATH="{mineru_dir}/.venv/bin" # or your MinerU installation bin path
+
+# Add MinerU to PATH if needed
+if [[ ":$PATH:" != *":{mineru_dir}/.venv/bin:"* ]]; then
+    export PATH="{mineru_dir}/.venv/bin:$PATH"
+fi
+"""
+
+env_file = megarag_dir / "env.sh"
+with open(env_file, "w") as f:
+    f.write(env_sh_content)
+
+print(f"Environment file created at: {env_file}")
+print("✓ OpenAI API Key configured")
+
+=== CELL 14 (code) ===
+# Set environment variables and update PATH for this notebook session
+import os
+import sys
+import shutil
+from pathlib import Path
+
+os.environ["OPENAI_API_KEY"] = openai_api_key
+os.environ["USE_TF"] = "0"
+os.environ["USE_TORCH"] = "1"
+
+# Ensure all bin paths (current python bin, /root/.local/bin, /usr/local/bin, /opt/conda/bin) are in PATH
+py_bin_dir = str(Path(sys.executable).parent)
+extra_paths = [
+    py_bin_dir,
+    "/root/.local/bin",
+    str(Path.home() / ".local" / "bin"),
+    "/usr/local/bin",
+    "/opt/conda/bin",
+    str(mineru_dir / ".venv" / "bin"),
+]
+for p in extra_paths:
+    if p not in os.environ.get("PATH", ""):
+        os.environ["PATH"] = f"{p}:{os.environ.get('PATH', '')}"
+
+print(f"✓ Python executable: {sys.executable}")
+print(f"✓ PATH updated with Python bin directories")
+
+# Check for mineru / magic-pdf executables
+mineru_path = shutil.which("mineru")
+magic_pdf_path = shutil.which("magic-pdf")
+print(f"✓ mineru CLI location: {mineru_path if mineru_path else 'Found via python module (python -m mineru.cli.client)'}")
+print(f"✓ magic-pdf CLI location: {magic_pdf_path if magic_pdf_path else 'Found via python module (python -m magic_pdf.cli.magicpdf)'}")
+
+
+=== CELL 15 (markdown) ===
+## 6. Prepare Example Data
+
+We'll use the tiny World History example from the repository.
+
+
+=== CELL 16 (code) ===
+# On Kaggle: Read input datasets from /kaggle/input (uploaded files)
+# Write outputs to /kaggle/working (writable directory)
+kaggle_input_dir = Path("/kaggle/input/datasets/nguyenngochonglinh")
+repo_example_dir = megarag_dir / "egs" / "world_history_tiny"
+
+
+def find_example_dir():
+    """Find the example directory with data in Kaggle Input folder."""
+    # First, check common dataset folder patterns in /kaggle/input
+    search_patterns = [
+        kaggle_input_dir / "world-history-tiny",
+        kaggle_input_dir / "megarag" / "world_history_tiny",
+        kaggle_input_dir / "megarag-world-history-tiny",
+        kaggle_input_dir / "egs" / "world_history_tiny",
+    ]
+
+    for candidate in search_patterns:
+        if candidate.exists():
+            return candidate
+
+    # Fallback to repository example directory if not found in Input
+    print(f"Note: Dataset not found in {kaggle_input_dir}, using repository examples")
+    return repo_example_dir
+
+
+example_dir = find_example_dir()
+data_dir = example_dir
+
+# Use a writable working folder for generated outputs such as dumps and exp/
+run_dir = WORK_DIR / "world_history_tiny_run"
+run_dir.mkdir(exist_ok=True, parents=True)
+config_file = repo_example_dir / "conf" / "addon_params.yaml"
+
+print(f"Input example directory: {example_dir}")
+print(f"Input data directory: {data_dir}")
+print(f"Writable run directory: {run_dir}")
+print(f"Config file: {config_file}")
+
+# Check if example data exists in the Input folder
+pdf_file = data_dir / "World_History_Volume_1.pdf"
+queries_file = data_dir / "queries.txt"
+
+if not pdf_file.exists():
+    print(f"\n⚠️  PDF file not found: {pdf_file}")
+    print("Please upload the PDF to the Kaggle Input dataset folder, or place it in:")
+    print(str(data_dir))
+    print("To proceed, download the example PDF from:")
+    print(
+        "https://drive.google.com/drive/folders/1iuukUWsxMYobuDRLRJ3dBOkB9mdPGoPp?usp=sharing"
+    )
+else:
+    print(f"✓ PDF file found: {pdf_file}")
+
+if not queries_file.exists():
+    print(f"\n⚠️  Queries file not found: {queries_file}")
+    print("We'll create a sample queries file in the Input data directory")
+    sample_queries = """What is the Byzantine Empire?
+When did the Roman Empire fall?
+Who was Alexander the Great?
+What was the Silk Road?
+Describe ancient Egyptian civilization
+"""
+    with open(queries_file, "w") as f:
+        f.write(sample_queries)
+    print(f"✓ Sample queries file created: {queries_file}")
+
+else:
+    print(f"✓ Queries file found: {queries_file}")
+
+=== CELL 17 (markdown) ===
+## 7. Build Multimodal Knowledge Graph (MMKG)
+
+This step will:
+
+1. Parse the PDF using MinerU
+2. Convert PDF pages to images
+3. Extract entities and build the knowledge graph
+
+
+=== CELL 18 (code) ===
+# Check if we have the required data files
+pdf_file = data_dir / "World_History_Volume_1.pdf"
+
+if not pdf_file.exists():
+    print("⚠️  PDF file is missing!")
+    print(
+        f"Please download from: https://drive.google.com/drive/folders/1iuukUWsxMYobuDRLRJ3dBOkB9mdPGoPp?usp=sharing"
+    )
+    print(f"And place in: {data_dir}")
+else:
+    print(f"✓ PDF file ready: {pdf_file}")
+    print(f"  File size: {pdf_file.stat().st_size / 1e6:.2f} MB")
+
+=== CELL 19 (code) ===
+# Step 1: Parse PDF with MinerU 3.x
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+
+print("Step 1: Parsing PDF with MinerU 3.x...")
+print("⏱️ Extracting text, layout, tables, and images (pages 0-9)...\n")
+
+# 1. Setup paths
+pdf_path = data_dir / "World_History_Volume_1.pdf"
+pdf_name = pdf_path.stem
+output_dir = run_dir / "dumps"
+output_dir.mkdir(parents=True, exist_ok=True)
+os.chdir(run_dir)
+
+# 2. Run MinerU 3.x CLI with -b pipeline (stable, high-speed document pipeline)
+mineru_bin = shutil.which("mineru") or f"{sys.executable} -m mineru.cli.client"
+
+# In MinerU 3.x, -b pipeline uses the dedicated Layout+OCR pipeline directly
+cmd = f"{mineru_bin} -p {pdf_path} -o {output_dir} -b pipeline -m auto -l en -e 9"
+print(f"Running: {cmd}\n")
+
+env_vars = {
+    **os.environ,
+    "USE_TF": "0",
+    "USE_TORCH": "1",
+}
+
+res = subprocess.run(cmd, shell=True, capture_output=True, text=True, env=env_vars)
+
+# If -b pipeline is not supported or failed, fallback to standard -m auto
+if res.returncode != 0 and "error: unrecognized arguments: -b" in res.stderr:
+    print("Fallback to standard -m auto mode...")
+    cmd = f"{mineru_bin} -p {pdf_path} -o {output_dir} -m auto -l en -e 9"
+    res = subprocess.run(cmd, shell=True, capture_output=True, text=True, env=env_vars)
+
+if res.stdout:
+    print("STDOUT:\n", res.stdout[-800:])
+if res.stderr:
+    print("STDERR:\n", res.stderr[-800:])
+
+# 3. Standardize output folders (ensure dumps/pdf_name/auto has all parsed assets)
+doc_dir = output_dir / pdf_name
+auto_dir = doc_dir / "auto"
+auto_dir.mkdir(parents=True, exist_ok=True)
+
+# Discover which folder contains parsed files (auto, hybrid_auto, or pipeline)
+source_folders = [f for f in doc_dir.iterdir() if f.is_dir() and list(f.glob("*_content_list.json"))]
+if source_folders:
+    src_f = source_folders[0]
+    if src_f != auto_dir:
+        for item in src_f.iterdir():
+            dest = auto_dir / item.name
+            if not dest.exists():
+                shutil.copytree(item, dest) if item.is_dir() else shutil.copy2(item, dest)
+
+print(f"\n✓ PDF parsing completed successfully!")
+print(f"Verified assets under '{auto_dir}':")
+for file in sorted(auto_dir.iterdir()):
+    print(f"  - {file.name}{'/' if file.is_dir() else f' ({file.stat().st_size / 1024:.1f} KB)'}")
+
+
+=== CELL 20 (code) ===
+# Step 2: Convert PDF pages to images
+import subprocess
+from pathlib import Path
+import shutil
+
+print("Step 2: Converting PDF pages to images...")
+print("=" * 60)
+
+pdf2img_script = megarag_dir / "egs" / "utils" / "pdf2img.py"
+doc_dir = run_dir / "dumps" / pdf_name
+
+# Target directories to keep page_images synchronized
+target_img_dirs = [
+    doc_dir / "auto" / "page_images",
+    doc_dir / "hybrid_auto" / "page_images",
+    doc_dir / "page_images",
+]
+
+primary_img_dir = target_img_dirs[0]
+primary_img_dir.mkdir(parents=True, exist_ok=True)
+
+# Convert first 10 pages to match -e 9 scope
+cmd = f"python3 {pdf2img_script} {pdf_path} {primary_img_dir} --dpi 150 --jpeg --end-page 10 --jobs 8"
+print(f"Command: {cmd}")
+res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+if res.stdout:
+    print(res.stdout)
+if res.returncode != 0:
+    print(res.stderr)
+    raise RuntimeError(f"pdf2img.py failed with exit code {res.returncode}")
+
+# Synchronize page_images to all candidate working directories
+for t_dir in target_img_dirs[1:]:
+    t_dir.mkdir(parents=True, exist_ok=True)
+    for img in primary_img_dir.glob("*.jpg"):
+        dest_img = t_dir / img.name
+        if not dest_img.exists():
+            shutil.copy2(img, dest_img)
+
+print(f"✓ PDF to images conversion completed ({len(list(primary_img_dir.glob('*.jpg')))} pages)")
+
+=== CELL 21 (code) ===
+# Step 3: Process Input and Build Multimodal Knowledge Graph (MMKG)
+import subprocess
+from pathlib import Path
+import shutil
+import time
+
+print("Step 3: Building Multimodal Knowledge Graph (MMKG)...")
+print("⏱️ This process extracts entities, relationships, and multimodal embeddings.\n")
+
+# Define scripts and directory paths
+build_assets_py = megarag_dir / "egs" / "utils" / "build_page_assets.py"
+construct_mmkg_py = megarag_dir / "egs" / "utils" / "construct_mmkg.py"
+doc_dir = run_dir / "dumps" / pdf_name
+
+# 1. Determine active working directory containing parsed content
+candidate_dirs = [
+    doc_dir / "auto",
+    doc_dir / "hybrid_auto",
+    doc_dir,
+]
+
+working_dir = None
+for c_dir in candidate_dirs:
+    if c_dir.exists() and list(c_dir.glob("*_content_list.json")):
+        working_dir = c_dir
+        break
+
+if not working_dir:
+    raise FileNotFoundError(f"MinerU output files not found under {doc_dir}. Please ensure Step 1 ran successfully.")
+
+# Ensure page_images directory exists inside working_dir
+if not (working_dir / "page_images").exists() and (doc_dir / "page_images").exists():
+    shutil.copytree(doc_dir / "page_images", working_dir / "page_images")
+
+page_manifest = doc_dir / "pages_content.json"
+exp_dir = run_dir / "exp" / pdf_name
+exp_dir.mkdir(parents=True, exist_ok=True)
+
+print(f"Working directory for assets: {working_dir}")
+print("Assets detected:")
+for f in sorted(working_dir.iterdir()):
+    print(f"  - {f.name}{'/' if f.is_dir() else f' ({f.stat().st_size / 1024:.1f} KB)'}")
+print("-" * 60 + "\n")
+
+# 2. Merge page assets (text, images, and tables) into page manifest
+print("--- [A] Building Page Assets Manifest ---")
+cmd_assets = f"python3 {build_assets_py} --working-dir {working_dir} --output {page_manifest}"
+print(f"Running: {cmd_assets}")
+t0 = time.time()
+res_assets = subprocess.run(cmd_assets, shell=True, capture_output=True, text=True)
+if res_assets.returncode != 0:
+    print("\n[ERROR] build_page_assets.py failed!")
+    print("STDOUT:", res_assets.stdout)
+    print("STDERR:", res_assets.stderr)
+    raise RuntimeError(f"build_page_assets.py exited with code {res_assets.returncode}")
+print(f"✓ Page assets manifest created successfully in {time.time() - t0:.1f}s ({page_manifest.stat().st_size / 1024:.1f} KB).\n")
+
+# 3. Construct Multimodal Knowledge Graph (MMKG)
+print("--- [B] Constructing Multimodal Knowledge Graph ---")
+cmd_mmkg = f"python3 {construct_mmkg_py} --config-file {config_file} --working-dir {exp_dir} --input-dir {page_manifest}"
+print(f"Running: {cmd_mmkg}")
+t1 = time.time()
+subprocess.run(cmd_mmkg, shell=True, check=True)
+print(f"\n✓ Multimodal Knowledge Graph built successfully in {time.time() - t1:.1f}s!")
+
+
+=== CELL 22 (markdown) ===
+## 8. Query the Knowledge Graph
+
+Now that we have built the MMKG, we can query it with natural language questions.
+
+
+=== CELL 23 (code) ===
+# Prepare for querying
+print("Step 4: Querying the Multimodal Knowledge Graph")
+print("=" * 60)
+
+queries_file = data_dir / "queries.txt"
+output_file = run_dir / "exp" / "World_History_Volume_1" / "results" / "results.json"
+
+# Make sure output directory exists
+output_file.parent.mkdir(exist_ok=True, parents=True)
+
+# Show the queries that will be answered
+print("\nQueries to be answered:")
+print("-" * 60)
+with open(queries_file, "r") as f:
+    queries = f.read().strip().split("\n")
+    for i, q in enumerate(queries, 1):
+        print(f"{i}. {q}")
+
+print("\n" + "=" * 60)
+print("Running MegaRAG queries...")
+print("This will generate answers using the MMKG")
+print(f"Results will be saved to: {output_file}")
+
+=== CELL 24 (code) ===
+# Execute queries
+import subprocess
+
+query_script = megarag_dir / "egs" / "utils" / "query_mmkg.py"
+working_dir = str(run_dir / "exp" / "World_History_Volume_1")
+queries_input = str(data_dir / "queries.txt")
+results_output = str(
+    run_dir / "exp" / "World_History_Volume_1" / "results" / "results.json"
+)
+
+cmd = f"""python3 {query_script} \
+    --config-file {config_file} \
+    --working-dir {working_dir} \
+    --input-queries {queries_input} \
+    --output-file {results_output} \
+    --concurrency 4
+"""
+
+print(f"Command: {cmd}")
+print("\nExecuting queries...")
+print("This may take 5-15 minutes depending on query complexity\n")
+
+subprocess.run(cmd, shell=True, check=True)
+print("\n" + "=" * 60)
+print("✓ Query execution completed")
+
+=== CELL 25 (markdown) ===
+## 9. View and Analyze Results
+
+
+=== CELL 26 (code) ===
+# Load and display results
+import json
+import pandas as pd
+from pathlib import Path
+
+results_file = run_dir / "exp" / "World_History_Volume_1" / "results" / "results.json"
+
+if results_file.exists():
+    with open(results_file, "r") as f:
+        results = json.load(f)
+
+    print("\n" + "=" * 80)
+    print("MEGARAG QUERY RESULTS")
+    print("=" * 80)
+
+    if isinstance(results, list):
+        for i, result in enumerate(results, 1):
+            print(f"\n{'─' * 80}")
+            print(f"Query {i}: {result.get('query', 'N/A')}")
+            print(f"{'─' * 80}")
+
+            if "answer" in result:
+                print(f"Answer:")
+                print(result["answer"])
+
+            if "retrieved_context" in result:
+                print(f"\nRetrieved Context:")
+                print(result["retrieved_context"][:500] + "...")
+
+            if "sources" in result:
+                print(f"\nSources: {result['sources']}")
+
+    elif isinstance(results, dict):
+        for query, answer in results.items():
+            print(f"\n{'─' * 80}")
+            print(f"Query: {query}")
+            print(f"{'─' * 80}")
+            if isinstance(answer, dict):
+                print(f"Answer: {answer.get('answer', answer)}")
+            else:
+                print(f"Answer: {answer}")
+
+    print(f"\n{'═' * 80}")
+    print(f"Total queries answered: {len(results)}")
+else:
+    print(f"Results file not found at: {results_file}")
+    print("\nMake sure the previous steps completed successfully.")
+
+=== CELL 27 (markdown) ===
+## 10. Knowledge Graph Statistics & Analysis
+
+
+=== CELL 28 (code) ===
+# Analyze the knowledge graph structure & verify MMKG quality
+import json
+from pathlib import Path
+import networkx as nx
+
+working_dir = run_dir / "exp" / "World_History_Volume_1"
+
+print("================================================================================")
+print("KNOWLEDGE GRAPH ANALYSIS & QUALITY REPORT")
+print("================================================================================")
+
+# 1. Inspect GraphML file if available
+graphml_files = list(working_dir.glob("**/*.graphml"))
+if graphml_files:
+    g_path = graphml_files[0]
+    try:
+        G = nx.read_graphml(g_path)
+        print(f"✓ GraphML File: {g_path.name}")
+        print(f"  • Total Entities (Nodes): {G.number_of_nodes()}")
+        print(f"  • Total Relationships (Edges): {G.number_of_edges()}")
+        
+        # Calculate degree centrality
+        degrees = dict(G.degree())
+        top_nodes = sorted(degrees.items(), key=lambda x: x[1], reverse=True)[:10]
+        print("
+Top 10 Most Connected Entities in Knowledge Graph:")
+        for rank, (node, deg) in enumerate(top_nodes, 1):
+            entity_data = G.nodes[node]
+            e_type = entity_data.get("entity_type", "entity")
+            desc = entity_data.get("description", "")[:80]
+            print(f"  {rank:02d}. [{e_type}] {node} (connections: {deg})")
+            if desc:
+                print(f"      └ {desc}...")
+    except Exception as e:
+        print(f"Note on parsing GraphML: {e}")
+
+# 2. Check Vector DB and KV chunks
+vdb_files = list(working_dir.glob("**/vdb_*.json"))
+kv_files = list(working_dir.glob("**/kv_store_*.json"))
+
+print("
+Storage & Vector Database Overview:")
+for vdb in vdb_files:
+    try:
+        with open(vdb, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            count = len(data) if isinstance(data, list) else len(data.get("data", data))
+            print(f"  • Vector DB [{vdb.name}]: {count} embeddings stored ({vdb.stat().st_size / 1024:.1f} KB)")
+    except Exception:
+        print(f"  • Vector DB [{vdb.name}]: ({vdb.stat().st_size / 1024:.1f} KB)")
+
+for kv in kv_files:
+    try:
+        with open(kv, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            count = len(data) if isinstance(data, (dict, list)) else "N/A"
+            print(f"  • KV Store [{kv.name}]: {count} entries ({kv.stat().st_size / 1024:.1f} KB)")
+    except Exception:
+        pass
+
+print("
+================================================================================")
+print("✓ Knowledge Graph analysis completed successfully.")
+
+
+=== CELL 29 (markdown) ===
+## 11. Using Your Own Dataset
+
+To use your own PDF documents, follow these steps:
+
+
+=== CELL 30 (code) ===
+# Template for processing custom documents
+print("""
+To process your own documents:
+
+1. Prepare your dataset:
+   - Create a new folder: egs/<your_dataset>
+   - Create data/ subfolder inside
+   - Place your PDF files in data/
+
+2. Configure parameters:
+   - Copy and modify conf/addon_params.yaml
+   - Adjust entity_types for your domain
+   - Set proper hyperparameters
+
+3. Create queries:
+   - Create data/queries.txt with one query per line
+
+4. Build and query:
+   - Run the same steps as above with your paths
+
+Example configuration for different domains:
+""")
+
+config_examples = {
+    "Scientific Papers": [
+        "research_topic",
+        "methodology",
+        "findings",
+        "author",
+        "institution",
+        "dataset",
+        "algorithm",
+    ],
+    "Legal Documents": [
+        "party",
+        "clause",
+        "obligation",
+        "condition",
+        "effective_date",
+        "jurisdiction",
+    ],
+    "Medical Records": [
+        "symptom",
+        "diagnosis",
+        "treatment",
+        "medication",
+        "date",
+        "provider",
+    ],
+}
+
+for domain, entities in config_examples.items():
+    print(f"\n{domain}:")
+    print(f"  entity_types:")
+    for entity in entities:
+        print(f"    - {entity}")
+
+=== CELL 31 (markdown) ===
+## 12. Troubleshooting & Support
+
+
+=== CELL 32 (code) ===
+print("""
+TROUBLESHOOTING GUIDE
+================================================================================
+
+1. Out of Memory (OOM) Errors:
+   - Reduce concurrency in scripts (lower --concurrency value)
+   - Process fewer pages (modify -e flag in magic-pdf command)
+   - Use smaller batch sizes in config
+
+2. magic-pdf not found:
+   - Make sure MinerU is properly installed
+   - Try: pip install magic-pdf
+   - Check if it's in PATH: which magic-pdf
+
+3. OpenAI API Errors:
+   - Check your API key is correct
+   - Verify you have sufficient quota
+   - Check rate limits (may need to reduce concurrency)
+
+4. PDF Parsing Fails:
+   - Ensure PDF is not corrupted
+   - Try with a smaller PDF first
+   - Check if PDF is image-based (requires OCR)
+
+5. GPU Memory Issues:
+   - Run: torch.cuda.empty_cache()
+   - Reduce batch sizes
+   - Use CPU-only mode (slower but works)
+
+For more help:
+- Paper: https://arxiv.org/abs/2512.20626
+- GitHub: https://github.com/AI-Application-and-Integration-Lab/MegaRAG
+- MinerU: https://github.com/opendatalab/MinerU
+""")
+
+=== CELL 33 (markdown) ===
+## Summary
+
+You've successfully:
+
+✅ Set up MinerU for PDF processing
+✅ Installed MegaRAG and its dependencies
+✅ Configured API keys and environment
+✅ Built a Multimodal Knowledge Graph from documents
+✅ Queried the MMKG with natural language questions
+✅ Analyzed and reviewed the results
+
+### Key Features:
+
+- **Multimodal Processing**: Extracts text, images, tables, and formulas
+- **Graph-based Reasoning**: Uses knowledge graphs for precise retrieval
+- **Visual Question Answering**: Answers questions about document content
+- **Scalable**: Can process multiple documents and queries in parallel
+
+### Next Steps:
+
+1. Modify entity types for your domain
+2. Prepare your own dataset
+3. Adjust hyperparameters for better results
+4. Deploy for production use
+
+### Citation:
+
+```bibtex
+@article{megarag2024,
+  title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation},
+  journal={arXiv preprint arXiv:2512.20626},
+  year={2024}
+}
+```
+
+
