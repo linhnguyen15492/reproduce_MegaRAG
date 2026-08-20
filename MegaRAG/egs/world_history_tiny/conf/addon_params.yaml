@@ -13,12 +13,14 @@ entity_types:
 insert_batch_size: 16
 entity_extract_max_gleaning: 0
 entity_refine_max_times: 1
+llm_model_max_async: 1
 
 refine_subgraph_top_k: 120
 refine_subgraph_max_token_for_global_context: 8000
 refine_subgraph_max_token_for_local_context: 8000
 refine_subgraph_max_token_for_text_unit: 8000
 
-chunk_top_k: 6
+chunk_top_k: 2
+query_mode: global
 
-embed_parallel_limit: 12
+embed_parallel_limit: 1

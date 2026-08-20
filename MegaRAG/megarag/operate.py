@@ -2227,7 +2227,11 @@ async def kg_two_step_query(
         hashing_kv=hashing_kv,
         system_prompt=system_prompt,
     )
-    kg_response, naive_response = await asyncio.gather(kg_task, naive_task)
+    # Run the two branches sequentially to avoid doubling peak OpenAI traffic.
+    # The two-step query is already expensive; running both branches in parallel
+    # makes 429s much more likely under batch evaluation.
+    kg_response = await kg_task
+    naive_response = await naive_task
 
     sys_prompt = PROMPTS["rag_two_step_response"].format(
         query=query,

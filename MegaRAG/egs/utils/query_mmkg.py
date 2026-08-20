@@ -146,12 +146,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--config-file", default="addon_params.yaml", metavar="FILE")
     parser.add_argument("--input-queries", default="./queries.jsonl", metavar="FILE")
     parser.add_argument("--working-dir", default="./exp", metavar="DIR")
-    parser.add_argument("--max-retries", type=int, default=3, metavar="N")
-    parser.add_argument("--retry-delay", type=float, default=3.0, metavar="SECONDS")
+    parser.add_argument("--max-retries", type=int, default=1, metavar="N")
+    parser.add_argument("--retry-delay", type=float, default=1.0, metavar="SECONDS")
     parser.add_argument(
         "--concurrency",
         type=int,
-        default=4,
+        default=1,
         metavar="N",
         help="How many queries to run at once (tune to your GPU/API limits).",
     )
@@ -212,8 +212,8 @@ async def async_main():
     rag, token_tracker = await initialize_rag(working_dir, addon_params)
 
     param = QueryParam(
-        mode="mix_two_step",
-        chunk_top_k=addon_params.get("chunk_top_k", 6),
+        mode=addon_params.get("query_mode", "global"),
+        chunk_top_k=addon_params.get("chunk_top_k", 2),
         enable_rerank=False,
     )
 
