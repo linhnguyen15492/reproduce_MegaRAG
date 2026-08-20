@@ -1,38 +1,18 @@
-# Walkthrough: Refactor `megarag-mmkg-kaggle.ipynb` & Fix MinerU BaseModel State Dict Error
+# Walkthrough: Direct Execution & Unmasked Error Logging in Steps 6.1-6.4
 
-We refactored [megarag-mmkg-kaggle.ipynb](file:///d:/Github/reproduce_MegaRAG/megarag-mmkg-kaggle.ipynb) to reproduce MegaRAG cleanly on Kaggle using the repository `https://github.com/linhnguyen15492/reproduce_MegaRAG.git` containing `MegaRAG`, `LightRAG`, and `MinerU`.
+We updated Steps 6.1 to 6.4 in [megarag-mmkg-kaggle.ipynb](file:///d:/Github/reproduce_MegaRAG/megarag-mmkg-kaggle.ipynb) to ensure that the entire execution flow remains intact while showing all raw, underlying outputs and error stack traces directly.
 
-## Root Cause & Fix for Step 6.1 `BaseModel` Error
+## Adjustments Made to Steps 6.1 - 6.4
 
-### Issue
-When running `magic-pdf` in Step 6.1, MinerU failed with:
-```
-Error(s) in loading state_dict for BaseModel:
-Missing key(s) in state_dict: "backbone.conv.conv.weight", "backbone.conv.bn.weight", ...
-```
-
-### Cause
-MinerU's OCR detection module (`BaseOCRV20`) expects PP-OCRv3 MobileNet/LCNet weights for `ch_PP-OCRv3_det_infer.pth` and `en_PP-OCRv3_det_infer.pth`. Previously, the alias mapping erroneously copied `ch_PP-OCRv5_det_infer.pth` (which uses an incompatible HGNet architecture) to `v3_det`, resulting in state_dict weight mismatch.
-
-### Fix
-In Step 3, the OCR alias mapping was corrected:
-- `ch_PP-OCRv3_det_infer.pth`, `en_PP-OCRv3_det_infer.pth`, and `ch_PP-OCRv4_det_infer.pth` are linked to `Multilingual_PP-OCRv3_det_infer.pth` (which possesses the exact matching MobileNet/LCNet architecture).
-- `en_PP-OCRv4_rec_infer.pth` and `latin_PP-OCRv3_rec_infer.pth` are linked to `ch_PP-OCRv4_rec_infer.pth`.
-
-## Key Structure of the Notebook
-
-1. **Step 1**: System setup and unified clone of `reproduce_MegaRAG`.
-2. **Step 2**: Dependency installation and editable installs (`pip install -e`) for `MinerU`, `LightRAG`, `MegaRAG`.
-3. **Step 3**: MinerU weights download and corrected OCR architecture alias mapping.
-4. **Step 4**: OpenAI API Key and `MegaRAG/env.sh` configuration.
-5. **Step 5**: Data loading from Kaggle Input datasets (`/kaggle/input/datasets`).
-6. **Step 6**: MMKG Construction in 4 separate modular steps using `<pdf_name>_run/dumps/` and `<pdf_name>_run/exp/`:
-   - **Step 6.1**: Parse PDF with MinerU.
-   - **Step 6.2**: Convert PDF pages to images (`pdf2img.py`).
-   - **Step 6.3**: Build page assets manifest (`build_page_assets.py`).
-   - **Step 6.4**: Construct MMKG and embeddings (`construct_mmkg.py`).
-7. **Step 7**: Query with MegaRAG (`query_mmkg.py`).
-8. **Step 8**: View and analyze query results and graph structure.
+1. **Step 6.1 (`magic-pdf` PDF Parsing)**:
+   - Removed `try-except` wrappers and custom fallback handlers that masked underlying CLI tracebacks.
+   - Command runs directly with `subprocess.run(cmd_parse, shell=True, check=True)`: streams full real-time stdout and stderr (Layout Predict, OCR Predict, and full Traceback if any exception occurs).
+2. **Step 6.2 (`pdf2img.py` Page Rendering)**:
+   - Direct execution via `subprocess.run(cmd_img, shell=True, check=True)`.
+3. **Step 6.3 (`build_page_assets.py` Asset Manifest)**:
+   - Discovers working content and runs `subprocess.run(cmd_assets, shell=True, check=True)` without custom exception interception.
+4. **Step 6.4 (`construct_mmkg.py` MMKG Construction)**:
+   - Runs directly with `subprocess.run(cmd_mmkg, shell=True, check=True)` showing entity/relationship extraction and embedding progress directly.
 
 ## Verification Results
 
