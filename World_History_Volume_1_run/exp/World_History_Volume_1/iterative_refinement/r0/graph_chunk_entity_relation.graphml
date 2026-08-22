@@ -1,0 +1,702 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d11" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d10" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d9" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d8" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d7" for="edge" attr.name="description" attr.type="string"/>
+<key id="d6" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Volume 1">
+  <data key="d0">Volume 1</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">This entry indicates the first volume of a comprehensive history textbook, covering significant events and themes up to the year 1500.</data>
+  <data key="d3">chunk-8800b0c95b2736852349ad6a4c3da631</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="1500">
+  <data key="d0">1500</data>
+  <data key="d1">time_period</data>
+  <data key="d2">The year 1500 marks a significant period in world history, representing the close of the Middle Ages and the onset of the Renaissance and Age of Exploration.</data>
+  <data key="d3">chunk-8800b0c95b2736852349ad6a4c3da631</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="World History, Volume 1: to 1500">
+  <data key="d0">World History, Volume 1: to 1500</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">A comprehensive academic text providing an analysis of world history up to the year 1500, contributing to educational resources in historical studies.</data>
+  <data key="d3">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Ann Kordas">
+  <data key="d0">Ann Kordas</data>
+  <data key="d1">historical_figure</data>
+  <data key="d2">Ann Kordas is a senior contributing author associated with Johnson &amp; Wales University, known for her contributions to the field of history.</data>
+  <data key="d3">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Ryan J. Lynch">
+  <data key="d0">Ryan J. Lynch</data>
+  <data key="d1">historical_figure</data>
+  <data key="d2">Ryan J. Lynch is a senior contributing author from Columbus State University, contributing significant insights into historical narratives.</data>
+  <data key="d3">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Brooke Nelson">
+  <data key="d0">Brooke Nelson</data>
+  <data key="d1">historical_figure</data>
+  <data key="d2">Brooke Nelson, formerly associated with California State University, is a senior contributing author, bringing expertise to historical scholarship.</data>
+  <data key="d3">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Julie Tatlock">
+  <data key="d0">Julie Tatlock</data>
+  <data key="d1">historical_figure</data>
+  <data key="d2">Julie Tatlock from Mount Mary University is recognized as a senior contributing author, enhancing the discourse in world history studies.</data>
+  <data key="d3">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="OpenStax">
+  <data key="d0">OpenStax</data>
+  <data key="d1">organization</data>
+  <data key="d2">OpenStax is a nonprofit ed tech initiative that provides free, peer-reviewed, openly licensed textbooks for college courses and personalized courseware aimed at improving students' educational access and learning.&lt;SEP&gt;OpenStax is a nonprofit organization that provides free and flexible educational resources and textbooks for students and educators.&lt;SEP&gt;OpenStax is an educational organization based at Rice University that provides free, openly licensed textbooks and learning resources.</data>
+  <data key="d3">chunk-9d69d2ad200070d622c08272608078ab&lt;SEP&gt;chunk-7824cb76d11e308c1dd0c52a8dfba578&lt;SEP&gt;chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Rice University">
+  <data key="d0">Rice University</data>
+  <data key="d1">organization</data>
+  <data key="d2">Rice University is a leading research university known for its commitment to undergraduate education, path-breaking research, and diverse community fostering learning and discovery.&lt;SEP&gt;Rice University is a private research university located in Houston, Texas, and it is the institution supporting OpenStax.</data>
+  <data key="d3">chunk-7824cb76d11e308c1dd0c52a8dfba578&lt;SEP&gt;chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Houston, Texas">
+  <data key="d0">Houston, Texas</data>
+  <data key="d1">geographical_location</data>
+  <data key="d2">Houston is a major city in Texas, known for its diverse population and as the home of Rice University.</data>
+  <data key="d3">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Creative Commons Attribution 4.0 International License">
+  <data key="d0">Creative Commons Attribution 4.0 International License</data>
+  <data key="d1">cultural_or_religious_movement</data>
+  <data key="d2">This license allows users to share and adapt the textbook content while providing appropriate credit to the original source.</data>
+  <data key="d3">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="2023">
+  <data key="d0">2023</data>
+  <data key="d1">time_period</data>
+  <data key="d2">The year 2023 marks the publication date of the textbook content produced by OpenStax.</data>
+  <data key="d3">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="ISBN-13">
+  <data key="d0">ISBN-13</data>
+  <data key="d1">source_or_artifact</data>
+  <data key="d2">ISBN numbers provide unique identifiers for the various print and digital versions of the textbook, crucial for bibliographic references.</data>
+  <data key="d3">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Arnold Ventures">
+  <data key="d0">Arnold Ventures</data>
+  <data key="d1">organization</data>
+  <data key="d2">Arnold Ventures is a philanthropic organization that supports initiatives aimed at improving educational access and success.</data>
+  <data key="d3">chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Chan Zuckerberg Initiative">
+  <data key="d0">Chan Zuckerberg Initiative</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Chan Zuckerberg Initiative is a philanthropic effort that seeks to promote educational access and reform through various partnerships and funding.</data>
+  <data key="d3">chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Bill &amp; Melinda Gates Foundation">
+  <data key="d0">Bill &amp; Melinda Gates Foundation</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Bill &amp; Melinda Gates Foundation is a major philanthropic organization focused on enhancing global health and education.</data>
+  <data key="d3">chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Google Inc.">
+  <data key="d0">Google Inc.</data>
+  <data key="d1">organization</data>
+  <data key="d2">Google Inc. is a technology company known for its search engine and various initiatives to enhance educational resources.</data>
+  <data key="d3">chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="National Science Foundation">
+  <data key="d0">National Science Foundation</data>
+  <data key="d1">organization</data>
+  <data key="d2">The National Science Foundation is a government agency that supports fundamental research and education in all fields of science and engineering.</data>
+  <data key="d3">chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Philanthropic Support">
+  <data key="d0">Philanthropic Support</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">The section discussing Philanthropic Support highlights the various partners contributing to OpenStax's mission of improving educational access.</data>
+  <data key="d3">chunk-d7b3c249a4fdd68ac267855429a6d917</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="World History Volume 1">
+  <data key="d0">World History Volume 1</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">World History Volume 1 is one of the educational resources offered by OpenStax, emphasizing free and accessible learning materials.</data>
+  <data key="d3">chunk-9d69d2ad200070d622c08272608078ab</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Early Human Societies">
+  <data key="d0">Early Human Societies</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Unit 1 focuses on early human societies, including the development of a global perspective and key themes related to early civilizations and urban societies.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Understanding the Past">
+  <data key="d0">Understanding the Past</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 1 discusses methods for understanding history, including causation, interpretation, and the significance of primary sources.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Early Humans">
+  <data key="d0">Early Humans</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 2 covers early human evolution, migration patterns, and life during the Paleolithic Age and the Neolithic Revolution.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Early Civilizations and Urban Societies">
+  <data key="d0">Early Civilizations and Urban Societies</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 3 emphasizes the rise of early civilizations, including significant cultures such as Ancient Mesopotamia and Ancient Egypt.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="The Near East">
+  <data key="d0">The Near East</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 4 explores historical developments from Old Babylon to the Medes, including the New Kingdom of Egypt and the Persian Empire.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Paleolithic Age">
+  <data key="d0">Paleolithic Age</data>
+  <data key="d1">time_period</data>
+  <data key="d2">The Paleolithic Age refers to the early period of human history characterized by the use of stone tools and a hunter-gatherer lifestyle.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Neolithic Revolution">
+  <data key="d0">Neolithic Revolution</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">The Neolithic Revolution signifies a major turning point in human history marked by the transition from nomadic lifestyles to agriculture and settlement.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Ancient Mesopotamia">
+  <data key="d0">Ancient Mesopotamia</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">Ancient Mesopotamia is known as one of the world's earliest civilizations, emerging around the Tigris and Euphrates rivers, famous for its innovations in writing, agriculture, and urbanization.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Ancient Egypt">
+  <data key="d0">Ancient Egypt</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">Ancient Egypt was a civilization that flourished along the Nile River, renowned for its monumental architecture, hieroglyphics, and complex society centered on agriculture and trade.</data>
+  <data key="d3">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Asia in Ancient Times">
+  <data key="d0">Asia in Ancient Times</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">This section discusses the history and cultures of Asia during ancient times, covering various regions and civilizations.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393101</data>
+</node>
+<node id="Ancient China">
+  <data key="d0">Ancient China</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">Ancient China refers to the early Chinese civilization, known for its dynasties, philosophy, and contributions to culture and technology.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="The Steppes">
+  <data key="d0">The Steppes</data>
+  <data key="d1">geographical_location</data>
+  <data key="d2">The Steppes are vast grassland regions typically associated with the nomadic peoples who migrated across Asia and Europe.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Korea">
+  <data key="d0">Korea</data>
+  <data key="d1">geographical_location</data>
+  <data key="d2">Korea is a region in East Asia known for its rich history and interactions with neighboring civilizations, including China and Japan.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Japan">
+  <data key="d0">Japan</data>
+  <data key="d1">geographical_location</data>
+  <data key="d2">Japan is an island nation in East Asia, noted for its historical isolation and unique cultural developments.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Southeast Asia">
+  <data key="d0">Southeast Asia</data>
+  <data key="d1">geographical_location</data>
+  <data key="d2">Southeast Asia is a diverse region with a complex history involving trade, colonization, and cultural exchanges among various groups.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Vedic India">
+  <data key="d0">Vedic India</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">Vedic India refers to the culture and society in the Indian subcontinent during the Vedic period, marked by the composition of the Vedas and early Hindu development.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Maurya Empire">
+  <data key="d0">Maurya Empire</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">The Maurya Empire was a vast and influential ancient Indian empire, known for its political unification and cultural achievements under rulers like Ashoka.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Mediterranean Peoples">
+  <data key="d0">Mediterranean Peoples</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">This section addresses the various peoples and cultures that thrived around the Mediterranean Sea in ancient history.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Ancient Greece">
+  <data key="d0">Ancient Greece</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">Ancient Greece is known as the cradle of Western civilization, contributing significantly to art, philosophy, and politics.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Hellenistic Era">
+  <data key="d0">Hellenistic Era</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">The Hellenistic Era marks the period following the conquests of Alexander the Great, characterized by the spread of Greek culture across the Mediterranean and Near East.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Roman Republic">
+  <data key="d0">Roman Republic</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">The Roman Republic was a period of ancient Roman civilization characterized by a complex system of governance and significant expansion of territory.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Age of Augustus">
+  <data key="d0">Age of Augustus</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">The Age of Augustus refers to the period of Roman history under the first emperor, marked by peace, stability, and cultural flourishing.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Roman Empire">
+  <data key="d0">Roman Empire</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">The Roman Empire was one of the most powerful entities in the ancient world, known for its extensive territorial conquests, governance, and cultural achievements.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="The Americas in Ancient Times">
+  <data key="d0">The Americas in Ancient Times</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">This section covers the early cultures, civilizations, and significant events in the Americas before European contact.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Populating the Americas">
+  <data key="d0">Populating the Americas</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">This refers to the migration and settlement of peoples in the American continents, shaping the diverse cultures that emerged.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Bantu Migrations">
+  <data key="d0">Bantu Migrations</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">The Bantu migrations involved the movement of Bantu-speaking peoples across Africa, leading to significant cultural and linguistic changes.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Kingdom of Kush">
+  <data key="d0">Kingdom of Kush</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">The Kingdom of Kush was an ancient civilization located to the south of Egypt, known for its rich resources and interactions with its neighbor.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="North Africas Mediterranean Connections">
+  <data key="d0">North Africas Mediterranean Connections</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">This concept explores the historical trade and cultural exchanges between North African societies and Mediterranean peoples.</data>
+  <data key="d3">chunk-8ed0eba47ffc9a226c547e79e4368362</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Age of Religion, 500–1200 CE">
+  <data key="d0">Age of Religion, 500–1200 CE</data>
+  <data key="d1">time_period</data>
+  <data key="d2">A historical period characterized by significant religious movements and developments, particularly the rise of Islam and various empires of faith.</data>
+  <data key="d3">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Empires of Faith">
+  <data key="d0">Empires of Faith</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 10 focuses on the Empires of Faith, detailing their impacts and interactions within the historical context of the period.</data>
+  <data key="d3">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="The Rise of Islam and the Caliphates">
+  <data key="d0">The Rise of Islam and the Caliphates</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 11 addresses the emergence of Islam and the establishment of the Caliphates, exploring their influence on society and politics.</data>
+  <data key="d3">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="India, the Indian Ocean Basin, and East Asia">
+  <data key="d0">India, the Indian Ocean Basin, and East Asia</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 12 examines trade, cultural exchanges, and interactions across regions including India, the Indian Ocean, and East Asia during this era.</data>
+  <data key="d3">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="The Post-Roman West and the Crusading Movement">
+  <data key="d0">The Post-Roman West and the Crusading Movement</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Chapter 13 discusses the socio-political landscape following the fall of the Roman Empire, with focus on the Crusading Movement and its implications.</data>
+  <data key="d3">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Pax Mongolica">
+  <data key="d0">Pax Mongolica</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">Pax Mongolica refers to the period of peace and stability established by the Mongol Empire, facilitating trade and cultural exchange across Asia during the 13th and 14th centuries.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="The Steppe Empire of the Mongols">
+  <data key="d0">The Steppe Empire of the Mongols</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">The Steppe Empire of the Mongols was a vast empire that emerged under the leadership of Chinggis Khan, significantly impacting trade, culture, and political dynamics in the region.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Chinggis Khan">
+  <data key="d0">Chinggis Khan</data>
+  <data key="d1">historical_figure</data>
+  <data key="d2">Chinggis Khan was the founder of the Mongol Empire, uniting the Mongol tribes and initiating campaigns that expanded the empire across much of Asia during the early 13th century.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Song China">
+  <data key="d0">Song China</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">Song China refers to the period in Chinese history (960–1279) known for its cultural achievements, economic prosperity, and advancements in technology and governance.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Sub-Saharan Africa">
+  <data key="d0">Sub-Saharan Africa</data>
+  <data key="d1">geographical_location</data>
+  <data key="d2">Sub-Saharan Africa refers to the region of the African continent lying south of the Sahara Desert, home to diverse cultures, societies, and historical developments.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="The Black Death">
+  <data key="d0">The Black Death</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">The Black Death was a devastating global epidemic of bubonic plague that swept through Europe and Asia in the 14th century, leading to significant social and economic upheaval.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Climate Change in the Fourteenth Century">
+  <data key="d0">Climate Change in the Fourteenth Century</data>
+  <data key="d1">historical_concept_or_event</data>
+  <data key="d2">The climate change during the 14th century contributed to widespread famine and migration, significantly impacting populations across Asia and Europe.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393102</data>
+</node>
+<node id="Ottomans, Mamluks, and Ming">
+  <data key="d0">Ottomans, Mamluks, and Ming</data>
+  <data key="d1">civilization_or_empire</data>
+  <data key="d2">The Ottoman, Mamluk, and Ming empires represent significant political powers in the historical landscape of the 14th to 17th centuries, each with its unique influence and interactions.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393103</data>
+</node>
+<node id="Appendix A Glossary">
+  <data key="d0">Appendix A Glossary</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Appendix A provides a glossary of key terms used throughout the textbook, enhancing comprehension of historical concepts and terminology.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393103</data>
+</node>
+<node id="Map and Timelines">
+  <data key="d0">Map and Timelines</data>
+  <data key="d1">source_or_artifact</data>
+  <data key="d2">Appendix B includes maps and timelines that illustrate the geographical and chronological contexts of historical events covered in the textbook.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393103</data>
+</node>
+<node id="Recommended Resources for the Study of World History">
+  <data key="d0">Recommended Resources for the Study of World History</data>
+  <data key="d1">textbook_structure</data>
+  <data key="d2">Appendix D offers a list of resources for further exploration of world history topics and themes, aimed at enhancing academic research.</data>
+  <data key="d3">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d5">1787393103</data>
+</node>
+<edge source="Volume 1" target="1500">
+  <data key="d6">8.0</data>
+  <data key="d7">Volume 1 covers historical events leading up to the significant time period of 1500, highlighting its importance in historical studies.</data>
+  <data key="d8">educational context,historical overview</data>
+  <data key="d9">chunk-8800b0c95b2736852349ad6a4c3da631</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="World History, Volume 1: to 1500" target="Ann Kordas">
+  <data key="d6">8.0</data>
+  <data key="d7">Ann Kordas contributes to the textbook, providing expert insights and historical context.</data>
+  <data key="d8">academic contribution,expertise</data>
+  <data key="d9">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="World History, Volume 1: to 1500" target="Ryan J. Lynch">
+  <data key="d6">8.0</data>
+  <data key="d7">Ryan J. Lynch's work as a contributing author enriches the textbook's historical analysis.</data>
+  <data key="d8">academic contribution,expertise</data>
+  <data key="d9">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="World History, Volume 1: to 1500" target="Brooke Nelson">
+  <data key="d6">8.0</data>
+  <data key="d7">Brooke Nelson's contributions help shape the perspectives presented in the textbook.</data>
+  <data key="d8">academic contribution,expertise</data>
+  <data key="d9">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="World History, Volume 1: to 1500" target="Julie Tatlock">
+  <data key="d6">8.0</data>
+  <data key="d7">Julie Tatlock enhances the textbook with her contributions and scholarly perspective.</data>
+  <data key="d8">academic contribution,expertise</data>
+  <data key="d9">chunk-b07ca79ce031e6ef7e4f53580a13747c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="OpenStax" target="Rice University">
+  <data key="d6">8.0</data>
+  <data key="d7">OpenStax operates as a program within Rice University, which provides institutional support.</data>
+  <data key="d8">affiliation,support</data>
+  <data key="d9">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="OpenStax" target="Creative Commons Attribution 4.0 International License">
+  <data key="d6">7.0</data>
+  <data key="d7">OpenStax textbooks are published under the Creative Commons license, which allows for legal sharing and adaptation.</data>
+  <data key="d8">educational access,publishing rights</data>
+  <data key="d9">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="OpenStax" target="2023">
+  <data key="d6">6.0</data>
+  <data key="d7">The year 2023 signifies the recent publication of OpenStax educational materials.</data>
+  <data key="d8">publication date,relevance</data>
+  <data key="d9">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="OpenStax" target="World History Volume 1">
+  <data key="d6">9.0</data>
+  <data key="d7">OpenStax provides the World History Volume 1 textbook as part of its mission to create free educational resources.</data>
+  <data key="d8">accessibility,education</data>
+  <data key="d9">chunk-9d69d2ad200070d622c08272608078ab</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Rice University" target="Houston, Texas">
+  <data key="d6">9.0</data>
+  <data key="d7">Rice University is geographically located in Houston, Texas.</data>
+  <data key="d8">association,location</data>
+  <data key="d9">chunk-7824cb76d11e308c1dd0c52a8dfba578</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Early Humans" target="Paleolithic Age">
+  <data key="d6">8.0</data>
+  <data key="d7">Chapter 2 focuses on the lifestyle and developments of early humans during this time period.</data>
+  <data key="d8">historical context,lifestyle evolution</data>
+  <data key="d9">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Early Civilizations and Urban Societies" target="Ancient Mesopotamia">
+  <data key="d6">9.0</data>
+  <data key="d7">Chapter 3 highlights Ancient Mesopotamia as a key example of early civilization and its significant contributions to human development.</data>
+  <data key="d8">civilization development,historical significance</data>
+  <data key="d9">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Early Civilizations and Urban Societies" target="Ancient Egypt">
+  <data key="d6">8.0</data>
+  <data key="d7">Ancient Egypt is presented as another critical early civilization discussed in Chapter 3, showcasing its innovations and societal structures.</data>
+  <data key="d8">civilization comparison,historical relevance</data>
+  <data key="d9">chunk-7e64e2403dd590a083e0fbec3e790668</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Age of Religion, 500–1200 CE" target="Empires of Faith">
+  <data key="d6">8.0</data>
+  <data key="d7">The Age of Religion is marked by the rise of various empires that defined the faith and political landscapes of the time.</data>
+  <data key="d8">historical influence,religion</data>
+  <data key="d9">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Empires of Faith" target="The Rise of Islam and the Caliphates">
+  <data key="d6">9.0</data>
+  <data key="d7">The rise of Islam directly influenced the formation and dynamics of several empires during the Age of Faith.</data>
+  <data key="d8">political developments,religious influence</data>
+  <data key="d9">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Empires of Faith" target="The Post-Roman West and the Crusading Movement">
+  <data key="d6">8.0</data>
+  <data key="d7">The Crusading Movement emerged in the context of various faith-based empires, highlighting the religious motivations behind these military campaigns.</data>
+  <data key="d8">military campaigns,religious motivation</data>
+  <data key="d9">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="The Rise of Islam and the Caliphates" target="India, the Indian Ocean Basin, and East Asia">
+  <data key="d6">7.0</data>
+  <data key="d7">Interactions in the Indian Ocean and East Asia were significantly impacted by the spread of Islam and the political changes brought by the Caliphates.</data>
+  <data key="d8">cultural exchange,trade</data>
+  <data key="d9">chunk-c13c9d68535c84e9a2084524eeed3c86</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Pax Mongolica" target="The Steppe Empire of the Mongols">
+  <data key="d6">8.0</data>
+  <data key="d7">Pax Mongolica is a key concept that describes the stability and peace achieved under the Mongol Empire, which is synonymous with the rise of the Steppe Empire.</data>
+  <data key="d8">cultural exchange,historical impact</data>
+  <data key="d9">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Pax Mongolica" target="Song China">
+  <data key="d6">7.0</data>
+  <data key="d7">The peace established by Pax Mongolica allowed for interaction and trade between Song China and other regions, exemplifying cultural exchange.</data>
+  <data key="d8">cultural interaction,trade</data>
+  <data key="d9">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="Pax Mongolica" target="Ottomans, Mamluks, and Ming">
+  <data key="d6">6.0</data>
+  <data key="d7">These empires emerged in a context influenced by the Pax Mongolica, which affected their development and interactions.</data>
+  <data key="d8">development,historical context</data>
+  <data key="d9">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="The Steppe Empire of the Mongols" target="Chinggis Khan">
+  <data key="d6">9.0</data>
+  <data key="d7">Chinggis Khan founded and expanded the Mongol Empire, playing a crucial role in establishing the foundations of the Steppe Empire.</data>
+  <data key="d8">expansion,founder</data>
+  <data key="d9">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+<edge source="The Black Death" target="Climate Change in the Fourteenth Century">
+  <data key="d6">9.0</data>
+  <data key="d7">The Black Death was worsened by climate change factors that caused famines, contributing to its spread and severity.</data>
+  <data key="d8">environmental impact,epidemic</data>
+  <data key="d9">chunk-4a7bd606960e970df3415af494e95c38</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json</data>
+  <data key="d11">1787393103</data>
+</edge>
+</graph></graphml>
