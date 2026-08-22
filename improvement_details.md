@@ -69,5 +69,6 @@
 
 ### 5. Configured defaults & updated Kaggle notebook invocation
 - Files: `MegaRAG/egs/world_history_tiny/conf/addon_params.yaml`, `megarag-mmkg-kaggle.ipynb`
-- Change: Added the token parameters and `image_detail` to the yaml config, and modified Section 7 cell command invocation to pass query pacing, retry, and resume CLI arguments.
+- Change: Added token parameters and `image_detail` to the yaml config, modified Section 7 cell command invocation to pass query pacing, retry, and resume CLI arguments, and updated Section 1 repository setup cell to run `git pull` if the repository folder already exists.
+- Why: Forces the Kaggle environment to fetch the latest codebase changes from GitHub on every execution instead of skipping updates and using outdated cached files.
 
