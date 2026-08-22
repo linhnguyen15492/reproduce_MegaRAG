@@ -71,14 +71,29 @@ async def initialize_rag(working_dir: Path, addon_params: dict) -> MegaRAG:
             history_messages=history_messages,
             keyword_extraction=keyword_extraction,
             token_tracker=token_tracker,
+            image_detail=addon_params.get("image_detail", "low"),
             **kwargs,
         )
         return results
+    extra_kwargs = {}
+    for field_name in [
+        "llm_model_max_async",
+        "max_entity_tokens",
+        "max_relation_tokens",
+        "max_total_tokens",
+        "top_k",
+        "chunk_top_k",
+        "entity_extract_max_gleaning",
+    ]:
+        if field_name in addon_params:
+            extra_kwargs[field_name] = addon_params[field_name]
+
     rag = MegaRAG(
         working_dir=str(working_dir),
         llm_model_func=llm_func,
         embedding_func=embed_func,
         addon_params=addon_params,
+        **extra_kwargs,
     )
     await rag.initialize_storages()
     await initialize_pipeline_status()

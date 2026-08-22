@@ -21,6 +21,7 @@ from tenacity import (
     retry,
     stop_after_attempt,
     wait_exponential,
+    wait_random,
     retry_if_exception_type,
 )
 from lightrag.utils import (
@@ -60,8 +61,8 @@ async def gpt_4o_mini_complete(
     )
 
 @retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    stop=stop_after_attempt(6),
+    wait=wait_exponential(multiplier=2, min=5, max=60) + wait_random(0, 2),
     retry=(
         retry_if_exception_type(RateLimitError)
         | retry_if_exception_type(APIConnectionError)
@@ -115,6 +116,7 @@ async def openai_complete_if_cache(
     # Strip kwargs meant only for upstream callers
     kwargs.pop("hashing_kv", None)
     kwargs.pop("keyword_extraction", None)
+    image_detail = kwargs.pop("image_detail", "low")
 
     messages: List[dict[str, Any]] = []
     if system_prompt:
@@ -130,7 +132,7 @@ async def openai_complete_if_cache(
             url = f"data:{mime or 'image/png'};base64,{b64}"
         else:                      # already remote
             url = path
-        return {"type": "image_url", "image_url": {"url": url}}
+        return {"type": "image_url", "image_url": {"url": url, "detail": image_detail}}
 
     if input_images:
         # Vision models expect *array* content when mixing text & images

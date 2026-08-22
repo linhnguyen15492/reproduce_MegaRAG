@@ -24,3 +24,9 @@ chunk_top_k: 2
 query_mode: global
 
 embed_parallel_limit: 1
+
+max_entity_tokens: 4000
+max_relation_tokens: 4000
+max_total_tokens: 16000
+image_detail: low
+

@@ -98,14 +98,29 @@ async def initialize_rag(working_dir: Path, addon_params: dict) -> Tuple[MegaRAG
             history_messages=history_messages,
             keyword_extraction=keyword_extraction,
             token_tracker=token_tracker,
+            image_detail=addon_params.get("image_detail", "low"),
             **kwargs,
         )
+
+    extra_kwargs = {}
+    for field_name in [
+        "llm_model_max_async",
+        "max_entity_tokens",
+        "max_relation_tokens",
+        "max_total_tokens",
+        "top_k",
+        "chunk_top_k",
+        "entity_extract_max_gleaning",
+    ]:
+        if field_name in addon_params:
+            extra_kwargs[field_name] = addon_params[field_name]
 
     rag = MegaRAG(
         working_dir=str(working_dir),
         llm_model_func=llm_func,
         embedding_func=embed_func,
         addon_params=addon_params,
+        **extra_kwargs,
     )
     await rag.initialize_storages()
     await initialize_pipeline_status()
@@ -146,8 +161,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--config-file", default="addon_params.yaml", metavar="FILE")
     parser.add_argument("--input-queries", default="./queries.jsonl", metavar="FILE")
     parser.add_argument("--working-dir", default="./exp", metavar="DIR")
-    parser.add_argument("--max-retries", type=int, default=1, metavar="N")
+    parser.add_argument("--max-retries", type=int, default=3, metavar="N")
     parser.add_argument("--retry-delay", type=float, default=1.0, metavar="SECONDS")
+    parser.add_argument(
+        "--query-delay",
+        type=float,
+        default=5.0,
+        metavar="SECONDS",
+        help="Delay between query requests to prevent rate limit limits.",
+    )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Skip already processed and successful queries in the output file.",
+    )
     parser.add_argument(
         "--concurrency",
         type=int,
@@ -215,20 +242,48 @@ async def async_main():
         mode=addon_params.get("query_mode", "global"),
         chunk_top_k=addon_params.get("chunk_top_k", 2),
         enable_rerank=False,
+        max_entity_tokens=addon_params.get("max_entity_tokens", 4000),
+        max_relation_tokens=addon_params.get("max_relation_tokens", 4000),
+        max_total_tokens=addon_params.get("max_total_tokens", 16000),
     )
 
     questions = extract_queries(Path(args.input_queries))
     if not questions:
         raise SystemExit(f"No questions found in {args.input_queries}")
 
+    processed_questions = set()
+    out_path = Path(args.output_file)
+    if args.resume and out_path.exists():
+        try:
+            if args.output_format == "jsonl":
+                with out_path.open("r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.strip():
+                            rec = json.loads(line)
+                            if rec.get("question") and not rec.get("error"):
+                                processed_questions.add(rec["question"])
+            else:
+                with out_path.open("r", encoding="utf-8") as f:
+                    payload = json.load(f)
+                    for rec in payload.get("results", []):
+                        if rec.get("question") and not rec.get("error"):
+                            processed_questions.add(rec["question"])
+            print(f"Loaded {len(processed_questions)} already completed queries from output file.")
+        except Exception as e:
+            print(f"⚠️ Resume check failed, running all: {e}")
+
     sem = asyncio.Semaphore(max(1, args.concurrency))
 
     async def worker(idx: int, q: str):
+        if q in processed_questions:
+            return idx, None
         started_at = _now_iso()
         async with sem:
             res, dt, err = await run_query_with_retries(
                 rag, q, param, max_retries=args.max_retries, retry_delay=args.retry_delay
             )
+            if args.query_delay > 0:
+                await asyncio.sleep(args.query_delay)
         finished_at = _now_iso()
         record: Dict[str, Any] = {
             "index": idx,
@@ -257,6 +312,10 @@ async def async_main():
 
     for fut in asyncio.as_completed(tasks):
         idx, rec = await fut
+        if rec is None:
+            if pbar:
+                pbar.update(1)
+            continue
         finished[idx] = rec
         if pbar:
             if rec["error"]:
@@ -279,15 +338,43 @@ async def async_main():
     if pbar:
         pbar.close()
 
+    # If resuming, load existing records to merge for output
+    if args.resume and out_path.exists():
+        try:
+            if args.output_format == "jsonl":
+                existing_recs = {}
+                with out_path.open("r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.strip():
+                            rec = json.loads(line)
+                            if rec.get("question"):
+                                existing_recs[rec["question"]] = rec
+                for i, q in enumerate(questions):
+                    if finished[i] is None and q in existing_recs:
+                        finished[i] = existing_recs[q]
+            else:
+                with out_path.open("r", encoding="utf-8") as f:
+                    existing_payload = json.load(f)
+                    existing_results = existing_payload.get("results", [])
+                    for i, q in enumerate(questions):
+                        if finished[i] is None:
+                            match = [x for x in existing_results if x.get("question") == q]
+                            if match:
+                                finished[i] = match[0]
+        except Exception as e:
+            print(f"⚠️ Failed to merge resume results: {e}")
+
+    # Remove any unresolved None records (e.g. if skipped but not found in existing output)
+    finished = [rec for rec in finished if rec is not None]
+
     # If not streaming earlier, print in input order now
     if not args.print_as_complete:
         for idx, rec in enumerate(finished):
             if rec["error"]:
-                print(f"[{idx}] ERROR for question: {rec['question']}\n  {rec['error']}\n")
+                print(f"[{rec['index']}] ERROR for question: {rec['question']}\n  {rec['error']}\n")
             else:
-                print(f"[{idx}] ({rec['latency_seconds']:.2f}s) {rec['answer']}\n")
+                print(f"[{rec['index']}] ({rec['latency_seconds']:.2f}s) {rec['answer']}\n")
 
-    out_path = Path(args.output_file)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     if args.output_format == "jsonl":
@@ -310,6 +397,11 @@ async def async_main():
         print(f"Saved results + metadata to {out_path} (JSON array).")
 
     print(f"Final Token Usage: {token_tracker}.")
+
+    # Save LLM Cache back to disk
+    if hasattr(rag, "llm_response_cache") and rag.llm_response_cache:
+        print("Persisting query-time LLM response cache to disk...")
+        await rag.llm_response_cache.index_done_callback()
 
 def main():
     try:

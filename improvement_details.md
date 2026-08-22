@@ -41,3 +41,33 @@
 - Current behavior: graph reasoning is still used, but only through the lighter `global` query path.
 - Not used by default: `mix_two_step`, because it adds an extra naive branch and increases OpenAI usage significantly.
 - Practical result: lower API cost, fewer 429s, and less wasted retry traffic.
+
+## 2026-08-22
+
+### 1. Resolved MMKG Construction 429 errors
+- File: `MegaRAG/egs/utils/construct_mmkg.py`
+- Change: Refactored `initialize_rag` to unpack and pass all parameters (such as `llm_model_max_async: 1`) from `addon_params.yaml` directly to the `MegaRAG` constructor.
+- Why: Previously, custom parameters from the yaml file were not forwarded to the MegaRAG instance, causing graph construction to run with a default concurrency of 4 and exceed the TPM limit.
+
+### 2. Enhanced API retry strategy & randomized jitter
+- File: `MegaRAG/megarag/llms/openai.py`
+- Change: Modified `@retry` on `openai_complete_if_cache` to run up to 6 times (up from 3) with an exponential wait up to 60 seconds (up from 10) combined with a random jitter (`wait_random`).
+- Why: Gives the sliding 60-second OpenAI rate limit window sufficient time to cool down and prevents synchronized request retry bursts.
+
+### 3. Integrated low-detail vision token footprint reduction
+- Files: `MegaRAG/megarag/llms/openai.py`, `MegaRAG/egs/utils/construct_mmkg.py`, `MegaRAG/egs/utils/query_mmkg.py`
+- Change: Exposed an `image_detail` parameter (defaulting to `low` in `addon_params.yaml`) to specify `"detail": image_detail` in OpenAI image payloads.
+- Why: Drops image token usage from 400+ down to exactly 85 tokens per document page/figure image.
+
+### 4. Added pacing, resume checkpointing, and cache disk persistence to querying
+- File: `MegaRAG/egs/utils/query_mmkg.py`
+- Change: 
+  - Added `--query-delay` (default 5s) to pace sequential requests.
+  - Added `--resume` flag to skip questions with existing successful responses in output.
+  - Explicitly called `await rag.llm_response_cache.index_done_callback()` at the end of `async_main`.
+- Why: Pacing protects TPM limits, resume prevents costly reprocessing of finished items if interrupted, and cache persistence ensures subsequent runs hit the cache instantly with zero token consumption.
+
+### 5. Configured defaults & updated Kaggle notebook invocation
+- Files: `MegaRAG/egs/world_history_tiny/conf/addon_params.yaml`, `megarag-mmkg-kaggle.ipynb`
+- Change: Added the token parameters and `image_detail` to the yaml config, and modified Section 7 cell command invocation to pass query pacing, retry, and resume CLI arguments.
+
