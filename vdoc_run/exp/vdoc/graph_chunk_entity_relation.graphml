@@ -1,0 +1,2590 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d11" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d10" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d9" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d8" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d7" for="edge" attr.name="description" attr.type="string"/>
+<key id="d6" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Vũ Đình Long">
+  <data key="d0">Vũ Đình Long</data>
+  <data key="d1">person</data>
+  <data key="d2">Vũ Đình Long (1896–1960) là một nhà văn, nhà kịch nổi tiếng Việt Nam, quê ở thôn Mục Xá, xã Cao Dương, huyện Thanh Oai, Hà Đông (cũ), nay thuộc Hà Nội. Ông sinh trưởng trong gia đình có truyền thống hiếu học, rất yêu thích ca kịch dân tộc và là tác giả của nhiều vở kịch hiện đại như 'Chén thuốc độc' (1921), 'Toả án lương tâm' (1923), 'Đàn bà mới' (1944), 'Tổ quốc trên hết' (1949, phóng tác), và 'Gia tài' (1958, phóng tác).</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637484</data>
+</node>
+<node id="Gia tài">
+  <data key="d0">Gia tài</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Tác phẩm kịch do Vũ Đình Long phóng tác từ vở hài kịch 'Lê-ga-tê Uy-ni-véc-xen' (Légataire Universel) của Ro-nha (Regnard). Nội dung xoay quanh việc bác Di Lung tìm người thừa kế tài sản khi đang bệnh nặng, và sự lừa đảo của các nhân vật để lập chúc thư giả nhằm đảm bảo tài sản cho cháu ruột Hy Lạc.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637484</data>
+</node>
+<node id="Di Lung">
+  <data key="d0">Di Lung</data>
+  <data key="d1">person</data>
+  <data key="d2">Là nhân vật chính trong văn bản 'Gia tài', Di Lung là bác của Hy Lạc, đang bệnh nặng và có nguy cơ qua đời. Ông tìm người thừa kế tài sản và bị các nhân vật khác lừa đảo bằng cách lập chúc thư giả.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637490</data>
+</node>
+<node id="Hy Lạc">
+  <data key="d0">Hy Lạc</data>
+  <data key="d1">person</data>
+  <data key="d2">Là cháu ruột của Di Lung, Hy Lạc là người thừa kế tài sản mà Di Lung muốn đảm bảo cho mình. Anh ta cùng với Kiệt và Lý lập chúc thư giả để đảm bảo tài sản.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637490</data>
+</node>
+<node id="Kiệt">
+  <data key="d0">Kiệt</data>
+  <data key="d1">person</data>
+  <data key="d2">Là người hầu trai của Hy Lạc, Kiệt đóng vai trò quan trọng trong việc lừa đảo bằng cách cải trang thành Di Lung để lừa công chứng viên lập chúc thư giả.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637494</data>
+</node>
+<node id="Lý">
+  <data key="d0">Lý</data>
+  <data key="d1">person</data>
+  <data key="d2">Là người hầu gái của Di Lung, Lý tham gia vào kế hoạch lập chúc thư giả cùng với Kiệt và Hy Lạc để đảm bảo tài sản cho Hy Lạc.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637494</data>
+</node>
+<node id="Thận Trọng">
+  <data key="d0">Thận Trọng</data>
+  <data key="d1">person</data>
+  <data key="d2">Là công chứng viên được mời đến nhà Di Lung để lập chúc thư. Anh ta bị lừa bởi Kiệt khi Kiệt cải trang thành Di Lung.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637497</data>
+</node>
+<node id="Chúc thư">
+  <data key="d0">Chúc thư</data>
+  <data key="d1">concept</data>
+  <data key="d2">Là văn bản chính thức ghi những nguyện vọng của một người, đặc biệt là về việc xử lý tài sản sau khi qua đời. Trong văn bản 'Gia tài', chúc thư giả được lập để lừa đảo và đảm bảo tài sản cho Hy Lạc.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637497</data>
+</node>
+<node id="Lê-ga-tê Uy-ni-véc-xen">
+  <data key="d0">Lê-ga-tê Uy-ni-véc-xen</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Là vở hài kịch gốc của Ro-nha (Regnard), được Vũ Đình Long phóng tác thành tác phẩm 'Gia tài'.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637500</data>
+</node>
+<node id="Ro-nha">
+  <data key="d0">Ro-nha</data>
+  <data key="d1">person</data>
+  <data key="d2">Là nhà văn Pháp, tác giả của vở hài kịch 'Lê-ga-tê Uy-ni-véc-xen' (Légataire Universel), được Vũ Đình Long dùng làm cơ sở để sáng tác 'Gia tài'.</data>
+  <data key="d3">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637500</data>
+</node>
+<node id="Bài tập toán lớp 1">
+  <data key="d0">Bài tập toán lớp 1</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài tập toán gồm các bài toán tìm chữ số thích hợp, so sánh số, bài toán thực tế về lượng sữa bò cho và bài toán tìm số theo chuỗi phép tính. Nội dung bao gồm các phép tính cộng, trừ, và các bài toán tư duy logic dành cho học sinh tiểu học.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637503</data>
+</node>
+<node id="Bài toán 2a">
+  <data key="d0">Bài toán 2a</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán yêu cầu tìm chữ số thích hợp để hoàn thành phép cộng: 27 + 46 = ??. Kết quả cần tìm là 73.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637503</data>
+</node>
+<node id="Bài toán 2b">
+  <data key="d0">Bài toán 2b</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán yêu cầu tìm chữ số thích hợp để hoàn thành phép cộng: 3? + ?6 = 75. Kết quả cần tìm là 39 + 36 = 75.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637507</data>
+</node>
+<node id="Bài toán 2c">
+  <data key="d0">Bài toán 2c</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán yêu cầu tìm chữ số thích hợp để hoàn thành phép trừ: 81 - 2? = ?6. Kết quả cần tìm là 81 - 25 = 56.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637507</data>
+</node>
+<node id="Bài toán 3a">
+  <data key="d0">Bài toán 3a</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán so sánh: 85 - 68 ? 20 và 49 + 33 ? 91. Kết quả là 85 - 68 = 17 &lt; 20 và 49 + 33 = 82 &lt; 91.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637510</data>
+</node>
+<node id="Bài toán 3b">
+  <data key="d0">Bài toán 3b</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán so sánh: 54 + 37 ? 37 + 54 và 72 - 27 ? 72 - 30. Kết quả là 54 + 37 = 37 + 54 (bằng nhau) và 72 - 27 = 45 &gt; 72 - 30 = 42.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637510</data>
+</node>
+<node id="Bài toán 4">
+  <data key="d0">Bài toán 4</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán thực tế: Con bò sữa của bác An cho 20 l sữa mỗi ngày, con bò sữa của bác Bình cho ít hơn 5 l so với bác An. Câu hỏi yêu cầu tìm lượng sữa bác Bình cho mỗi ngày: 20 - 5 = 15 l.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637514</data>
+</node>
+<node id="Bài toán 5">
+  <data key="d0">Bài toán 5</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán tìm số theo chuỗi phép tính: 74 - 69 = 5, sau đó 5 + 48 = 53, và cuối cùng 53 - 30 = 23. Kết quả cuối cùng là 23.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637514</data>
+</node>
+<node id="Hình minh họa bò sữa">
+  <data key="d0">Hình minh họa bò sữa</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình ảnh minh họa cảnh nông thôn với hai người nông dân đang chăm sóc bò sữa, một người đang vắt sữa và người kia đang cầm thùng sữa. Bối cảnh là một cánh đồng xanh với nhà cửa và cây cối, thể hiện hoạt động nông nghiệp và sản xuất sữa.</data>
+  <data key="d3">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637518</data>
+</node>
+<node id="Chòm sao Gấu Bé">
+  <data key="d0">Chòm sao Gấu Bé</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chòm sao Gấu Bé là một chòm sao nằm trên bầu trời phương Bắc, cạnh chòm Gấu Lớn, được tạo thành từ 7 ngôi sao chính, trong đó ngôi sao cuối đuôi là sao Bắc Cực. Khoảng cách giữa các sao trong chòm này nhỏ hơn so với chòm Gấu Lớn. Hình 4.6 minh họa chòm sao này.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637518</data>
+</node>
+<node id="Chòm sao Gấu Lớn">
+  <data key="d0">Chòm sao Gấu Lớn</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chòm sao Gấu Lớn là một chòm sao nằm trên bầu trời phương Bắc, cạnh chòm Gấu Bé. Hình dạng của nó thay đổi do các ngôi sao di chuyển theo hướng khác nhau với tốc độ rất chậm.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637523</data>
+</node>
+<node id="Chòm sao Thiên Hậu">
+  <data key="d0">Chòm sao Thiên Hậu</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chòm sao Thiên Hậu là một trong các chòm sao sáng trên bầu trời phương Bắc, có vị trí quan trọng để xác định vị trí của sao Bắc Cực. Nó mang hình ảnh của nữ hoàng Cassiopeia trong truyền thuyết Hy Lạp, được tạo thành từ 5 ngôi sao ở thiên cầu Bắc, đối diện với chòm Gấu Lớn qua chòm Gấu Bé.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637523</data>
+</node>
+<node id="Sao Bắc Cực">
+  <data key="d0">Sao Bắc Cực</data>
+  <data key="d1">concept</data>
+  <data key="d2">Sao Bắc Cực là ngôi sao ở cuối đuôi chòm sao Gấu Bé, đóng vai trò quan trọng trong việc xác định hướng Bắc trên bầu trời.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637527</data>
+</node>
+<node id="Cassiopeia">
+  <data key="d0">Cassiopeia</data>
+  <data key="d1">person</data>
+  <data key="d2">Cassiopeia là nữ hoàng trong truyền thuyết Hy Lạp, được tượng trưng bởi chòm sao Thiên Hậu.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637527</data>
+</node>
+<node id="Hình 4.6">
+  <data key="d0">Hình 4.6</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 4.6 là hình ảnh minh họa chòm sao Gấu Bé, với các ngôi sao được nối lại để tạo hình một con gấu nhỏ, giúp người quan sát dễ dàng nhận diện chòm sao này trên bầu trời.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637530</data>
+</node>
+<node id="Hình 4.7">
+  <data key="d0">Hình 4.7</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 4.7 là hình ảnh minh họa chòm sao Thiên Hậu, thể hiện hình dạng đặc trưng của nó trên bầu trời đêm.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637530</data>
+</node>
+<node id="Hình 4.8">
+  <data key="d0">Hình 4.8</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 4.8 là hình ảnh tượng trưng của người Hy Lạp xưa về chòm sao Thiên Hậu, thể hiện hình ảnh nữ hoàng Cassiopeia với các ngôi sao nối lại tạo thành hình dáng của bà.</data>
+  <data key="d3">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637533</data>
+</node>
+<node id="Trò chơi 'Chạm bóng nhanh'">
+  <data key="d0">Trò chơi 'Chạm bóng nhanh'</data>
+  <data key="d1">event</data>
+  <data key="d2">"Một trò chơi bóng đá được mô tả với các bước thực hiện cụ thể, bao gồm ném bóng và tập đao chân, nhằm rèn luyện kỹ năng thể thao cho học sinh trong môn bóng đá."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637533</data>
+</node>
+<node id="Ném bóng">
+  <data key="d0">Ném bóng</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Hành động kỹ thuật trong bóng đá, yêu cầu học sinh đứng hai chân rộng bằng vai, đưa bóng lên cao ra sau đầu rồi ném qua đầu từ sau ra trước khi có hiệu lệnh."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637537</data>
+</node>
+<node id="Tại chỗ tập đao chân">
+  <data key="d0">Tại chỗ tập đao chân</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Hành động kỹ thuật trong bóng đá, yêu cầu học sinh đứng trên một chân, dùng chân còn lại đưa ra trước để vòng quanh bóng, sau đó đổi chân khi có hiệu lệnh tiếp theo."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637537</data>
+</node>
+<node id="BÓNG ĐÁ">
+  <data key="d0">BÓNG ĐÁ</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Chủ đề chính của tài liệu, liên quan đến môn thể thao bóng đá và các kỹ năng, động tác được dạy cho học sinh."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637540</data>
+</node>
+<node id="TTCB">
+  <data key="d0">TTCB</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Thuật ngữ viết tắt của 'Tư thế chuẩn bị', mô tả vị trí đứng và cách cầm bóng trước khi thực hiện động tác trong bóng đá."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637540</data>
+</node>
+<node id="Động tác">
+  <data key="d0">Động tác</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Thuật ngữ chỉ các bước thực hiện kỹ thuật trong bóng đá, được thực hiện theo hiệu lệnh của giáo viên hoặc người hướng dẫn."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637543</data>
+</node>
+<node id="Chân trời sáng tạo">
+  <data key="d0">Chân trời sáng tạo</data>
+  <data key="d1">organization</data>
+  <data key="d2">"Tên thương hiệu hoặc nhà xuất bản tài liệu giáo dục, được hiển thị dưới dạng logo trong hình minh họa, cho thấy đây là tài liệu học tập chính thống."&gt;</data>
+  <data key="d3">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637543</data>
+</node>
+<node id="Đồng phân mạch carbon">
+  <data key="d0">Đồng phân mạch carbon</data>
+  <data key="d1">concept</data>
+  <data key="d2">Đồng phân mạch carbon là loại đồng phân trong đó các nguyên tử carbon được sắp xếp theo chuỗi khác nhau, nhưng vẫn giữ nguyên loại nhóm chức và công thức phân tử, như ví dụ CH₃–CH₂–CH₂–CH₃ và CH₃–CH–CH₃ (có nhóm CH₃ nhánh).</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637546</data>
+</node>
+<node id="Đồng phân loại nhóm chức">
+  <data key="d0">Đồng phân loại nhóm chức</data>
+  <data key="d1">concept</data>
+  <data key="d2">Đồng phân loại nhóm chức là loại đồng phân trong đó nhóm chức (như OH hoặc O) được thay đổi loại, dẫn đến sự khác biệt về tính chất hóa học, như ví dụ CH₃–CH₂–OH (rượu) và CH₃–O–CH₃ (este).</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637546</data>
+</node>
+<node id="Đồng phân vị trí nhóm chức">
+  <data key="d0">Đồng phân vị trí nhóm chức</data>
+  <data key="d1">concept</data>
+  <data key="d2">Đồng phân vị trí nhóm chức là loại đồng phân trong đó nhóm chức được gắn vào vị trí khác nhau trên chuỗi carbon, như ví dụ CH₃–CH₂–CH₂–OH (rượu ở vị trí 1) và CH₃–CH–CH₃ (rượu ở vị trí 2).</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637550</data>
+</node>
+<node id="Chất đồng phân">
+  <data key="d0">Chất đồng phân</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chất đồng phân là những hợp chất có cùng công thức phân tử nhưng khác nhau về cấu trúc (trật tự liên kết, cách thức liên kết hoặc vị trí không gian của các nguyên tử).</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637550</data>
+</node>
+<node id="Bài tập 1">
+  <data key="d0">Bài tập 1</data>
+  <data key="d1">document</data>
+  <data key="d2">Bài tập 1 được ghi nhận ở trang 43 của sách giáo khoa (SGK), là một bài tập trong chương trình học về chủ đề 'SO SÁNH'.&lt;SEP&gt;Bài tập yêu cầu viết công thức cấu tạo đầy đủ và thu gọn của các chất có công thức phân tử C₄H₁₀ và C₂H₆O, nhằm luyện tập nhận biết các đồng phân cấu tạo.</data>
+  <data key="d3">chunk-abbf73eacb2d7d88370ce348846120fb&lt;SEP&gt;chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637554</data>
+</node>
+<node id="Bài tập 2">
+  <data key="d0">Bài tập 2</data>
+  <data key="d1">document</data>
+  <data key="d2">Bài tập 2 được ghi nhận ở trang 43 của sách giáo khoa (SGK), là một bài tập trong chương trình học về chủ đề 'SO SÁNH'.&lt;SEP&gt;Bài tập yêu cầu xác định các công thức cấu tạo (1) đến (6) nào biểu diễn cùng một chất, nhằm kiểm tra khả năng nhận diện cấu trúc hóa học tương đương.</data>
+  <data key="d3">chunk-abbf73eacb2d7d88370ce348846120fb&lt;SEP&gt;chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637554</data>
+</node>
+<node id="Bài tập 3">
+  <data key="d0">Bài tập 3</data>
+  <data key="d1">document</data>
+  <data key="d2">Bài tập yêu cầu phân loại các chất (a) đến (g) thành đồng đẳng và đồng phân, nhằm hiểu rõ sự khác biệt giữa hai khái niệm quan trọng trong hóa học hữu cơ.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637558</data>
+</node>
+<node id="Bài tập 7">
+  <data key="d0">Bài tập 7</data>
+  <data key="d1">document</data>
+  <data key="d2">Bài tập yêu cầu nhóm các chất hữu cơ (A) đến (G) theo loại đồng phân cấu tạo, nhằm phân loại các đồng phân dựa trên cấu trúc phân tử.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637558</data>
+</node>
+<node id="C₄H₁₀">
+  <data key="d0">C₄H₁₀</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức phân tử của butan và isobutan, hai đồng phân mạch carbon.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637561</data>
+</node>
+<node id="C₂H₆O">
+  <data key="d0">C₂H₆O</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức phân tử của ethanol (CH₃–CH₂–OH) và dimethyl ether (CH₃–O–CH₃), hai đồng phân loại nhóm chức.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637561</data>
+</node>
+<node id="CH₃–CH₂–OH">
+  <data key="d0">CH₃–CH₂–OH</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức cấu tạo của ethanol, một rượu đơn chức.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637564</data>
+</node>
+<node id="CH₃–O–CH₃">
+  <data key="d0">CH₃–O–CH₃</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức cấu tạo của dimethyl ether, một este đơn chức.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637564</data>
+</node>
+<node id="CH₃–CH–CH₃">
+  <data key="d0">CH₃–CH–CH₃</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức cấu tạo của butan-2-ol, một đồng phân vị trí nhóm chức.&lt;SEP&gt;Công thức cấu tạo của isobutan, một đồng phân mạch carbon của butan.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637567</data>
+</node>
+<node id="CH₃–CH₂–CH₂–OH">
+  <data key="d0">CH₃–CH₂–CH₂–OH</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức cấu tạo của propanol, một đồng phân vị trí nhóm chức.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637567</data>
+</node>
+<node id="CH₂=CH₂">
+  <data key="d0">CH₂=CH₂</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức phân tử của etilen, một hợp chất không no.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637570</data>
+</node>
+<node id="CH₂=CH–CH₃">
+  <data key="d0">CH₂=CH–CH₃</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức phân tử của propilen, một đồng đẳng của etilen.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637570</data>
+</node>
+<node id="CH₃–CH₂–CH₂–CH₃">
+  <data key="d0">CH₃–CH₂–CH₂–CH₃</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức phân tử của butan, một đồng đẳng của etilen.</data>
+  <data key="d3">chunk-234aa0e8ab41f14afa30b5bc24fc3620</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637572</data>
+</node>
+<node id="Tiên đề Euclid">
+  <data key="d0">Tiên đề Euclid</data>
+  <data key="d1">law</data>
+  <data key="d2">Đây là một định lý cơ bản trong hình học Euclid, nêu rằng: Qua một điểm ở ngoài một đường thẳng, chỉ có một đường thẳng song song với đường thẳng đó. Tiên đề này là nền tảng cho các tính chất về đường thẳng song song trong hình học phẳng.</data>
+  <data key="d3">chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637572</data>
+</node>
+<node id="Hai đường thẳng song song">
+  <data key="d0">Hai đường thẳng song song</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Khái niệm hai đường thẳng song song được định nghĩa là hai đường thẳng không có điểm chung và được xác định thông qua các dấu hiệu như cặp góc so le trong bằng nhau hoặc cặp góc đồng vị bằng nhau khi bị một đường thẳng cắt. Đây là nội dung chính của Bài 9 trong tài liệu hình học."&gt;&lt;SEP&gt;Khái niệm hai đường thẳng song song là hai đường thẳng không bao giờ gặp nhau, dù kéo dài vô hạn, và có cùng hướng. Trong hình học Euclid, chúng được xác định bởi tiên đề Euclid và có các tính chất như: góc đồng vị bằng nhau, góc so le trong bằng nhau, và nếu vuông góc với một đường thẳng thì cũng vuông góc với đường thẳng kia.</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559&lt;SEP&gt;chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637576</data>
+</node>
+<node id="Hình 3.17">
+  <data key="d0">Hình 3.17</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình minh họa cho ví dụ 1 trong bài học, thể hiện hai đường thẳng song song m và n bị cắt bởi một đường thẳng khác, tạo ra các góc được đánh số từ 1 đến 4 và các điểm E, F. Hình ảnh này được dùng để minh họa các tính chất của hai đường thẳng song song và giải các bài toán liên quan.</data>
+  <data key="d3">chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637576</data>
+</node>
+<node id="Ví dụ 1">
+  <data key="d0">Ví dụ 1</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">"Ví dụ 1 trong tài liệu yêu cầu gọi tên các góc so le trong và đồng vị trong Hình 3.7, nhằm minh họa cách xác định các góc trong mối quan hệ song song giữa hai đường thẳng."&gt;&lt;SEP&gt;Bài toán ví dụ 1 yêu cầu tính số đo góc F₂, so sánh góc E₄ và góc F₁, và tính số đo góc F₄ dựa trên hình 3.17 với điều kiện m // n. Bài toán sử dụng các tính chất của hai đường thẳng song song như góc đồng vị, góc so le trong và góc đối đỉnh để giải.</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559&lt;SEP&gt;chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637581</data>
+</node>
+<node id="Hình 14.3">
+  <data key="d0">Hình 14.3</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 14.3 là bản vẽ kỹ thuật thể hiện các chi tiết hình học và kích thước của một bộ phận máy, được ghi chú là 'Vẽ mờ', có thể dùng để minh họa cách trình bày hoặc các yếu tố cần làm mờ trong bản vẽ kỹ thuật.</data>
+  <data key="d3">chunk-be4fbb427728033f05c0d49ea45e9e90</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637581</data>
+</node>
+<node id="Hình 14.2">
+  <data key="d0">Hình 14.2</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 14.2 là bản bố trí hình biểu diễn, cho thấy cách sắp xếp các hình chiếu hoặc hình biểu diễn trong bản vẽ kỹ thuật, có thể dùng để hướng dẫn cách trình bày các hình chiếu trong bản vẽ.</data>
+  <data key="d3">chunk-be4fbb427728033f05c0d49ea45e9e90</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637586</data>
+</node>
+<node id="Chủ đề 4">
+  <data key="d0">Chủ đề 4</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chủ đề 4 là một phần trong tài liệu giáo trình hoặc sách kỹ thuật, có thể liên quan đến các nội dung về bản vẽ kỹ thuật, bố trí hình chiếu và các quy tắc trình bày.</data>
+  <data key="d3">chunk-be4fbb427728033f05c0d49ea45e9e90</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637586</data>
+</node>
+<node id="Bài 11">
+  <data key="d0">Bài 11</data>
+  <data key="d1">document</data>
+  <data key="d2">"Đây là bài học trong sách giáo khoa âm nhạc, tập trung vào yêu cầu cần đạt về kỹ năng hát, nghe nhạc, thưởng thức âm nhạc và lý thuyết âm nhạc, cùng với bài hát mẫu 'Bay cao tiếng hát ước mơ'."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637589</data>
+</node>
+<node id="Bay cao tiếng hát ước mơ">
+  <data key="d0">Bay cao tiếng hát ước mơ</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">"Bài hát được trình bày trong bài học, có nhạc và lời của Nguyễn Nam, thể hiện cảm xúc tự hào và khát vọng về ước mơ."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637589</data>
+</node>
+<node id="Nguyễn Nam">
+  <data key="d0">Nguyễn Nam</data>
+  <data key="d1">person</data>
+  <data key="d2">"Tác giả nhạc và lời cho bài hát 'Bay cao tiếng hát ước mơ'."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637592</data>
+</node>
+<node id="hợp âm Đô trưởng">
+  <data key="d0">hợp âm Đô trưởng</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Hợp âm Đô trưởng là một hợp âm âm nhạc được sử dụng trong bài hát để tạo ra âm thanh hài hòa và phù hợp với cảm xúc bài hát."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637592</data>
+</node>
+<node id="nhịp 6/8">
+  <data key="d0">nhịp 6/8</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Một nhịp điệu âm nhạc được đề cập trong lý thuyết âm nhạc, có đặc điểm và tính chất riêng biệt cần được phân tích và so sánh."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637595</data>
+</node>
+<node id="nhịp 3/8">
+  <data key="d0">nhịp 3/8</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Một nhịp điệu âm nhạc được đề cập trong lý thuyết âm nhạc, được so sánh với nhịp 6/8 để hiểu sự giống và khác nhau."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637595</data>
+</node>
+<node id="hợp xướng">
+  <data key="d0">hợp xướng</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Một thể loại âm nhạc được đề cập trong yêu cầu thưởng thức âm nhạc, cần phân biệt với các hình thức ca hát khác."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637598</data>
+</node>
+<node id="Ca ngợi Tổ quốc">
+  <data key="d0">Ca ngợi Tổ quốc</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">"Một tác phẩm âm nhạc được đề cập trong yêu cầu nghe nhạc, thể hiện vẻ đẹp và cảm xúc về Tổ quốc."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637598</data>
+</node>
+<node id="hoc10.vn">
+  <data key="d0">hoc10.vn</data>
+  <data key="d1">organization</data>
+  <data key="d2">"Trang web cung cấp bản mới nhất của tài liệu học tập, nơi có thể đọc bản mẫu bài học này."&gt;</data>
+  <data key="d3">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637601</data>
+</node>
+<node id="Ngày hội tái chế">
+  <data key="d0">Ngày hội tái chế</data>
+  <data key="d1">event</data>
+  <data key="d2">Một sự kiện do trường tổ chức nhằm khuyến khích học sinh và cộng đồng tham gia tái chế rác thải bằng cách đổi rác lấy quà và cây xanh, nhằm nâng cao ý thức bảo vệ môi trường và tạo không gian xanh cho trường học.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637601</data>
+</node>
+<node id="Đổi rác lấy quà">
+  <data key="d0">Đổi rác lấy quà</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một hoạt động trong sự kiện Ngày hội tái chế, nơi học sinh và người dân mang rác thải đến để đổi lấy các phần quà nhỏ, nhằm khuyến khích hành vi tái chế và giảm thiểu rác thải.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637604</data>
+</node>
+<node id="Đổi rác lấy cây xanh">
+  <data key="d0">Đổi rác lấy cây xanh</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một hoạt động trong sự kiện Ngày hội tái chế, nơi người tham gia đổi rác thải để nhận cây xanh, nhằm nâng cao nhận thức về bảo vệ môi trường và tạo không gian xanh cho cộng đồng.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637604</data>
+</node>
+<node id="Lập chậu">
+  <data key="d0">Lập chậu</data>
+  <data key="d1">event</data>
+  <data key="d2">Một hoạt động cụ thể trong sự kiện Ngày hội tái chế, nơi học sinh và người dân cùng nhau tạo chậu trồng cây từ rác thải tái chế, nhằm thúc đẩy sáng tạo và bảo vệ môi trường.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637608</data>
+</node>
+<node id="Minh">
+  <data key="d0">Minh</data>
+  <data key="d1">person</data>
+  <data key="d2">Một học sinh tham gia sự kiện Ngày hội tái chế, vừa góp phần bảo vệ môi trường thông qua việc đổi rác lấy cây xanh, vừa nhận được một cây xanh đẹp để chăm sóc.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637608</data>
+</node>
+<node id="Cộng đồng trường">
+  <data key="d0">Cộng đồng trường</data>
+  <data key="d1">organization</data>
+  <data key="d2">Cộng đồng học sinh, giáo viên và phụ huynh trong trường học tham gia các hoạt động kết nối với cộng đồng nhằm nâng cao ý thức bảo vệ môi trường và xây dựng không gian xanh.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637611</data>
+</node>
+<node id="Hoạt động kết nối với cộng đồng">
+  <data key="d0">Hoạt động kết nối với cộng đồng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Các hoạt động do trường tổ chức nhằm kết nối với cộng đồng học sinh, giáo viên và phụ huynh, như Ngày hội tái chế, nhằm thúc đẩy sự tham gia, trách nhiệm và ý thức bảo vệ môi trường.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637611</data>
+</node>
+<node id="Bảo vệ môi trường">
+  <data key="d0">Bảo vệ môi trường</data>
+  <data key="d1">concept</data>
+  <data key="d2">Mục tiêu chính của sự kiện Ngày hội tái chế, thông qua các hoạt động như đổi rác lấy cây xanh, nhằm nâng cao nhận thức và hành động bảo vệ môi trường sống.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637615</data>
+</node>
+<node id="Cây xanh">
+  <data key="d0">Cây xanh</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một phần thưởng trong sự kiện Ngày hội tái chế, được trao cho người tham gia khi đổi rác thải, nhằm khuyến khích trồng cây, tạo không gian xanh và nâng cao ý thức bảo vệ môi trường.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637615</data>
+</node>
+<node id="Rác thải">
+  <data key="d0">Rác thải</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chất thải được mang đến tại sự kiện Ngày hội tái chế để đổi lấy quà hoặc cây xanh, nhằm khuyến khích tái chế và giảm thiểu rác thải trong cộng đồng.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637618</data>
+</node>
+<node id="Quà tặng">
+  <data key="d0">Quà tặng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Các phần quà nhỏ được trao cho người tham gia sự kiện Ngày hội tái chế khi đổi rác thải, nhằm khuyến khích hành vi tái chế và tạo động lực tham gia.</data>
+  <data key="d3">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637618</data>
+</node>
+<node id="Dấu hiệu nhận biết hai đường thẳng song song">
+  <data key="d0">Dấu hiệu nhận biết hai đường thẳng song song</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Dấu hiệu nhận biết hai đường thẳng song song bao gồm: nếu một đường thẳng cắt hai đường thẳng khác và tạo ra một cặp góc so le trong bằng nhau hoặc một cặp góc đồng vị bằng nhau thì hai đường thẳng đó song song với nhau. Ngoài ra, hai đường thẳng cùng vuông góc với một đường thẳng thứ ba cũng song song với nhau."&gt;</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637621</data>
+</node>
+<node id="Hình 3.7">
+  <data key="d0">Hình 3.7</data>
+  <data key="d1">figure</data>
+  <data key="d2">"Hình 3.7 là hình minh họa cho Ví dụ 1, trong đó có hai đường thẳng xy và x'y' bị một đường thẳng cắt tạo thành các góc. Hình ảnh này dùng để minh họa cách gọi tên các góc so le trong và đồng vị trong ngữ cảnh hai đường thẳng song song."&gt;</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637621</data>
+</node>
+<node id="Hình 3.8">
+  <data key="d0">Hình 3.8</data>
+  <data key="d1">figure</data>
+  <data key="d2">"Hình 3.8 là hình minh họa cho Ví dụ 2, trong đó có hai đường thẳng xy và x'y' bị một đường thẳng cắt tại điểm E và F, với các góc được ghi là 65°. Hình ảnh này dùng để minh họa cách sử dụng dấu hiệu nhận biết hai đường thẳng song song thông qua cặp góc so le trong bằng nhau."&gt;</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637625</data>
+</node>
+<node id="Góc so le trong">
+  <data key="d0">Góc so le trong</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Góc so le trong là một cặp góc nằm ở hai phía đối nhau của đường thẳng cắt, nằm trong hai đường thẳng bị cắt. Nếu cặp góc này bằng nhau thì hai đường thẳng bị cắt song song với nhau."&gt;</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637625</data>
+</node>
+<node id="Góc đồng vị">
+  <data key="d0">Góc đồng vị</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Góc đồng vị là một cặp góc nằm ở cùng một phía của đường thẳng cắt và cùng nằm trong hai đường thẳng bị cắt. Nếu cặp góc này bằng nhau thì hai đường thẳng bị cắt song song với nhau."&gt;</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637629</data>
+</node>
+<node id="Ví dụ 2">
+  <data key="d0">Ví dụ 2</data>
+  <data key="d1">example</data>
+  <data key="d2">"Ví dụ 2 trong tài liệu yêu cầu giải thích tại sao hai đường thẳng xy và x'y' song song với nhau dựa trên Hình 3.8, bằng cách sử dụng dấu hiệu nhận biết hai đường thẳng song song thông qua cặp góc so le trong bằng nhau (65°)."}</data>
+  <data key="d3">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637629</data>
+</node>
+<node id="Chị Q">
+  <data key="d0">Chị Q</data>
+  <data key="d1">person</data>
+  <data key="d2">Chị Q là một người tiêu dùng sử dụng dịch vụ thẻ tín dụng có trách nhiệm, luôn thanh toán đúng hạn và nhận được ưu đãi từ ngân hàng, thể hiện lối sống có trách nhiệm và đáng tin cậy.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637633</data>
+</node>
+<node id="Anh H">
+  <data key="d0">Anh H</data>
+  <data key="d1">person</data>
+  <data key="d2">Anh H là một người tiêu dùng sử dụng dịch vụ vay thế chấp không có trách nhiệm do không trả nợ đúng hạn, dẫn đến việc mất lòng tin từ bên cấp tín dụng.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637633</data>
+</node>
+<node id="Dịch vụ tín dụng">
+  <data key="d0">Dịch vụ tín dụng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Dịch vụ tín dụng là một hệ thống tài chính cho phép cá nhân và doanh nghiệp tiếp cận vốn vay, bao gồm các hình thức như thẻ tín dụng, vay thế chấp, tín dụng thương mại, tín dụng nhà nước, tín dụng tiêu dùng và tín dụng ngân hàng, cần được sử dụng có trách nhiệm để đảm bảo sự ổn định tài chính và lòng tin giữa các bên.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637636</data>
+</node>
+<node id="Tín dụng thương mại">
+  <data key="d0">Tín dụng thương mại</data>
+  <data key="d1">concept</data>
+  <data key="d2">Tín dụng thương mại là hình thức tín dụng được cung cấp cho doanh nghiệp nhằm hỗ trợ hoạt động kinh doanh, đầu tư và mở rộng sản xuất.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637636</data>
+</node>
+<node id="Tín dụng nhà nước">
+  <data key="d0">Tín dụng nhà nước</data>
+  <data key="d1">concept</data>
+  <data key="d2">Tín dụng nhà nước là hình thức tín dụng do chính phủ hoặc các tổ chức công cung cấp, thường nhằm mục đích hỗ trợ phát triển kinh tế, hạ tầng hoặc các chương trình xã hội.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637640</data>
+</node>
+<node id="Tín dụng tiêu dùng">
+  <data key="d0">Tín dụng tiêu dùng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Tín dụng tiêu dùng là hình thức tín dụng dành cho cá nhân để phục vụ nhu cầu tiêu dùng như mua sắm, du lịch, giáo dục, v.v.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637640</data>
+</node>
+<node id="Tín dụng ngân hàng">
+  <data key="d0">Tín dụng ngân hàng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Tín dụng ngân hàng là hình thức tín dụng do các tổ chức tài chính như ngân hàng cung cấp, bao gồm các sản phẩm như vay vốn, thẻ tín dụng, vay thế chấp, vay tiêu dùng, v.v.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637643</data>
+</node>
+<node id="Sử dụng tín dụng có trách nhiệm">
+  <data key="d0">Sử dụng tín dụng có trách nhiệm</data>
+  <data key="d1">concept</data>
+  <data key="d2">Sử dụng tín dụng có trách nhiệm là việc người vay tuân thủ cam kết về khoản vay, thời hạn thanh toán, lãi suất và sử dụng tiền vay phù hợp với năng lực tài chính cá nhân, từ đó xây dựng lòng tin với bên cấp tín dụng và tạo điều kiện thuận lợi cho các giao dịch tài chính trong tương lai.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637643</data>
+</node>
+<node id="Lòng tin tín dụng">
+  <data key="d0">Lòng tin tín dụng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Lòng tin tín dụng là sự tin tưởng giữa người vay và bên cấp tín dụng, được xây dựng thông qua việc tuân thủ cam kết, thanh toán đúng hạn và sử dụng tín dụng có trách nhiệm, giúp quá trình vay vốn trở nên dễ dàng hơn và mang lại nhiều ưu đãi.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637647</data>
+</node>
+<node id="Hoạt động nhóm">
+  <data key="d0">Hoạt động nhóm</data>
+  <data key="d1">event</data>
+  <data key="d2">Hoạt động nhóm là một phần của nhiệm vụ học tập trong đó giáo viên tổ chức các nhóm học sinh (6-8 người) thảo luận, phân tích các trường hợp và giải thích lý do chọn dịch vụ tín dụng phù hợp, nhằm phát triển kỹ năng hợp tác và tư duy phản biện.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637647</data>
+</node>
+<node id="Gợi ý trả lời">
+  <data key="d0">Gợi ý trả lời</data>
+  <data key="d1">document</data>
+  <data key="d2">Gợi ý trả lời là phần hướng dẫn chi tiết do giáo viên cung cấp để học sinh tham khảo khi thực hiện nhiệm vụ, bao gồm các ví dụ cụ thể về cách sử dụng tín dụng có trách nhiệm và các loại dịch vụ tín dụng phù hợp với từng trường hợp.</data>
+  <data key="d3">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637651</data>
+</node>
+<node id="Sầu riêng">
+  <data key="d0">Sầu riêng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một loại trái cây quý của miền Nam, nổi bật với hương vị đặc biệt, mùi thơm đậm, kết hợp hương thơm của mít chín, hương bưởi, vị béo của trứng gà và ngọt của mật ong, được mô tả trong bài văn của Mai Văn Tạo.</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637651</data>
+</node>
+<node id="Cây">
+  <data key="d0">Cây</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một khái niệm tổng quát được sử dụng trong bài tập, liên quan đến các bài thơ, câu chuyện, bài văn về cây cối, ví dụ như 'Sự tích cây lúa', 'Sự tích cây khoai lang' theo gợi ý trong bài tập.</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637654</data>
+</node>
+<node id="Mai Văn Tạo">
+  <data key="d0">Mai Văn Tạo</data>
+  <data key="d1">person</data>
+  <data key="d2">Tác giả bài văn 'Mặt trời xanh của tôi' được trích dẫn trong bài tập, mô tả đặc điểm của trái sầu riêng.</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637654</data>
+</node>
+<node id="Ngô Quán Miện">
+  <data key="d0">Ngô Quán Miện</data>
+  <data key="d1">person</data>
+  <data key="d2">Tác giả bài thơ được trích dẫn trong bài tập, có nội dung liên quan đến cây và các câu hỏi về cây như 'Cây thuộc loại', 'Có đau lắm?' và 'Tôi đỡ nào'</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637657</data>
+</node>
+<node id="Bài thơ của Ngô Quán Miện">
+  <data key="d0">Bài thơ của Ngô Quán Miện</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Bài thơ trích dẫn trong bài tập, có nội dung liên quan đến cây, với các câu hỏi như 'Cây thuộc loại', 'Có đau lắm?', 'Tôi đỡ nào', được dùng để làm bài tập luyện tập từ ngữ.</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637657</data>
+</node>
+<node id="Bài văn của Mai Văn Tạo">
+  <data key="d0">Bài văn của Mai Văn Tạo</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Bài văn trích dẫn trong bài tập, mô tả trái sầu riêng với hương vị đặc biệt, được dùng để làm bài tập luyện tập từ ngữ và ngữ pháp.</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637661</data>
+</node>
+<node id="Bài tập luyện từ ngữ">
+  <data key="d0">Bài tập luyện từ ngữ</data>
+  <data key="d1">document</data>
+  <data key="d2">Bài tập trong sách giáo khoa yêu cầu học sinh chọn từ đúng, tìm từ chứa âm 'in' hoặc 'inh', và đọc các tác phẩm về cây.</data>
+  <data key="d3">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637661</data>
+</node>
+<node id="Rừng xuân">
+  <data key="d0">Rừng xuân</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Đoạn văn miêu tả cảnh rừng xuân với không khí trong lành, sương mỏng như khăn voan, rừng xanh như ngày hội màu sắc, và những đốm lá già như ngọc, cùng hoa chòi chang như ngọn lửa. Tác giả là NGÔ QUÂN MIỀN, được sử dụng trong bài tập so sánh hình ảnh trong văn bản.</data>
+  <data key="d3">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637664</data>
+</node>
+<node id="Múa sạp">
+  <data key="d0">Múa sạp</data>
+  <data key="d1">event</data>
+  <data key="d2">Một hoạt động văn hóa truyền thống được mô tả trong sách Tiếng Anh 3 (Celebrate 3), với hình ảnh trẻ em và người lớn cùng nhau múa trên sạp, thể hiện sự vui tươi và đoàn kết.</data>
+  <data key="d3">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637664</data>
+</node>
+<node id="NGÔ QUÂN MIỀN">
+  <data key="d0">NGÔ QUÂN MIỀN</data>
+  <data key="d1">person</data>
+  <data key="d2">Tác giả của đoạn văn 'Rừng xuân', một nhà văn Việt Nam, được trích dẫn trong sách giáo khoa để học sinh phân tích và so sánh hình ảnh.</data>
+  <data key="d3">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637668</data>
+</node>
+<node id="Celebrate 3">
+  <data key="d0">Celebrate 3</data>
+  <data key="d1">document</data>
+  <data key="d2">Sách Tiếng Anh 3 (Celebrate 3) được trích dẫn trong bài tập về 'Múa sạp', là tài liệu học tập cho học sinh tiểu học, cung cấp ngữ cảnh cho hoạt động văn hóa được mô tả.</data>
+  <data key="d3">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637668</data>
+</node>
+<node id="Bảng so sánh hình ảnh">
+  <data key="d0">Bảng so sánh hình ảnh</data>
+  <data key="d1">table</data>
+  <data key="d2">Bảng được sử dụng trong bài tập Tiết 4 để học sinh xếp các hình ảnh so sánh trong đoạn văn 'Rừng xuân', với các cột: Sự vật 1, Đặc điểm, Từ so sánh, Sự vật 2, nhằm giúp học sinh nhận diện và phân tích hình ảnh ẩn dụ.</data>
+  <data key="d3">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637671</data>
+</node>
+<node id="Hoạt động 1. KHỞI ĐỘNG">
+  <data key="d0">Hoạt động 1. KHỞI ĐỘNG</data>
+  <data key="d1">event</data>
+  <data key="d2">Hoạt động khởi động trong bài học về trao đổi khí, trong đó giáo viên đưa ra thông tin và câu hỏi để học sinh trả lời, từ đó dẫn dắt vào nội dung bài học chính.</data>
+  <data key="d3">chunk-2c56b640a58517ba2677b2b2bf0f5386</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637671</data>
+</node>
+<node id="Hoạt động 2. TÌM HIỂU TRAO ĐỔI KHÍ Ở SINH VẬT">
+  <data key="d0">Hoạt động 2. TÌM HIỂU TRAO ĐỔI KHÍ Ở SINH VẬT</data>
+  <data key="d1">event</data>
+  <data key="d2">Hoạt động tìm hiểu trao đổi khí ở sinh vật, bao gồm việc sử dụng tranh ảnh hoặc video để học sinh hình thành khái niệm và phân biệt quá trình trao đổi khí ở động vật và thực vật.</data>
+  <data key="d3">chunk-2c56b640a58517ba2677b2b2bf0f5386</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637675</data>
+</node>
+<node id="Bảng trao đổi khí">
+  <data key="d0">Bảng trao đổi khí</data>
+  <data key="d1">table</data>
+  <data key="d2">Bảng so sánh quá trình trao đổi khí ở thực vật và động vật, bao gồm các cột: 'Trao đổi khí', 'Khí lấy vào', 'Khí thải ra', với các dòng cụ thể cho thực vật (quang hợp, hô hấp) và động vật (hô hấp), kèm theo các chất khí tương ứng như CO2, O2.</data>
+  <data key="d3">chunk-2c56b640a58517ba2677b2b2bf0f5386</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637675</data>
+</node>
+<node id="Ghép hình nhà">
+  <data key="d0">Ghép hình nhà</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một chủ đề nghệ thuật và giáo dục hướng đến việc quan sát, thảo luận và sáng tạo hình ảnh về các loại hình nhà ở trong đời sống thực tế và trong tranh vẽ của trẻ em, bao gồm cả khu phố cổ và chung cư hiện đại.</data>
+  <data key="d3">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637679</data>
+</node>
+<node id="Phố cổ Hà Nội">
+  <data key="d0">Phố cổ Hà Nội</data>
+  <data key="d1">location</data>
+  <data key="d2">Một khu vực lịch sử và văn hóa đặc trưng của Hà Nội, được chụp bởi nghệ sĩ Nguyễn Xuân Tiến, thể hiện không gian sống truyền thống với kiến trúc nhà phố cổ điển và sinh hoạt đường phố sôi động.</data>
+  <data key="d3">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637679</data>
+</node>
+<node id="Chung cư ở Thành phố Hồ Chí Minh">
+  <data key="d0">Chung cư ở Thành phố Hồ Chí Minh</data>
+  <data key="d1">location</data>
+  <data key="d2">Một khu vực đô thị hiện đại tại Thành phố Hồ Chí Minh, được chụp bởi nghệ sĩ Hạnh Tiến, thể hiện kiến trúc chung cư cao tầng, đại diện cho sự phát triển đô thị và đời sống hiện đại.</data>
+  <data key="d3">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637682</data>
+</node>
+<node id="Khu phố, sáp màu, Song Như">
+  <data key="d0">Khu phố, sáp màu, Song Như</data>
+  <data key="d1">figure</data>
+  <data key="d2">Một bức tranh sáp màu do nghệ sĩ Song Như sáng tác, thể hiện khung cảnh khu phố với các tòa nhà nhiều màu sắc, phong cách vẽ trẻ thơ, vui tươi và sáng tạo.</data>
+  <data key="d3">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637682</data>
+</node>
+<node id="Thế giới trong bao niông, sáp màu, Thái Thị Bảo Anh">
+  <data key="d0">Thế giới trong bao niông, sáp màu, Thái Thị Bảo Anh</data>
+  <data key="d1">figure</data>
+  <data key="d2">Một bức tranh sáp màu do nghệ sĩ Thái Thị Bảo Anh sáng tác, thể hiện một thế giới tưởng tượng trong một căn hộ hoặc chung cư với các chi tiết sinh động như ô dù, cây cối và xe hơi, mang phong cách sáng tạo và giàu tưởng tượng.</data>
+  <data key="d3">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637686</data>
+</node>
+<node id="Bài 4: Các số đặc trưng đo mức độ phân tán của mẫu số liệu">
+  <data key="d0">Bài 4: Các số đặc trưng đo mức độ phân tán của mẫu số liệu</data>
+  <data key="d1">document</data>
+  <data key="d2">Đây là một bài học trong chương trình giáo dục toán học, tập trung vào việc học các số đặc trưng thống kê như khoảng biến thiên, khoảng tứ phân vị, phương sai và độ lệch chuẩn để đo mức độ phân tán của mẫu số liệu không ghép nhóm. Bài học bao gồm mục tiêu cần đạt, năng lực cần chú trọng và một số chú ý quan trọng về ý nghĩa và ứng dụng thực tiễn của các số đặc trưng này trong phân tích dữ liệu.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637686</data>
+</node>
+<node id="Khoảng biến thiên">
+  <data key="d0">Khoảng biến thiên</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một số đặc trưng thống kê dùng để đo mức độ phân tán của toàn bộ mẫu số liệu, cho biết sự khác biệt giữa giá trị lớn nhất và nhỏ nhất trong mẫu.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637691</data>
+</node>
+<node id="Khoảng tứ phân vị">
+  <data key="d0">Khoảng tứ phân vị</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một số đặc trưng thống kê đo mức độ phân tán của một nửa các số liệu trong mẫu, được xác định bởi khoảng từ Q1 đến Q3, giúp hiểu được sự phân tán trong nửa dữ liệu giữa các giá trị phân vị.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637691</data>
+</node>
+<node id="Phương sai">
+  <data key="d0">Phương sai</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một số đặc trưng thống kê đo mức độ phân tán của các giá trị trong mẫu, phản ánh sự khác biệt trung bình của các giá trị so với giá trị trung bình, thường được sử dụng trong các phương pháp thống kê và phân tích dữ liệu.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637694</data>
+</node>
+<node id="Độ lệch chuẩn">
+  <data key="d0">Độ lệch chuẩn</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một số đặc trưng thống kê đo mức độ phân tán của các giá trị trong mẫu, được tính bằng căn bậc hai của phương sai, giúp hiểu được mức độ biến động hoặc phân tán của dữ liệu một cách trực quan và dễ hiểu.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637694</data>
+</node>
+<node id="Mục tiêu cần đạt">
+  <data key="d0">Mục tiêu cần đạt</data>
+  <data key="d1">concept</data>
+  <data key="d2">Bao gồm ba yêu cầu: tính toán các số đặc trưng đo mức độ phân tán, giải thích ý nghĩa và vai trò của chúng trong thực tiễn, và chỉ ra kết luận đơn giản dựa trên các số đặc trưng này.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637697</data>
+</node>
+<node id="Năng lực cần chú trọng">
+  <data key="d0">Năng lực cần chú trọng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Bao gồm tư duy và lập luận toán học, mô hình hóa toán học, và giao tiếp toán học, nhằm phát triển kỹ năng phân tích và ứng dụng toán học trong các tình huống thực tế.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637697</data>
+</node>
+<node id="Tích hợp">
+  <data key="d0">Tích hợp</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chỉ ra sự kết hợp giữa toán học và cuộc sống, cũng như tích hợp với các môn học khác để tạo ra một nền tảng học tập toàn diện và ứng dụng thực tiễn.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637701</data>
+</node>
+<node id="Một số chú ý">
+  <data key="d0">Một số chú ý</data>
+  <data key="d1">concept</data>
+  <data key="d2">Phần này nhấn mạnh việc nhận biết ý nghĩa của các số đặc trưng đo mức độ phân tán và vận dụng chúng trong thực hành, với các ví dụ cụ thể về khoảng biến thiên và khoảng tứ phân vị.</data>
+  <data key="d3">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637701</data>
+</node>
+<node id="Ô nhiễm môi trường trong trồng trọt">
+  <data key="d0">Ô nhiễm môi trường trong trồng trọt</data>
+  <data key="d1">concept</data>
+  <data key="d2">Khái niệm về ô nhiễm môi trường trong trồng trọt, bao gồm ảnh hưởng đến sức khỏe con người, vật nuôi, cây trồng và hệ sinh thái, được sử dụng trong bài học để giúp học sinh hiểu và phân tích nguyên nhân gây ô nhiễm.</data>
+  <data key="d3">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637704</data>
+</node>
+<node id="Hình 26.2">
+  <data key="d0">Hình 26.2</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình ảnh trong sách giáo khoa (SGK) được sử dụng để minh họa và hỗ trợ học sinh hiểu rõ hơn về ô nhiễm môi trường trong trồng trọt và các ảnh hưởng của nó.</data>
+  <data key="d3">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637704</data>
+</node>
+<node id="Hình 26.1">
+  <data key="d0">Hình 26.1</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình ảnh trong sách giáo khoa (SGK) được sử dụng để minh họa và hỗ trợ học sinh hiểu rõ hơn về các nguyên nhân gây ô nhiễm môi trường trong trồng trọt.</data>
+  <data key="d3">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637707</data>
+</node>
+<node id="Hộp Khám phá">
+  <data key="d0">Hộp Khám phá</data>
+  <data key="d1">document</data>
+  <data key="d2">Một phần trong sách giáo khoa (SGK) được thiết kế để khuyến khích học sinh thảo luận và trả lời câu hỏi, nhằm giúp học sinh hiểu sâu và mở rộng kiến thức về ô nhiễm môi trường trong trồng trọt.</data>
+  <data key="d3">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637707</data>
+</node>
+<node id="Sách giáo khoa (SGK)">
+  <data key="d0">Sách giáo khoa (SGK)</data>
+  <data key="d1">document</data>
+  <data key="d2">Tài liệu học tập chính thức được sử dụng trong bài giảng, chứa các mục nội dung, hình ảnh minh họa và hoạt động học tập để giúp học sinh hiểu về ô nhiễm môi trường trong trồng trọt và các nguyên nhân gây ô nhiễm.</data>
+  <data key="d3">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637711</data>
+</node>
+<node id="cơm">
+  <data key="d0">cơm</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cơm là sản phẩm cuối cùng sau khi lúa được thu hoạch, làm sạch và nấu chín, là món ăn chính trong văn hóa Việt Nam và được thể hiện trong hình ảnh a.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637711</data>
+</node>
+<node id="thóc">
+  <data key="d0">thóc</data>
+  <data key="d1">concept</data>
+  <data key="d2">Thóc là hạt lúa sau khi đã được gặt và làm sạch, nhưng chưa được xay thành gạo, được thể hiện trong hình ảnh b.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637714</data>
+</node>
+<node id="gạo">
+  <data key="d0">gạo</data>
+  <data key="d1">concept</data>
+  <data key="d2">Gạo là hạt lúa đã được xay xát, sẵn sàng để nấu cơm, được thể hiện trong hình ảnh c.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637714</data>
+</node>
+<node id="cây lúa chín">
+  <data key="d0">cây lúa chín</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cây lúa chín là giai đoạn cuối cùng trước khi thu hoạch, khi hạt lúa đã đầy và chín mọng, được thể hiện trong hình ảnh d.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637717</data>
+</node>
+<node id="cây mạ non">
+  <data key="d0">cây mạ non</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cây mạ non là cây lúa trong giai đoạn đầu tiên, khi vừa nảy mầm và còn rất nhỏ, được thể hiện trong hình ảnh e.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637717</data>
+</node>
+<node id="cây lúa trưởng thành">
+  <data key="d0">cây lúa trưởng thành</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cây lúa trưởng thành là giai đoạn giữa, khi cây đã phát triển mạnh mẽ và chuẩn bị cho giai đoạn chín, được thể hiện trong hình ảnh f.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637720</data>
+</node>
+<node id="Em đi giữa biển vàng">
+  <data key="d0">Em đi giữa biển vàng</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Bài hát 'Em đi giữa biển vàng' với nhạc của Bùi Đình Thảo và lời thơ của Nguyễn Khoa Đăng, miêu tả hình ảnh người nông dân đang gặt lúa trên cánh đồng vàng óng, thể hiện sự gắn bó với thiên nhiên và lao động vất vả.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637720</data>
+</node>
+<node id="Bùi Đình Thảo">
+  <data key="d0">Bùi Đình Thảo</data>
+  <data key="d1">person</data>
+  <data key="d2">Bùi Đình Thảo là nhạc sĩ sáng tác bài hát 'Em đi giữa biển vàng', người đã tạo nên giai điệu đặc trưng cho bài hát này.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637723</data>
+</node>
+<node id="Nguyễn Khoa Đăng">
+  <data key="d0">Nguyễn Khoa Đăng</data>
+  <data key="d1">person</data>
+  <data key="d2">Nguyễn Khoa Đăng là nhà thơ viết lời bài hát 'Em đi giữa biển vàng', người đã truyền tải cảm xúc sâu sắc về cuộc sống và lao động của người nông dân.</data>
+  <data key="d3">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637723</data>
+</node>
+<node id="Mùa xuân">
+  <data key="d0">Mùa xuân</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Bài hát 'Mùa xuân' của Antonin Vivaldi, được sử dụng trong tài liệu để minh họa cách ứng dụng đệm và thể hiện tiết tấu bằng nhạc cụ gõ trong giảng dạy hoặc biểu diễn âm nhạc.</data>
+  <data key="d3">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637726</data>
+</node>
+<node id="Antonin Vivaldi">
+  <data key="d0">Antonin Vivaldi</data>
+  <data key="d1">person</data>
+  <data key="d2">Tác giả của bản nhạc 'Mùa xuân', một nhà soạn nhạc người Ý nổi tiếng, được nhắc đến trong tài liệu như nguồn gốc của bản nhạc được sử dụng để minh họa kỹ thuật đệm và thể hiện tiết tấu.</data>
+  <data key="d3">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637726</data>
+</node>
+<node id="Tiết tấu">
+  <data key="d0">Tiết tấu</data>
+  <data key="d1">concept</data>
+  <data key="d2">Khái niệm âm nhạc liên quan đến nhịp điệu và tốc độ của bản nhạc, được trình bày trong tài liệu thông qua việc sử dụng nhạc cụ gõ và ứng dụng vào bài hát 'Mùa xuân' để thể hiện.</data>
+  <data key="d3">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637729</data>
+</node>
+<node id="Nhạc cụ gõ">
+  <data key="d0">Nhạc cụ gõ</data>
+  <data key="d1">concept</data>
+  <data key="d2">Các loại nhạc cụ được sử dụng để thể hiện tiết tấu trong âm nhạc, được đề cập trong tài liệu như phương tiện để thể hiện nhịp điệu cho bài hát 'Mùa xuân'.</data>
+  <data key="d3">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637729</data>
+</node>
+<node id="Đệm">
+  <data key="d0">Đệm</data>
+  <data key="d1">concept</data>
+  <data key="d2">Công cụ âm nhạc hoặc kỹ thuật âm nhạc dùng để hỗ trợ và làm nổi bật bản nhạc chính, được áp dụng trong tài liệu cho bài hát 'Mùa xuân' để thể hiện tiết tấu.</data>
+  <data key="d3">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637733</data>
+</node>
+<node id="Hình 36">
+  <data key="d0">Hình 36</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 36 là đồ thị minh họa cho ba hàm số: y = x², y = x^(1/2), và y = x^(-1), giúp học sinh quan sát tập xác định của từng hàm số và nhận xét sự phụ thuộc của tập xác định vào số mũ α trong hàm lũy thừa.</data>
+  <data key="d3">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637733</data>
+</node>
+<node id="Hàm số lũy thừa">
+  <data key="d0">Hàm số lũy thừa</data>
+  <data key="d1">concept</data>
+  <data key="d2">Hàm số lũy thừa là hàm số có dạng y = x^α với α là số thực, có tập xác định phụ thuộc vào giá trị của α nhưng luôn chứa khoảng (0; +∞).</data>
+  <data key="d3">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637736</data>
+</node>
+<node id="Đạo hàm của hàm số lũy thừa">
+  <data key="d0">Đạo hàm của hàm số lũy thừa</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức đạo hàm của hàm số lũy thừa y = x^α (α ∈ ℝ) là y' = α x^(α - 1), được chứng minh bằng cách sử dụng công thức đạo hàm của hàm mũ và hàm lôgarit.</data>
+  <data key="d3">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637736</data>
+</node>
+<node id="Công thức đạo hàm">
+  <data key="d0">Công thức đạo hàm</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Công thức đạo hàm của hàm số lũy thừa được trình bày chi tiết trong văn bản: y' = (x^α)' = α x^(α - 1), được chứng minh bằng cách biến đổi x = e^(ln x) và sử dụng quy tắc đạo hàm hàm hợp.</data>
+  <data key="d3">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637740</data>
+</node>
+<node id="Các hoạt động 2, 3">
+  <data key="d0">Các hoạt động 2, 3</data>
+  <data key="d1">document</data>
+  <data key="d2">Các hoạt động 2 và 3 là các bài tập đơn giản yêu cầu học sinh áp dụng công thức đạo hàm của hàm số lũy thừa và hàm hợp của hàm số đó.</data>
+  <data key="d3">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637740</data>
+</node>
+<node id="Đáp án của hoạt động 2">
+  <data key="d0">Đáp án của hoạt động 2</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Đáp án của hoạt động 2 bao gồm ba đạo hàm cụ thể: (x^(-2/3))' = -2/3 x^(-5/3); (x^π)' = π x^(π - 1); (x^√2)' = √2 x^(√2 - 1).</data>
+  <data key="d3">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637743</data>
+</node>
+<node id="Bài toán 6">
+  <data key="d0">Bài toán 6</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán yêu cầu tìm tọa độ giao điểm của hai đồ thị hàm số: y = (x² - 2x - 3)/(x - 2) và y = x + 1, với các lựa chọn trả lời là (A) (2; 2), (B) (2; -3), (C) (-1; 0), (D) (3; 1).</data>
+  <data key="d3">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637743</data>
+</node>
+<node id="Bài toán 7">
+  <data key="d0">Bài toán 7</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Bài toán yêu cầu xác định số giao điểm của đồ thị hàm số y = (x - 3)(x² + x + 4) với trục hoành, với các lựa chọn trả lời là (A) 2, (B) 3, (C) 0, (D) 1.</data>
+  <data key="d3">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637748</data>
+</node>
+<node id="Hàm số y = (x² - 2x - 3)/(x - 2)">
+  <data key="d0">Hàm số y = (x² - 2x - 3)/(x - 2)</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Hàm số phân thức, có mẫu số là (x - 2), và tử số là đa thức bậc hai (x² - 2x - 3). Hàm số này có điểm không xác định tại x = 2 và cần được phân tích để tìm giao điểm với đường thẳng y = x + 1.</data>
+  <data key="d3">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637748</data>
+</node>
+<node id="Hàm số y = x + 1">
+  <data key="d0">Hàm số y = x + 1</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Đây là một hàm số tuyến tính, biểu diễn đường thẳng có hệ số góc 1 và điểm giao với trục tung tại (0; 1).</data>
+  <data key="d3">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637752</data>
+</node>
+<node id="Hàm số y = (x - 3)(x² + x + 4)">
+  <data key="d0">Hàm số y = (x - 3)(x² + x + 4)</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">Hàm số bậc ba, được viết dưới dạng tích của hai nhân tử: (x - 3) và (x² + x + 4).</data>
+  <data key="d3">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637752</data>
+</node>
+<node id="Trục hoành">
+  <data key="d0">Trục hoành</data>
+  <data key="d1">concept</data>
+  <data key="d2">Trục hoành là trục x trong hệ tọa độ Descartes, là nơi hàm số bằng 0, tức là các điểm giao với trục hoành là nghiệm của phương trình y = 0.</data>
+  <data key="d3">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637755</data>
+</node>
+<node id="Biểu thức vector">
+  <data key="d0">Biểu thức vector</data>
+  <data key="d1">mathematical_expression</data>
+  <data key="d2">"Biểu thức vector cho thấy sự tương thích trong phép cộng vector: $\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} + \overrightarrow{OD} = (\overrightarrow{OA} + \overrightarrow{OB}) + (\overrightarrow{OC} + \overrightarrow{OD}) = \overrightarrow{OK} + \overrightarrow{OL} = 0$."&gt;</data>
+  <data key="d3">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637755</data>
+</node>
+<node id="Ví dụ 4">
+  <data key="d0">Ví dụ 4</data>
+  <data key="d1">example</data>
+  <data key="d2">"Ví dụ 4 minh họa việc vận dụng phép toán cộng vector để tổng hợp vận tốc và giải quyết bài toán trong tình huống mở đầu, với giáo viên trình bày và giảng giải cho học sinh."&gt;</data>
+  <data key="d3">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637759</data>
+</node>
+<node id="Hình minh họa lực trên dốc">
+  <data key="d0">Hình minh họa lực trên dốc</data>
+  <data key="d1">figure</data>
+  <data key="d2">"Hình minh họa lực tổng hợp của trọng lực $\vec{P}$ và phản lực $\vec{w}$ tạo thành lực $\vec{T}$ theo phương dốc, với góc 30°, và yêu cầu lực kéo $\vec{F}$ phải lớn hơn lực $\vec{T}$ để kéo pháo lên dốc."&gt;</data>
+  <data key="d3">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637759</data>
+</node>
+<node id="Phân loại bài tập">
+  <data key="d0">Phân loại bài tập</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Phân loại bài tập thành hai nhóm: (1) Thực hiện phép toán cộng, trừ vector (bài tập 4.6, 4.7, 4.8); (2) Vận dụng phép toán vector để tính hợp lực và tổng hợp vận tốc (bài tập 4.9, 4.10)."&gt;</data>
+  <data key="d3">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637762</data>
+</node>
+<node id="Lực kéo pháo">
+  <data key="d0">Lực kéo pháo</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Lực kéo $\vec{F}$ cần lớn hơn lực $\vec{T} = 11074 (N)$ để kéo pháo lên dốc, và nếu mỗi người kéo 100 N thì cần ít nhất 111 người."&gt;</data>
+  <data key="d3">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637762</data>
+</node>
+<node id="SO SÁNH">
+  <data key="d0">SO SÁNH</data>
+  <data key="d1">concept</data>
+  <data key="d2">SO SÁNH là một chủ đề học tập trong chương trình giáo dục, có thể liên quan đến việc so sánh các khái niệm, đối tượng hoặc nội dung trong sách giáo khoa.</data>
+  <data key="d3">chunk-abbf73eacb2d7d88370ce348846120fb</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637766</data>
+</node>
+<node id="Bài toán">
+  <data key="d0">Bài toán</data>
+  <data key="d1">concept</data>
+  <data key="d2">Bài toán yêu cầu tính thời gian trung bình để hoàn thành một sản phẩm, dựa trên dữ liệu người đó làm việc từ 8 giờ đến 11 giờ và hoàn thành 6 sản phẩm.</data>
+  <data key="d3">chunk-d19a2ee5aebe82d23c13c1adf68cac6f</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637766</data>
+</node>
+<node id="Bài giải">
+  <data key="d0">Bài giải</data>
+  <data key="d1">document</data>
+  <data key="d2">Một phần của tài liệu học tập hoặc sách giáo khoa chứa bài toán và chỗ để ghi lời giải, với các dòng chấm chấm cho phép người học điền đáp án hoặc trình bày cách giải.</data>
+  <data key="d3">chunk-d19a2ee5aebe82d23c13c1adf68cac6f</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637769</data>
+</node>
+<node id="Hình 5">
+  <data key="d0">Hình 5</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 5 minh họa cách phân công ngón tay để gõ các phím trên hàng phím trên của bàn phím, với các ngón tay được chỉ định bằng màu sắc và mũi tên hướng đến từng phím cụ thể như Q, W, E, R, T, Y, U, I, O, P, và các phím điều khiển như Tab, Caps Lock, Enter, Shift, Ctrl, Alt, Backspace.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637769</data>
+</node>
+<node id="Hình 6">
+  <data key="d0">Hình 6</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình 6 minh họa cách phân công ngón tay để gõ các phím trên hàng phím dưới của bàn phím, với các ngón tay được chỉ định bằng màu sắc và mũi tên hướng đến từng phím cụ thể như A, S, D, F, G, H, J, K, L, và các phím điều khiển như Tab, Caps Lock, Enter, Shift, Ctrl, Alt, Backspace.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637773</data>
+</node>
+<node id="Ngón tay">
+  <data key="d0">Ngón tay</data>
+  <data key="d1">concept</data>
+  <data key="d2">Ngón tay là phần tử cơ bản trong kỹ thuật gõ phím, được phân công cụ thể để gõ từng phím trên bàn phím, với ngón tay trung tâm (ngón giữa) thường gõ phím cơ bản và các ngón tay khác gõ các phím xung quanh theo quy tắc phân bổ.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637773</data>
+</node>
+<node id="Bàn phím">
+  <data key="d0">Bàn phím</data>
+  <data key="d1">concept</data>
+  <data key="d2">Bàn phím là thiết bị đầu vào được sử dụng để gõ chữ và lệnh, được chia thành hai hàng chính: hàng phím trên và hàng phím dưới, mỗi hàng có các phím được phân công cho từng ngón tay cụ thể.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637777</data>
+</node>
+<node id="Hàng phím trên">
+  <data key="d0">Hàng phím trên</data>
+  <data key="d1">concept</data>
+  <data key="d2">Hàng phím trên là hàng phím nằm ở phía trên của bàn phím, bao gồm các phím như Q, W, E, R, T, Y, U, I, O, P, và các phím điều khiển như Tab, Caps Lock, Enter, Shift, Ctrl, Alt, Backspace.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637777</data>
+</node>
+<node id="Hàng phím dưới">
+  <data key="d0">Hàng phím dưới</data>
+  <data key="d1">concept</data>
+  <data key="d2">Hàng phím dưới là hàng phím nằm ở phía dưới của bàn phím, bao gồm các phím như A, S, D, F, G, H, J, K, L, và các phím điều khiển như Tab, Caps Lock, Enter, Shift, Ctrl, Alt, Backspace.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637781</data>
+</node>
+<node id="Quy tắc gõ phím">
+  <data key="d0">Quy tắc gõ phím</data>
+  <data key="d1">concept</data>
+  <data key="d2">Quy tắc gõ phím là phương pháp phân công ngón tay cho từng phím trên bàn phím để đạt hiệu quả gõ nhanh và chính xác, bao gồm việc ngón tay vươn ra để gõ phím trên và co lại để gõ phím dưới, sau đó đưa về vị trí khởi hành.</data>
+  <data key="d3">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637781</data>
+</node>
+<node id="Hình ảnh thực tiễn (1)">
+  <data key="d0">Hình ảnh thực tiễn (1)</data>
+  <data key="d1">figure</data>
+  <data key="d2">"Hình ảnh minh họa một hình vuông màu đen với nhiều điểm sáng trắng rải rác, có thể tượng trưng cho các điểm trong không gian hoặc các ngôi sao, dùng để minh họa cho bài tập liên quan đến hình học."&gt;</data>
+  <data key="d3">chunk-c76a81f2c06126bdd3247dcc105fd5b4</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637785</data>
+</node>
+<node id="Hình hình học (A) Điểm">
+  <data key="d0">Hình hình học (A) Điểm</data>
+  <data key="d1">concept</data>
+  <data key="d2">"Đây là khái niệm hình học cơ bản, trong đó 'Điểm' là một đối tượng không có kích thước, chỉ định vị trí trong không gian và là nền tảng để xây dựng các hình học phức tạp hơn."&gt;</data>
+  <data key="d3">chunk-c76a81f2c06126bdd3247dcc105fd5b4</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637785</data>
+</node>
+<node id="HS dân tộc vùng Tây Nguyên">
+  <data key="d0">HS dân tộc vùng Tây Nguyên</data>
+  <data key="d1">person</data>
+  <data key="d2">Học sinh dân tộc vùng Tây Nguyên được mô tả trong tranh, đang tham gia các hoạt động văn nghệ vui đón xuân, là đối tượng chính trong bài học âm nhạc có tính chất rón ràng.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637788</data>
+</node>
+<node id="đàn t'rưng">
+  <data key="d0">đàn t'rưng</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một loại nhạc cụ truyền thống của người dân tộc Tây Nguyên, được sử dụng trong bài học để khai thác mục tiêu âm nhạc và mô phỏng âm thanh.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637788</data>
+</node>
+<node id="đàn đá">
+  <data key="d0">đàn đá</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một loại nhạc cụ truyền thống của người dân tộc Tây Nguyên, được sử dụng trong bài học để khai thác mục tiêu âm nhạc và mô phỏng âm thanh.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637791</data>
+</node>
+<node id="đàn k'longput">
+  <data key="d0">đàn k'longput</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một loại nhạc cụ truyền thống của người dân tộc Tây Nguyên, được sử dụng trong bài học để khai thác mục tiêu âm nhạc và mô phỏng âm thanh.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637791</data>
+</node>
+<node id="Bảng tương tác">
+  <data key="d0">Bảng tương tác</data>
+  <data key="d1">document</data>
+  <data key="d2">Một dụng cụ dạy học được đề cập trong tài liệu, dùng để hỗ trợ hoạt động học tập và tương tác trong bài học âm nhạc.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637794</data>
+</node>
+<node id="Bài hát Sắp đến Tết rồi">
+  <data key="d0">Bài hát Sắp đến Tết rồi</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Một bài hát quen thuộc được đề xuất để sử dụng trong hoạt động nhóm, nhằm giúp học sinh hòa tấu và kết hợp với nội dung chủ đề âm nhạc rón ràng.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637794</data>
+</node>
+<node id="Tranh chủ đề">
+  <data key="d0">Tranh chủ đề</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình ảnh minh họa trong sách giáo khoa, mô tả học sinh dân tộc Tây Nguyên tham gia hoạt động văn nghệ, được sử dụng để tạo tình huống và đặt câu hỏi cho học sinh.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637797</data>
+</node>
+<node id="File âm thanh minh hoạ">
+  <data key="d0">File âm thanh minh hoạ</data>
+  <data key="d1">document</data>
+  <data key="d2">Các file âm thanh được cung cấp để hỗ trợ học sinh nghe và mô phỏng âm thanh của các nhạc cụ truyền thống như đàn t'rưng, đàn đá, đàn k'longput.</data>
+  <data key="d3">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637797</data>
+</node>
+<node id="Đô - Rê - Mi - Pha - Son - La - Đổ">
+  <data key="d0">Đô - Rê - Mi - Pha - Son - La - Đổ</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một dãy các nốt nhạc cơ bản trong âm nhạc Việt Nam, được sử dụng để dạy trẻ em cách đọc nhạc và luyện tập theo mẫu bằng cách dùng các cử chỉ tay tương ứng với từng nốt nhạc, như một phương pháp trực quan và vui nhộn trong giáo dục âm nhạc.</data>
+  <data key="d3">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637801</data>
+</node>
+<node id="Luyện tập mẫu 5 âm theo kí hiệu nốt nhạc bàn tay">
+  <data key="d0">Luyện tập mẫu 5 âm theo kí hiệu nốt nhạc bàn tay</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một hoạt động giáo dục âm nhạc giúp trẻ em học cách nhận biết và thực hành các nốt nhạc cơ bản (Đô, Rê, Mi, Pha, Son, La, Đổ) bằng cách sử dụng các cử chỉ tay tương ứng với từng nốt nhạc, nhằm phát triển kỹ năng nghe, nhìn và vận động tay đồng thời.</data>
+  <data key="d3">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637801</data>
+</node>
+<node id="Ví dụ: Mẫu 5 âm">
+  <data key="d0">Ví dụ: Mẫu 5 âm</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một ví dụ minh họa cho hoạt động luyện tập mẫu 5 âm, trong đó sử dụng hình ảnh các bàn tay với màu sắc khác nhau để đại diện cho các nốt nhạc, giúp trẻ dễ dàng nhận biết và phân biệt các nốt nhạc cơ bản.</data>
+  <data key="d3">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637805</data>
+</node>
+<node id="Thực hành đọc nhạc theo mẫu">
+  <data key="d0">Thực hành đọc nhạc theo mẫu</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một phần thực hành âm nhạc trong sách giáo khoa, yêu cầu học sinh đọc và thực hành các đoạn nhạc mẫu dựa trên các nốt nhạc cơ bản đã được học, giúp củng cố kỹ năng đọc nhạc và phối hợp tay với âm thanh.</data>
+  <data key="d3">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637805</data>
+</node>
+<node id="Bàn tay biểu diễn nốt nhạc">
+  <data key="d0">Bàn tay biểu diễn nốt nhạc</data>
+  <data key="d1">figure</data>
+  <data key="d2">Hình ảnh minh họa trong sách giáo khoa cho thấy các bàn tay với màu sắc khác nhau (đỏ, xanh dương, xanh lá, xanh lam, xanh đậm) được sử dụng để biểu diễn các nốt nhạc cơ bản (Đô, Rê, Mi, Pha, Son, La, Đổ), nhằm giúp trẻ em học cách đọc nhạc một cách trực quan và vui nhộn.</data>
+  <data key="d3">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637809</data>
+</node>
+<node id="Đọc nhạc">
+  <data key="d0">Đọc nhạc</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một kỹ năng âm nhạc cơ bản, bao gồm việc nhận biết và đọc các nốt nhạc trên bản nhạc, thường được dạy trong giáo dục âm nhạc cho trẻ em thông qua các phương pháp trực quan và tương tác như sử dụng cử chỉ tay, hình ảnh minh họa và bài tập thực hành.</data>
+  <data key="d3">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637809</data>
+</node>
+<node id="Kĩ thuật giao cầu">
+  <data key="d0">Kĩ thuật giao cầu</data>
+  <data key="d1">concept</data>
+  <data key="d2">Khái niệm về kĩ thuật giao cầu, bao gồm mục đích, cấu trúc, hoạt động, cách luyện tập, sửa chữa sai sót, và ứng dụng trong rèn luyện thể chất và thi đấu.</data>
+  <data key="d3">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637813</data>
+</node>
+<node id="Bài 1. Kĩ thuật giao cầu thuận tay">
+  <data key="d0">Bài 1. Kĩ thuật giao cầu thuận tay</data>
+  <data key="d1">document</data>
+  <data key="d2">Bài học trong chương trình giảng dạy, kéo dài 3 tiết, tập trung vào việc rèn luyện kỹ thuật giao cầu thuận tay, bao gồm mục tiêu, yêu cầu cần đạt và phương pháp giảng dạy.</data>
+  <data key="d3">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637813</data>
+</node>
+<node id="Yêu cầu cần đạt">
+  <data key="d0">Yêu cầu cần đạt</data>
+  <data key="d1">document</data>
+  <data key="d2">Đây là phần mục tiêu giáo dục chi tiết, chia thành 4 nhóm: Kiến thức, Kĩ năng, Thể lực và Thái độ, nhằm định hướng cho học sinh trong quá trình học tập và rèn luyện kỹ thuật giao cầu.</data>
+  <data key="d3">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637816</data>
+</node>
+<node id="Mục tiêu, yêu cầu cần đạt">
+  <data key="d0">Mục tiêu, yêu cầu cần đạt</data>
+  <data key="d1">document</data>
+  <data key="d2">Phần này nêu rõ các mục tiêu cụ thể mà học sinh cần đạt được sau khi học bài 1, bao gồm rèn luyện kỹ thuật, nhận biết cấu trúc, thực hiện kỹ thuật, phát triển thể lực và thái độ học tập.</data>
+  <data key="d3">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637816</data>
+</node>
+<node id="Thể lực">
+  <data key="d0">Thể lực</data>
+  <data key="d1">concept</data>
+  <data key="d2">Khái niệm về sự phát triển năng lực liên kết vận động, năng lực định hướng và năng lực sức mạnh tốc độ trong quá trình luyện tập thể thao.</data>
+  <data key="d3">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637820</data>
+</node>
+<node id="Thái độ">
+  <data key="d0">Thái độ</data>
+  <data key="d1">concept</data>
+  <data key="d2">Khái niệm về thái độ học tập tích cực, chủ động trong nhóm, hình thành thói quen tự luyện tập và biết giúp đỡ bạn bè trong quá trình luyện tập.</data>
+  <data key="d3">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637820</data>
+</node>
+<node id="Phương pháp giải quyết vấn đề">
+  <data key="d0">Phương pháp giải quyết vấn đề</data>
+  <data key="d1">concept</data>
+  <data key="d2">Đây là một phương pháp giáo dục nhằm hướng dẫn học sinh phát hiện vấn đề, phân tích các hiện tượng đạo đức, pháp luật đang tồn tại và xác định cách giải quyết vấn đề đó, thường được áp dụng trong các tình huống thực tế cuộc sống có mâu thuẫn cần giải quyết.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637822</data>
+</node>
+<node id="Tình huống giáo dục">
+  <data key="d0">Tình huống giáo dục</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một tình huống được thiết kế để học sinh tham gia thảo luận, phân tích và giải quyết vấn đề thực tế, ví dụ như tình huống về tín dụng và việc cho vay tiền giữa bà Y và mẹ H.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637822</data>
+</node>
+<node id="Tín dụng và vai trò của tín dụng trong đời sống">
+  <data key="d0">Tín dụng và vai trò của tín dụng trong đời sống</data>
+  <data key="d1">literary_work</data>
+  <data key="d2">Bài học trong chương trình giáo dục, được sử dụng để tổ chức tình huống giáo dục nhằm giúp học sinh hiểu về tín dụng và các rủi ro liên quan đến việc cho vay tiền.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637826</data>
+</node>
+<node id="GV (Giáo viên)">
+  <data key="d0">GV (Giáo viên)</data>
+  <data key="d1">person</data>
+  <data key="d2">Người hướng dẫn học sinh trong các hoạt động giáo dục, thiết kế tình huống, quan sát nhóm, hỗ trợ học sinh và chốt lại nội dung học tập.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637826</data>
+</node>
+<node id="HS (Học sinh)">
+  <data key="d0">HS (Học sinh)</data>
+  <data key="d1">person</data>
+  <data key="d2">Người tham gia hoạt động học tập, đóng vai, thảo luận, phân tích tình huống và đưa ra giải pháp trong các tình huống giáo dục.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637829</data>
+</node>
+<node id="Bà Y">
+  <data key="d0">Bà Y</data>
+  <data key="d1">person</data>
+  <data key="d2">Một nhân vật trong tình huống giáo dục, đang vận động mọi người cho vay tiền với lãi suất cao để đầu tư kinh doanh.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637829</data>
+</node>
+<node id="Mẹ H">
+  <data key="d0">Mẹ H</data>
+  <data key="d1">person</data>
+  <data key="d2">Một nhân vật trong tình huống giáo dục, là người được gợi ý để phân tích và đưa ra quyết định về việc cho vay tiền cho bà Y.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637832</data>
+</node>
+<node id="H">
+  <data key="d0">H</data>
+  <data key="d1">person</data>
+  <data key="d2">Một nhân vật trong tình huống giáo dục, là người muốn ngăn mẹ cho bà Y vay tiền và cần tìm cách thuyết phục mẹ.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637832</data>
+</node>
+<node id="Tình huống cho vay tiền">
+  <data key="d0">Tình huống cho vay tiền</data>
+  <data key="d1">event</data>
+  <data key="d2">Một tình huống thực tế được sử dụng trong giáo dục để phân tích rủi ro và nguyên nhân của việc cho vay tiền giữa bà Y và mẹ H.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637834</data>
+</node>
+<node id="Cách giải quyết vấn đề">
+  <data key="d0">Cách giải quyết vấn đề</data>
+  <data key="d1">concept</data>
+  <data key="d2">Các phương pháp mà học sinh có thể sử dụng để giải quyết tình huống, ví dụ như phân tích rủi ro của việc cho vay tiền.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637834</data>
+</node>
+<node id="Phân tích rủi ro">
+  <data key="d0">Phân tích rủi ro</data>
+  <data key="d1">concept</data>
+  <data key="d2">Một cách giải quyết vấn đề trong tình huống cho vay tiền, được học sinh H sử dụng để thuyết phục mẹ không cho bà Y vay tiền.</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787637837</data>
+</node>
+<node id="GV">
+  <data key="d0">GV</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d2">Giáo viên là người thiết kế, nêu tình huống giáo dục và hướng dẫn học sinh phân tích, giải quyết vấn đề trong tình huống đó.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787638029</data>
+</node>
+<node id="HS">
+  <data key="d0">HS</data>
+  <data key="d3">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d2">Học sinh là người tham gia trực tiếp vào tình huống giáo dục, đóng vai, thảo luận và đưa ra giải pháp cho vấn đề được đặt ra.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d5">1787638030</data>
+</node>
+<edge source="Vũ Đình Long" target="Gia tài">
+  <data key="d6">10.0</data>
+  <data key="d7">Vũ Đình Long là tác giả của tác phẩm 'Gia tài', một trong những vở kịch hiện đại nổi tiếng của ông.</data>
+  <data key="d8">authorship</data>
+  <data key="d9">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637837</data>
+</edge>
+<edge source="Vũ Đình Long" target="Lê-ga-tê Uy-ni-véc-xen">
+  <data key="d6">9.0</data>
+  <data key="d7">Vũ Đình Long đã phóng tác vở hài kịch 'Lê-ga-tê Uy-ni-véc-xen' của Ro-nha thành tác phẩm 'Gia tài'.</data>
+  <data key="d8">adaptation</data>
+  <data key="d9">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637840</data>
+</edge>
+<edge source="Di Lung" target="Hy Lạc">
+  <data key="d6">8.0</data>
+  <data key="d7">Hy Lạc là cháu ruột của Di Lung và là người thừa kế tài sản mà Di Lung muốn đảm bảo cho mình.</data>
+  <data key="d8">family relationship</data>
+  <data key="d9">chunk-bd3afe2ae9945e9515d4bf136a470e32</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637840</data>
+</edge>
+<edge source="Bài toán 2a" target="Bài toán 2b">
+  <data key="d6">8.0</data>
+  <data key="d7">Cả hai đều là bài toán tìm chữ số thích hợp trong phép tính, nhưng có cấu trúc phép tính khác nhau (cộng và trừ).</data>
+  <data key="d8">cùng loại bài tập,phép tính</data>
+  <data key="d9">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637843</data>
+</edge>
+<edge source="Bài toán 2b" target="Bài toán 2c">
+  <data key="d6">8.0</data>
+  <data key="d7">Cả hai đều là bài toán tìm chữ số thích hợp trong phép tính, nhưng có cấu trúc phép tính khác nhau (cộng và trừ).</data>
+  <data key="d8">cùng loại bài tập,phép tính</data>
+  <data key="d9">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637845</data>
+</edge>
+<edge source="Bài toán 3a" target="Bài toán 3b">
+  <data key="d6">7.0</data>
+  <data key="d7">Cả hai đều là bài toán so sánh hai biểu thức số học, nhưng với các phép tính và kết quả khác nhau.</data>
+  <data key="d8">logic,so sánh số học</data>
+  <data key="d9">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637845</data>
+</edge>
+<edge source="Bài toán 4" target="Hình minh họa bò sữa">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài toán 4 liên quan đến chủ đề bò sữa, và hình minh họa trực quan hóa bối cảnh nông nghiệp liên quan đến bài toán.</data>
+  <data key="d8">bối cảnh minh họa,chủ đề</data>
+  <data key="d9">chunk-2dec2e0df2203a994785994b8aa1787b</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637848</data>
+</edge>
+<edge source="Chòm sao Gấu Bé" target="Chòm sao Gấu Lớn">
+  <data key="d6">8.0</data>
+  <data key="d7">Chòm sao Gấu Bé nằm cạnh chòm Gấu Lớn trên bầu trời phương Bắc và có kích thước nhỏ hơn, với các ngôi sao gần nhau hơn.</data>
+  <data key="d8">geographical proximity,size comparison</data>
+  <data key="d9">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637848</data>
+</edge>
+<edge source="Chòm sao Gấu Bé" target="Sao Bắc Cực">
+  <data key="d6">9.0</data>
+  <data key="d7">Sao Bắc Cực là ngôi sao cuối đuôi của chòm sao Gấu Bé, đóng vai trò quan trọng trong việc xác định hướng Bắc.</data>
+  <data key="d8">celestial navigation,directional reference</data>
+  <data key="d9">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637853</data>
+</edge>
+<edge source="Chòm sao Gấu Bé" target="Hình 4.6">
+  <data key="d6">9.0</data>
+  <data key="d7">Hình 4.6 là hình ảnh minh họa trực quan cho chòm sao Gấu Bé, giúp người quan sát dễ dàng nhận diện và hiểu cấu trúc của nó.</data>
+  <data key="d8">educational aid,visual representation</data>
+  <data key="d9">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637857</data>
+</edge>
+<edge source="Chòm sao Gấu Lớn" target="Chòm sao Thiên Hậu">
+  <data key="d6">9.0</data>
+  <data key="d7">Chòm sao Thiên Hậu đối diện với chòm Gấu Lớn qua chòm Gấu Bé trên bầu trời phương Bắc.</data>
+  <data key="d8">celestial positioning,opposition</data>
+  <data key="d9">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637852</data>
+</edge>
+<edge source="Chòm sao Thiên Hậu" target="Cassiopeia">
+  <data key="d6">9.0</data>
+  <data key="d7">Chòm sao Thiên Hậu mang hình ảnh của nữ hoàng Cassiopeia trong truyền thuyết Hy Lạp, tượng trưng cho bà.</data>
+  <data key="d8">cultural symbolism,mythological representation</data>
+  <data key="d9">chunk-c5002d0afdc1752508b8255e7551ad31</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637853</data>
+</edge>
+<edge source="Trò chơi 'Chạm bóng nhanh'" target="Ném bóng">
+  <data key="d6">8.0</data>
+  <data key="d7">"Trò chơi 'Chạm bóng nhanh' bao gồm kỹ thuật ném bóng như một phần trong nội dung học tập."&gt;</data>
+  <data key="d8">kỹ thuật,trò chơi</data>
+  <data key="d9">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637857</data>
+</edge>
+<edge source="Trò chơi 'Chạm bóng nhanh'" target="Tại chỗ tập đao chân">
+  <data key="d6">7.0</data>
+  <data key="d7">"Trò chơi 'Chạm bóng nhanh' cũng bao gồm kỹ thuật tập đao chân để rèn luyện sự phối hợp và kỹ năng di chuyển."&gt;</data>
+  <data key="d8">kỹ thuật,trò chơi</data>
+  <data key="d9">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637860</data>
+</edge>
+<edge source="Ném bóng" target="BÓNG ĐÁ">
+  <data key="d6">9.0</data>
+  <data key="d7">"Ném bóng là một kỹ thuật thuộc môn bóng đá, được dạy trong chương trình học tập."&gt;</data>
+  <data key="d8">kỹ thuật,môn thể thao</data>
+  <data key="d9">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637860</data>
+</edge>
+<edge source="Tại chỗ tập đao chân" target="BÓNG ĐÁ">
+  <data key="d6">9.0</data>
+  <data key="d7">"Tại chỗ tập đao chân là một kỹ thuật trong môn bóng đá, giúp học sinh rèn luyện kỹ năng di chuyển và phối hợp."&gt;</data>
+  <data key="d8">kỹ thuật,môn thể thao</data>
+  <data key="d9">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637863</data>
+</edge>
+<edge source="BÓNG ĐÁ" target="Chân trời sáng tạo">
+  <data key="d6">8.0</data>
+  <data key="d7">"Tài liệu 'BÓNG ĐÁ' thuộc bộ sách do 'Chân trời sáng tạo' xuất bản, phục vụ cho giáo dục thể chất."&gt;</data>
+  <data key="d8">nhà xuất bản,tài liệu</data>
+  <data key="d9">chunk-80f4d6b104db8bb1c7c044f1f29cfcde</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637865</data>
+</edge>
+<edge source="Bài tập 1" target="SO SÁNH">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài tập 1 là một phần của chương trình học chủ đề SO SÁNH, được ghi trong sách giáo khoa.</data>
+  <data key="d8">curriculum,educational content</data>
+  <data key="d9">chunk-abbf73eacb2d7d88370ce348846120fb</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637988</data>
+</edge>
+<edge source="Bài tập 2" target="SO SÁNH">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài tập 2 là một phần của chương trình học chủ đề SO SÁNH, được ghi trong sách giáo khoa.</data>
+  <data key="d8">curriculum,educational content</data>
+  <data key="d9">chunk-abbf73eacb2d7d88370ce348846120fb</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637989</data>
+</edge>
+<edge source="Tiên đề Euclid" target="Hai đường thẳng song song">
+  <data key="d6">9.0</data>
+  <data key="d7">Tiên đề Euclid là cơ sở lý luận để định nghĩa và chứng minh các tính chất của hai đường thẳng song song trong hình học phẳng.</data>
+  <data key="d8">foundational principle,geometric basis</data>
+  <data key="d9">chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637865</data>
+</edge>
+<edge source="Tiên đề Euclid" target="Ví dụ 1">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài toán ví dụ 1 được xây dựng dựa trên tiên đề Euclid và các tính chất suy ra từ nó để giải các bài toán hình học liên quan đến hai đường thẳng song song.</data>
+  <data key="d8">application,theoretical foundation</data>
+  <data key="d9">chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637870</data>
+</edge>
+<edge source="Hai đường thẳng song song" target="Dấu hiệu nhận biết hai đường thẳng song song">
+  <data key="d6">9.0</data>
+  <data key="d7">Dấu hiệu nhận biết là phương pháp để xác định hai đường thẳng có song song hay không, dựa trên các tính chất hình học như góc so le trong hoặc góc đồng vị bằng nhau.</data>
+  <data key="d8">geometric relationship,identification criteria</data>
+  <data key="d9">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637896</data>
+</edge>
+<edge source="Hình 3.17" target="Ví dụ 1">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình 3.17 là hình minh họa trực quan cho bài toán ví dụ 1, giúp người học hiểu và áp dụng các tính chất của hai đường thẳng song song để giải bài toán.</data>
+  <data key="d8">problem illustration,visual aid</data>
+  <data key="d9">chunk-ed4e95cb57a41c2306ffb44a3a4ab6e5</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637869</data>
+</edge>
+<edge source="Ví dụ 1" target="Hình 3.7">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình 3.7 là hình minh họa trực tiếp cho Ví dụ 1, dùng để xác định tên các góc so le trong và đồng vị trong ngữ cảnh hai đường thẳng song song.</data>
+  <data key="d8">example context,illustration</data>
+  <data key="d9">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637899</data>
+</edge>
+<edge source="Hình 14.3" target="Hình 14.2">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình 14.3 và Hình 14.2 đều là các hình minh họa trong tài liệu kỹ thuật, có thể liên quan đến nhau trong việc trình bày các quy tắc hoặc phương pháp vẽ kỹ thuật.</data>
+  <data key="d8">instructional content,technical drawing</data>
+  <data key="d9">chunk-be4fbb427728033f05c0d49ea45e9e90</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637870</data>
+</edge>
+<edge source="Hình 14.3" target="Chủ đề 4">
+  <data key="d6">9.0</data>
+  <data key="d7">Hình 14.3 là một hình minh họa trực tiếp thuộc nội dung của Chủ đề 4, dùng để minh họa cho các quy tắc hoặc phương pháp trình bày trong bản vẽ kỹ thuật.</data>
+  <data key="d8">educational content,technical illustration</data>
+  <data key="d9">chunk-be4fbb427728033f05c0d49ea45e9e90</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637874</data>
+</edge>
+<edge source="Hình 14.2" target="Chủ đề 4">
+  <data key="d6">9.0</data>
+  <data key="d7">Hình 14.2 là một hình minh họa trực tiếp thuộc nội dung của Chủ đề 4, dùng để minh họa cho các quy tắc hoặc phương pháp bố trí hình chiếu trong bản vẽ kỹ thuật.</data>
+  <data key="d8">educational content,technical illustration</data>
+  <data key="d9">chunk-be4fbb427728033f05c0d49ea45e9e90</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637876</data>
+</edge>
+<edge source="Bài 11" target="Bay cao tiếng hát ước mơ">
+  <data key="d6">9.0</data>
+  <data key="d7">"Bài 11 là bài học trong sách giáo khoa âm nhạc, trong đó bài hát 'Bay cao tiếng hát ước mơ' được sử dụng làm bài tập mẫu và nội dung học tập."&gt;</data>
+  <data key="d8">curriculum_content</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637876</data>
+</edge>
+<edge source="Bài 11" target="Nguyễn Nam">
+  <data key="d6">8.0</data>
+  <data key="d7">"Bài 11 giới thiệu bài hát 'Bay cao tiếng hát ước mơ' do Nguyễn Nam sáng tác, nên ông là tác giả của tác phẩm được học trong bài này."&gt;</data>
+  <data key="d8">authorship</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637879</data>
+</edge>
+<edge source="Bài 11" target="hợp âm Đô trưởng">
+  <data key="d6">7.0</data>
+  <data key="d7">"Bài 11 yêu cầu học sinh cùng hát 3 nốt của hợp âm Đô trưởng để thực hành kỹ năng hòa quyện âm thanh."&gt;</data>
+  <data key="d8">practical_application</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637881</data>
+</edge>
+<edge source="Bài 11" target="nhịp 6/8">
+  <data key="d6">8.0</data>
+  <data key="d7">"Bài 11 yêu cầu học sinh nắm được đặc điểm và cảm nhận tính chất của nhịp 6/8 trong lý thuyết âm nhạc."&gt;</data>
+  <data key="d8">curriculum_focus</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637884</data>
+</edge>
+<edge source="Bài 11" target="nhịp 3/8">
+  <data key="d6">7.0</data>
+  <data key="d7">"Bài 11 yêu cầu học sinh so sánh sự giống và khác nhau giữa nhịp 6/8 và nhịp 3/8 trong lý thuyết âm nhạc."&gt;</data>
+  <data key="d8">comparison_analysis</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637886</data>
+</edge>
+<edge source="Bài 11" target="hợp xướng">
+  <data key="d6">8.0</data>
+  <data key="d7">"Bài 11 yêu cầu học sinh nêu đặc điểm và tác dụng của thể loại hợp xướng trong thưởng thức âm nhạc."&gt;</data>
+  <data key="d8">concept_learning</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637888</data>
+</edge>
+<edge source="Bài 11" target="Ca ngợi Tổ quốc">
+  <data key="d6">7.0</data>
+  <data key="d7">"Bài 11 yêu cầu học sinh cảm nhận vẻ đẹp của tác phẩm 'Ca ngợi Tổ quốc' trong yêu cầu nghe nhạc."&gt;</data>
+  <data key="d8">musical_appreciation</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637889</data>
+</edge>
+<edge source="Bay cao tiếng hát ước mơ" target="Nguyễn Nam">
+  <data key="d6">10.0</data>
+  <data key="d7">"Bài hát 'Bay cao tiếng hát ước mơ' là tác phẩm âm nhạc do Nguyễn Nam sáng tác và viết lời."&gt;</data>
+  <data key="d8">creation</data>
+  <data key="d9">chunk-9324a16461e21295de6018ddc175db45</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637881</data>
+</edge>
+<edge source="Ngày hội tái chế" target="Đổi rác lấy quà">
+  <data key="d6">9.0</data>
+  <data key="d7">Đổi rác lấy quà là một hoạt động cụ thể trong sự kiện Ngày hội tái chế nhằm khuyến khích tái chế và giảm rác thải.</data>
+  <data key="d8">event_component</data>
+  <data key="d9">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637889</data>
+</edge>
+<edge source="Ngày hội tái chế" target="Đổi rác lấy cây xanh">
+  <data key="d6">9.0</data>
+  <data key="d7">Đổi rác lấy cây xanh là một hoạt động cụ thể trong sự kiện Ngày hội tái chế nhằm nâng cao nhận thức về bảo vệ môi trường và tạo không gian xanh.</data>
+  <data key="d8">event_component</data>
+  <data key="d9">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637892</data>
+</edge>
+<edge source="Ngày hội tái chế" target="Lập chậu">
+  <data key="d6">9.0</data>
+  <data key="d7">Lập chậu là một hoạt động cụ thể trong sự kiện Ngày hội tái chế, nơi học sinh và cộng đồng cùng nhau tạo chậu trồng cây từ rác thải.</data>
+  <data key="d8">event_component</data>
+  <data key="d9">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637894</data>
+</edge>
+<edge source="Ngày hội tái chế" target="Minh">
+  <data key="d6">8.0</data>
+  <data key="d7">Minh là một học sinh tham gia sự kiện Ngày hội tái chế và nhận được cây xanh để góp phần bảo vệ môi trường.</data>
+  <data key="d8">participant</data>
+  <data key="d9">chunk-9cbd3fde99f09bfc85a43cfc53d9898e</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637896</data>
+</edge>
+<edge source="Dấu hiệu nhận biết hai đường thẳng song song" target="Góc so le trong">
+  <data key="d6">9.0</data>
+  <data key="d7">Góc so le trong là một trong hai dấu hiệu chính để xác định hai đường thẳng song song khi chúng bị một đường thẳng cắt.</data>
+  <data key="d8">geometric criterion,parallel line identification</data>
+  <data key="d9">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637903</data>
+</edge>
+<edge source="Hình 3.8" target="Ví dụ 2">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình 3.8 là hình minh họa trực tiếp cho Ví dụ 2, dùng để giải thích tại sao hai đường thẳng song song dựa trên dấu hiệu góc so le trong bằng nhau.</data>
+  <data key="d8">example context,illustration</data>
+  <data key="d9">chunk-d9a6fce419c316f563d67dcbdbc48559</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637899</data>
+</edge>
+<edge source="Chị Q" target="Dịch vụ tín dụng">
+  <data key="d6">9.0</data>
+  <data key="d7">Chị Q sử dụng dịch vụ tín dụng một cách có trách nhiệm, cụ thể là thẻ tín dụng, và do đó nhận được ưu đãi từ ngân hàng.</data>
+  <data key="d8">financial discipline,responsible usage</data>
+  <data key="d9">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637903</data>
+</edge>
+<edge source="Anh H" target="Dịch vụ tín dụng">
+  <data key="d6">8.0</data>
+  <data key="d7">Anh H sử dụng dịch vụ vay thế chấp một cách không có trách nhiệm, dẫn đến việc không trả nợ đúng hạn và mất lòng tin từ bên cấp tín dụng.</data>
+  <data key="d8">financial risk,irresponsible usage</data>
+  <data key="d9">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637906</data>
+</edge>
+<edge source="Dịch vụ tín dụng" target="Sử dụng tín dụng có trách nhiệm">
+  <data key="d6">10.0</data>
+  <data key="d7">Sử dụng tín dụng có trách nhiệm là nguyên tắc cần tuân thủ khi sử dụng dịch vụ tín dụng để đảm bảo sự ổn định tài chính và lòng tin giữa các bên.</data>
+  <data key="d8">financial responsibility,trust building</data>
+  <data key="d9">chunk-bcd055bdbf9e0a0443f5369c591db29d</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637907</data>
+</edge>
+<edge source="Sầu riêng" target="Mai Văn Tạo">
+  <data key="d6">9.0</data>
+  <data key="d7">Mai Văn Tạo là tác giả bài văn mô tả đặc điểm của trái sầu riêng trong bài tập.</data>
+  <data key="d8">tác giả mô tả</data>
+  <data key="d9">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637907</data>
+</edge>
+<edge source="Cây" target="Ngô Quán Miện">
+  <data key="d6">8.0</data>
+  <data key="d7">Ngô Quán Miện là tác giả bài thơ liên quan đến cây, được sử dụng trong bài tập luyện tập từ ngữ.</data>
+  <data key="d8">tác giả bài thơ</data>
+  <data key="d9">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637911</data>
+</edge>
+<edge source="Bài thơ của Ngô Quán Miện" target="Bài tập luyện từ ngữ">
+  <data key="d6">7.0</data>
+  <data key="d7">Bài thơ của Ngô Quán Miện được sử dụng trong bài tập luyện tập từ ngữ để học sinh làm bài tập.</data>
+  <data key="d8">nội dung bài tập</data>
+  <data key="d9">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637911</data>
+</edge>
+<edge source="Bài văn của Mai Văn Tạo" target="Bài tập luyện từ ngữ">
+  <data key="d6">7.0</data>
+  <data key="d7">Bài văn của Mai Văn Tạo được sử dụng trong bài tập luyện tập từ ngữ để học sinh làm bài tập.</data>
+  <data key="d8">nội dung bài tập</data>
+  <data key="d9">chunk-9c514e770e11b76f17116a8b23e273cb</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637914</data>
+</edge>
+<edge source="Rừng xuân" target="NGÔ QUÂN MIỀN">
+  <data key="d6">9.0</data>
+  <data key="d7">Đoạn văn 'Rừng xuân' là tác phẩm của nhà văn NGÔ QUÂN MIỀN, được sử dụng trong sách giáo khoa để dạy học sinh kỹ năng đọc và so sánh hình ảnh.</data>
+  <data key="d8">authorship,literary analysis</data>
+  <data key="d9">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637914</data>
+</edge>
+<edge source="Rừng xuân" target="Bảng so sánh hình ảnh">
+  <data key="d6">8.0</data>
+  <data key="d7">Bảng so sánh hình ảnh được thiết kế để hỗ trợ học sinh phân tích và sắp xếp các hình ảnh ẩn dụ trong đoạn văn 'Rừng xuân', giúp hiểu sâu hơn về cách tác giả sử dụng hình ảnh so sánh.</data>
+  <data key="d8">educational tool,literary analysis</data>
+  <data key="d9">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637917</data>
+</edge>
+<edge source="Múa sạp" target="Celebrate 3">
+  <data key="d6">9.0</data>
+  <data key="d7">Hoạt động 'Múa sạp' được trích dẫn từ sách Tiếng Anh 3 (Celebrate 3), là nội dung học tập trong chương trình tiếng Anh cho học sinh tiểu học, nhằm giúp học sinh hiểu và mô tả văn hóa truyền thống.</data>
+  <data key="d8">cultural activity,curriculum content</data>
+  <data key="d9">chunk-de0adc351305093315be9db3e344c023</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637917</data>
+</edge>
+<edge source="Hoạt động 1. KHỞI ĐỘNG" target="Hoạt động 2. TÌM HIỂU TRAO ĐỔI KHÍ Ở SINH VẬT">
+  <data key="d6">8.0</data>
+  <data key="d7">Hoạt động 1 là phần khởi động để dẫn dắt học sinh vào hoạt động 2, giúp học sinh hình thành khái niệm và phân biệt các quá trình trao đổi khí.</data>
+  <data key="d8">pedagogical progression,sequential learning</data>
+  <data key="d9">chunk-2c56b640a58517ba2677b2b2bf0f5386</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637921</data>
+</edge>
+<edge source="Hoạt động 2. TÌM HIỂU TRAO ĐỔI KHÍ Ở SINH VẬT" target="Bảng trao đổi khí">
+  <data key="d6">9.0</data>
+  <data key="d7">Bảng trao đổi khí là một phần nội dung quan trọng trong hoạt động 2, giúp học sinh so sánh và nắm rõ sự khác biệt giữa trao đổi khí ở thực vật và động vật.</data>
+  <data key="d8">conceptual comparison,learning tool</data>
+  <data key="d9">chunk-2c56b640a58517ba2677b2b2bf0f5386</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637923</data>
+</edge>
+<edge source="Ghép hình nhà" target="Phố cổ Hà Nội">
+  <data key="d6">9.0</data>
+  <data key="d7">Chủ đề 'Ghép hình nhà' bao gồm việc quan sát và thảo luận về các loại hình nhà ở trong đời sống thực tế, trong đó phố cổ Hà Nội là một ví dụ điển hình về không gian sống truyền thống.</data>
+  <data key="d8">real-world observation,urban life</data>
+  <data key="d9">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637927</data>
+</edge>
+<edge source="Ghép hình nhà" target="Chung cư ở Thành phố Hồ Chí Minh">
+  <data key="d6">9.0</data>
+  <data key="d7">Chủ đề 'Ghép hình nhà' bao gồm việc quan sát và thảo luận về các loại hình nhà ở trong đời sống thực tế, trong đó chung cư ở Thành phố Hồ Chí Minh là một ví dụ điển hình về không gian sống hiện đại.</data>
+  <data key="d8">real-world observation,urban life</data>
+  <data key="d9">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637931</data>
+</edge>
+<edge source="Ghép hình nhà" target="Khu phố, sáp màu, Song Như">
+  <data key="d6">8.0</data>
+  <data key="d7">Chủ đề 'Ghép hình nhà' bao gồm việc sáng tạo hình ảnh về khu phố trong tranh, trong đó tác phẩm của Song Như là một ví dụ về cách thể hiện không gian sống qua nghệ thuật sáp màu.</data>
+  <data key="d8">artistic expression,creative interpretation</data>
+  <data key="d9">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637933</data>
+</edge>
+<edge source="Ghép hình nhà" target="Thế giới trong bao niông, sáp màu, Thái Thị Bảo Anh">
+  <data key="d6">8.0</data>
+  <data key="d7">Chủ đề 'Ghép hình nhà' bao gồm việc sáng tạo hình ảnh về chung cư trong tranh, trong đó tác phẩm của Thái Thị Bảo Anh là một ví dụ về cách thể hiện không gian sống qua nghệ thuật sáp màu.</data>
+  <data key="d8">artistic expression,creative interpretation</data>
+  <data key="d9">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637935</data>
+</edge>
+<edge source="Phố cổ Hà Nội" target="Khu phố, sáp màu, Song Như">
+  <data key="d6">8.0</data>
+  <data key="d7">Bức tranh của Song Như là sự sáng tạo nghệ thuật dựa trên cảm hứng từ không gian sống thực tế của phố cổ Hà Nội, thể hiện sự chuyển hóa từ thực tế sang hình ảnh tưởng tượng trong tranh.</data>
+  <data key="d8">artistic interpretation,inspiration</data>
+  <data key="d9">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637923</data>
+</edge>
+<edge source="Chung cư ở Thành phố Hồ Chí Minh" target="Thế giới trong bao niông, sáp màu, Thái Thị Bảo Anh">
+  <data key="d6">8.0</data>
+  <data key="d7">Bức tranh của Thái Thị Bảo Anh là sự sáng tạo nghệ thuật dựa trên cảm hứng từ không gian sống hiện đại của chung cư ở Thành phố Hồ Chí Minh, thể hiện sự chuyển hóa từ thực tế sang hình ảnh tưởng tượng trong tranh.</data>
+  <data key="d8">artistic interpretation,inspiration</data>
+  <data key="d9">chunk-33368858eb23cde0de54f6853429a514</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637927</data>
+</edge>
+<edge source="Bài 4: Các số đặc trưng đo mức độ phân tán của mẫu số liệu" target="Khoảng biến thiên">
+  <data key="d6">9.0</data>
+  <data key="d7">Khoảng biến thiên là một trong những số đặc trưng chính được học trong bài này để đo mức độ phân tán của mẫu số liệu.</data>
+  <data key="d8">phân tích dữ liệu,thống kê</data>
+  <data key="d9">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637935</data>
+</edge>
+<edge source="Bài 4: Các số đặc trưng đo mức độ phân tán của mẫu số liệu" target="Khoảng tứ phân vị">
+  <data key="d6">9.0</data>
+  <data key="d7">Khoảng tứ phân vị là một trong những số đặc trưng chính được học trong bài này để đo mức độ phân tán của mẫu số liệu.</data>
+  <data key="d8">phân tích dữ liệu,thống kê</data>
+  <data key="d9">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637938</data>
+</edge>
+<edge source="Bài 4: Các số đặc trưng đo mức độ phân tán của mẫu số liệu" target="Phương sai">
+  <data key="d6">9.0</data>
+  <data key="d7">Phương sai là một trong những số đặc trưng chính được học trong bài này để đo mức độ phân tán của mẫu số liệu.</data>
+  <data key="d8">phân tích dữ liệu,thống kê</data>
+  <data key="d9">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637940</data>
+</edge>
+<edge source="Bài 4: Các số đặc trưng đo mức độ phân tán của mẫu số liệu" target="Độ lệch chuẩn">
+  <data key="d6">9.0</data>
+  <data key="d7">Độ lệch chuẩn là một trong những số đặc trưng chính được học trong bài này để đo mức độ phân tán của mẫu số liệu.</data>
+  <data key="d8">phân tích dữ liệu,thống kê</data>
+  <data key="d9">chunk-e0d78b2a476ea4bb323d687c64358da9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637942</data>
+</edge>
+<edge source="Ô nhiễm môi trường trong trồng trọt" target="Hình 26.2">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình 26.2 là hình ảnh minh họa trực quan giúp học sinh hiểu rõ hơn về khái niệm và ảnh hưởng của ô nhiễm môi trường trong trồng trọt.</data>
+  <data key="d8">educational support,visual aid</data>
+  <data key="d9">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637942</data>
+</edge>
+<edge source="Ô nhiễm môi trường trong trồng trọt" target="Hình 26.1">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình 26.1 là hình ảnh minh họa trực quan giúp học sinh hiểu rõ hơn về các nguyên nhân gây ô nhiễm môi trường trong trồng trọt.</data>
+  <data key="d8">educational support,visual aid</data>
+  <data key="d9">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637945</data>
+</edge>
+<edge source="Ô nhiễm môi trường trong trồng trọt" target="Hộp Khám phá">
+  <data key="d6">9.0</data>
+  <data key="d7">Hộp Khám phá trong SGK được sử dụng để tổ chức thảo luận giúp học sinh hiểu sâu và mở rộng kiến thức về ô nhiễm môi trường trong trồng trọt.</data>
+  <data key="d8">discussion facilitator,learning tool</data>
+  <data key="d9">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637947</data>
+</edge>
+<edge source="Ô nhiễm môi trường trong trồng trọt" target="Sách giáo khoa (SGK)">
+  <data key="d6">10.0</data>
+  <data key="d7">Sách giáo khoa (SGK) là tài liệu chính chứa nội dung, hình ảnh và hoạt động học tập giúp học sinh hiểu về ô nhiễm môi trường trong trồng trọt.</data>
+  <data key="d8">curriculum foundation,educational resource</data>
+  <data key="d9">chunk-88449b6dabf731a20bcc7ae12a3a03da</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637949</data>
+</edge>
+<edge source="cơm" target="gạo">
+  <data key="d6">9.0</data>
+  <data key="d7">Gạo được nấu chín để trở thành cơm, sản phẩm cuối cùng của quá trình chế biến lúa.</data>
+  <data key="d8">cooking,final product</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637957</data>
+</edge>
+<edge source="thóc" target="cây lúa chín">
+  <data key="d6">8.0</data>
+  <data key="d7">Cây lúa chín được gặt để thu hoạch thóc, hạt lúa đã chín và được thu hoạch từ cây lúa.</data>
+  <data key="d8">agricultural product,harvest</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637954</data>
+</edge>
+<edge source="thóc" target="gạo">
+  <data key="d6">9.0</data>
+  <data key="d7">Thóc được xay xát để trở thành gạo, loại hạt đã được làm sạch và chuẩn bị để nấu cơm.</data>
+  <data key="d8">processing,transformation</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637956</data>
+</edge>
+<edge source="cây lúa chín" target="cây lúa trưởng thành">
+  <data key="d6">9.0</data>
+  <data key="d7">Cây lúa trưởng thành tiếp theo là cây lúa chín, khi hạt lúa đã hoàn toàn chín và sẵn sàng thu hoạch.</data>
+  <data key="d8">harvest preparation,maturation</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637952</data>
+</edge>
+<edge source="cây lúa chín" target="Em đi giữa biển vàng">
+  <data key="d6">8.0</data>
+  <data key="d7">Bài hát 'Em đi giữa biển vàng' miêu tả hình ảnh cánh đồng lúa chín vàng óng, nơi người nông dân đang gặt lúa, thể hiện sự gắn bó với thiên nhiên và lao động.</data>
+  <data key="d8">imagery,theme</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637962</data>
+</edge>
+<edge source="cây mạ non" target="cây lúa trưởng thành">
+  <data key="d6">9.0</data>
+  <data key="d7">Cây mạ non phát triển thành cây lúa trưởng thành, là giai đoạn tiếp theo trong quá trình sinh trưởng của cây lúa.</data>
+  <data key="d8">agricultural growth,developmental sequence</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637949</data>
+</edge>
+<edge source="Em đi giữa biển vàng" target="Bùi Đình Thảo">
+  <data key="d6">10.0</data>
+  <data key="d7">Bài hát 'Em đi giữa biển vàng' do nhạc sĩ Bùi Đình Thảo sáng tác, thể hiện giai điệu đặc trưng của bài hát.</data>
+  <data key="d8">authorship,musical composition</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637957</data>
+</edge>
+<edge source="Em đi giữa biển vàng" target="Nguyễn Khoa Đăng">
+  <data key="d6">10.0</data>
+  <data key="d7">Bài hát 'Em đi giữa biển vàng' có lời thơ do nhà thơ Nguyễn Khoa Đăng sáng tác, truyền tải cảm xúc sâu sắc.</data>
+  <data key="d8">literary contribution,lyricist</data>
+  <data key="d9">chunk-9ff558d4f57497f4746f009fac564406</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637960</data>
+</edge>
+<edge source="Mùa xuân" target="Antonin Vivaldi">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài hát 'Mùa xuân' là tác phẩm của nhà soạn nhạc Antonin Vivaldi, được trích dẫn trong tài liệu để minh họa kỹ thuật âm nhạc.</data>
+  <data key="d8">authorship,musical composition</data>
+  <data key="d9">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637962</data>
+</edge>
+<edge source="Mùa xuân" target="Tiết tấu">
+  <data key="d6">8.0</data>
+  <data key="d7">Bài hát 'Mùa xuân' được sử dụng trong tài liệu để minh họa cách thể hiện tiết tấu thông qua nhạc cụ gõ.</data>
+  <data key="d8">musical demonstration,rhythm expression</data>
+  <data key="d9">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637965</data>
+</edge>
+<edge source="Mùa xuân" target="Đệm">
+  <data key="d6">7.0</data>
+  <data key="d7">Bài hát 'Mùa xuân' được ứng dụng đệm trong tài liệu để minh họa cách sử dụng đệm trong âm nhạc.</data>
+  <data key="d8">accompaniment,musical application</data>
+  <data key="d9">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637967</data>
+</edge>
+<edge source="Tiết tấu" target="Nhạc cụ gõ">
+  <data key="d6">9.0</data>
+  <data key="d7">Tiết tấu được thể hiện thông qua việc sử dụng nhạc cụ gõ trong tài liệu.</data>
+  <data key="d8">musical instrument,rhythm expression</data>
+  <data key="d9">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637967</data>
+</edge>
+<edge source="Tiết tấu" target="Đệm">
+  <data key="d6">8.0</data>
+  <data key="d7">Tiết tấu được thể hiện thông qua kỹ thuật đệm trong bản nhạc 'Mùa xuân'.</data>
+  <data key="d8">musical technique,rhythm expression</data>
+  <data key="d9">chunk-ff4904f62fa9257eafee8a9efbf65d6c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637970</data>
+</edge>
+<edge source="Hình 36" target="Hàm số lũy thừa">
+  <data key="d6">9.0</data>
+  <data key="d7">Hình 36 minh họa đồ thị của ba hàm số lũy thừa khác nhau để giúp học sinh quan sát và nhận xét tập xác định của chúng.</data>
+  <data key="d8">mathematical analysis,visual representation</data>
+  <data key="d9">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637970</data>
+</edge>
+<edge source="Đạo hàm của hàm số lũy thừa" target="Công thức đạo hàm">
+  <data key="d6">10.0</data>
+  <data key="d7">Công thức đạo hàm là kết quả của việc chứng minh công thức đạo hàm của hàm số lũy thừa, được trình bày chi tiết trong văn bản.</data>
+  <data key="d8">derivation,mathematical proof</data>
+  <data key="d9">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637973</data>
+</edge>
+<edge source="Công thức đạo hàm" target="Đáp án của hoạt động 2">
+  <data key="d6">8.0</data>
+  <data key="d7">Đáp án của hoạt động 2 là ứng dụng trực tiếp của công thức đạo hàm của hàm số lũy thừa vào các trường hợp cụ thể.</data>
+  <data key="d8">application,practical example</data>
+  <data key="d9">chunk-bc5af5ef6a36b0749d8a80b42f72e330</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637975</data>
+</edge>
+<edge source="Bài toán 6" target="Hàm số y = (x² - 2x - 3)/(x - 2)">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài toán 6 yêu cầu tìm giao điểm của hàm số này với hàm số y = x + 1.</data>
+  <data key="d8">function intersection,mathematical problem</data>
+  <data key="d9">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637975</data>
+</edge>
+<edge source="Bài toán 6" target="Hàm số y = x + 1">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài toán 6 yêu cầu tìm giao điểm của hai hàm số này với nhau.</data>
+  <data key="d8">function intersection,mathematical problem</data>
+  <data key="d9">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637978</data>
+</edge>
+<edge source="Bài toán 7" target="Hàm số y = (x - 3)(x² + x + 4)">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài toán 7 yêu cầu tìm số giao điểm của hàm số này với trục hoành.</data>
+  <data key="d8">mathematical problem,x-intercept</data>
+  <data key="d9">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637978</data>
+</edge>
+<edge source="Bài toán 7" target="Trục hoành">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài toán 7 yêu cầu xác định số điểm giao với trục hoành, tức là số nghiệm của phương trình y = 0.</data>
+  <data key="d8">mathematical concept,root finding</data>
+  <data key="d9">chunk-6eff233ee94ed01783b719ef43aee432</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637981</data>
+</edge>
+<edge source="Biểu thức vector" target="Ví dụ 4">
+  <data key="d6">9.0</data>
+  <data key="d7">"Biểu thức vector là nền tảng lý thuyết để giải Ví dụ 4, minh họa sự tương thích giữa phép cộng vector và vật lý."&gt;</data>
+  <data key="d8">theoretical foundation</data>
+  <data key="d9">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637981</data>
+</edge>
+<edge source="Ví dụ 4" target="Phân loại bài tập">
+  <data key="d6">7.0</data>
+  <data key="d7">"Ví dụ 4 là một phần của bài tập thuộc nhóm vận dụng phép toán vector để tính hợp lực và tổng hợp vận tốc."&gt;</data>
+  <data key="d8">application,classification</data>
+  <data key="d9">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637984</data>
+</edge>
+<edge source="Hình minh họa lực trên dốc" target="Lực kéo pháo">
+  <data key="d6">8.0</data>
+  <data key="d7">"Hình minh họa trực quan hóa cách tính toán lực kéo $\vec{F}$ cần thiết để vượt qua lực $\vec{T}$ trong bài toán kéo pháo."&gt;</data>
+  <data key="d8">physical application,visual representation</data>
+  <data key="d9">chunk-5c144b6f1c5bbd5915b0a7e72fddfd00</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637984</data>
+</edge>
+<edge source="Bài toán" target="Bài giải">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài giải là phần tiếp theo của bài toán, nơi người học cần điền lời giải hoặc trình bày cách tính toán để trả lời câu hỏi trong bài toán.</data>
+  <data key="d8">giải toán,học tập,tính toán</data>
+  <data key="d9">chunk-d19a2ee5aebe82d23c13c1adf68cac6f</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637989</data>
+</edge>
+<edge source="Hình 5" target="Hàng phím trên">
+  <data key="d6">9.0</data>
+  <data key="d7">Hình 5 minh họa phân công ngón tay cho các phím trên hàng phím trên của bàn phím.</data>
+  <data key="d8">instructional,visual representation</data>
+  <data key="d9">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637993</data>
+</edge>
+<edge source="Hình 6" target="Hàng phím dưới">
+  <data key="d6">9.0</data>
+  <data key="d7">Hình 6 minh họa phân công ngón tay cho các phím trên hàng phím dưới của bàn phím.</data>
+  <data key="d8">instructional,visual representation</data>
+  <data key="d9">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637993</data>
+</edge>
+<edge source="Ngón tay" target="Bàn phím">
+  <data key="d6">8.0</data>
+  <data key="d7">Ngón tay được phân công để gõ các phím trên bàn phím theo quy tắc cụ thể.</data>
+  <data key="d8">control,interaction</data>
+  <data key="d9">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637995</data>
+</edge>
+<edge source="Ngón tay" target="Quy tắc gõ phím">
+  <data key="d6">9.0</data>
+  <data key="d7">Ngón tay là yếu tố chính được phân công theo quy tắc gõ phím để gõ nhanh và chính xác.</data>
+  <data key="d8">execution,implementation</data>
+  <data key="d9">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637997</data>
+</edge>
+<edge source="Hàng phím trên" target="Hàng phím dưới">
+  <data key="d6">7.0</data>
+  <data key="d7">Hai hàng phím trên và dưới được phân công ngón tay khác nhau và cần phối hợp theo quy tắc gõ phím để gõ hiệu quả.</data>
+  <data key="d8">complementary,coordination</data>
+  <data key="d9">chunk-128acb2e8d968427514d0219cbea34c9</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787637997</data>
+</edge>
+<edge source="Hình ảnh thực tiễn (1)" target="Hình hình học (A) Điểm">
+  <data key="d6">8.0</data>
+  <data key="d7">Hình ảnh (1) có thể được nối với 'Điểm' vì các điểm sáng trắng trong hình tượng trưng cho các điểm trong không gian hình học, phù hợp với khái niệm 'Điểm' được đưa ra trong cột bên phải.</data>
+  <data key="d8">hình học cơ bản,tương quan trực quan</data>
+  <data key="d9">chunk-c76a81f2c06126bdd3247dcc105fd5b4</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638000</data>
+</edge>
+<edge source="HS dân tộc vùng Tây Nguyên" target="đàn t'rưng">
+  <data key="d6">8.0</data>
+  <data key="d7">Học sinh dân tộc Tây Nguyên là người sử dụng và biểu diễn nhạc cụ đàn t'rưng trong các hoạt động văn nghệ.</data>
+  <data key="d8">cultural instrument,performance</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638000</data>
+</edge>
+<edge source="HS dân tộc vùng Tây Nguyên" target="đàn đá">
+  <data key="d6">8.0</data>
+  <data key="d7">Học sinh dân tộc Tây Nguyên là người sử dụng và biểu diễn nhạc cụ đàn đá trong các hoạt động văn nghệ.</data>
+  <data key="d8">cultural instrument,performance</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638004</data>
+</edge>
+<edge source="HS dân tộc vùng Tây Nguyên" target="đàn k'longput">
+  <data key="d6">8.0</data>
+  <data key="d7">Học sinh dân tộc Tây Nguyên là người sử dụng và biểu diễn nhạc cụ đàn k'longput trong các hoạt động văn nghệ.</data>
+  <data key="d8">cultural instrument,performance</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638005</data>
+</edge>
+<edge source="đàn t'rưng" target="Bài hát Sắp đến Tết rồi">
+  <data key="d6">7.0</data>
+  <data key="d7">Bài hát Sắp đến Tết rồi được sử dụng để hòa tấu cùng các nhạc cụ như đàn t'rưng trong hoạt động nhóm.</data>
+  <data key="d8">cultural expression,musical collaboration</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638008</data>
+</edge>
+<edge source="đàn đá" target="Bài hát Sắp đến Tết rồi">
+  <data key="d6">7.0</data>
+  <data key="d7">Bài hát Sắp đến Tết rồi được sử dụng để hòa tấu cùng các nhạc cụ như đàn đá trong hoạt động nhóm.</data>
+  <data key="d8">cultural expression,musical collaboration</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638010</data>
+</edge>
+<edge source="đàn k'longput" target="Bài hát Sắp đến Tết rồi">
+  <data key="d6">7.0</data>
+  <data key="d7">Bài hát Sắp đến Tết rồi được sử dụng để hòa tấu cùng các nhạc cụ như đàn k'longput trong hoạt động nhóm.</data>
+  <data key="d8">cultural expression,musical collaboration</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638011</data>
+</edge>
+<edge source="Bảng tương tác" target="Tranh chủ đề">
+  <data key="d6">7.0</data>
+  <data key="d7">Tranh chủ đề được sử dụng để tạo tình huống học tập, trong khi bảng tương tác là dụng cụ hỗ trợ tương tác trong bài học.</data>
+  <data key="d8">teaching support,visual aid</data>
+  <data key="d9">chunk-3151157d6c0882008a88a58bea456626</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638005</data>
+</edge>
+<edge source="Đô - Rê - Mi - Pha - Son - La - Đổ" target="Luyện tập mẫu 5 âm theo kí hiệu nốt nhạc bàn tay">
+  <data key="d6">9.0</data>
+  <data key="d7">Dãy nốt nhạc cơ bản là nội dung chính được luyện tập trong hoạt động 'Luyện tập mẫu 5 âm theo kí hiệu nốt nhạc bàn tay'.</data>
+  <data key="d8">nội dung học tập,phương pháp giảng dạy</data>
+  <data key="d9">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638011</data>
+</edge>
+<edge source="Đô - Rê - Mi - Pha - Son - La - Đổ" target="Thực hành đọc nhạc theo mẫu">
+  <data key="d6">9.0</data>
+  <data key="d7">Dãy nốt nhạc cơ bản là nền tảng kiến thức cần thiết để thực hành đọc nhạc theo mẫu trong sách giáo khoa.</data>
+  <data key="d8">học tập âm nhạc,nền tảng kiến thức</data>
+  <data key="d9">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638019</data>
+</edge>
+<edge source="Luyện tập mẫu 5 âm theo kí hiệu nốt nhạc bàn tay" target="Ví dụ: Mẫu 5 âm">
+  <data key="d6">8.0</data>
+  <data key="d7">Ví dụ: Mẫu 5 âm là một minh họa cụ thể cho hoạt động luyện tập mẫu 5 âm, giúp học sinh hiểu rõ cách thực hiện.</data>
+  <data key="d8">minh họa,ví dụ thực tế</data>
+  <data key="d9">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638015</data>
+</edge>
+<edge source="Luyện tập mẫu 5 âm theo kí hiệu nốt nhạc bàn tay" target="Thực hành đọc nhạc theo mẫu">
+  <data key="d6">7.0</data>
+  <data key="d7">Hoạt động 'Thực hành đọc nhạc theo mẫu' là phần tiếp theo và nâng cao hơn của hoạt động luyện tập mẫu 5 âm, giúp học sinh áp dụng kiến thức đã học vào việc đọc nhạc thực tế.</data>
+  <data key="d8">phát triển kỹ năng,áp dụng kiến thức</data>
+  <data key="d9">chunk-32a4ef3dbc89426e926dc916c1b711a3</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638017</data>
+</edge>
+<edge source="Kĩ thuật giao cầu" target="Bài 1. Kĩ thuật giao cầu thuận tay">
+  <data key="d6">9.0</data>
+  <data key="d7">Bài học 1 là một phần cụ thể của khái niệm kĩ thuật giao cầu, tập trung vào kỹ thuật thuận tay.</data>
+  <data key="d8">curriculum component,specific application</data>
+  <data key="d9">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638019</data>
+</edge>
+<edge source="Kĩ thuật giao cầu" target="Thể lực">
+  <data key="d6">7.0</data>
+  <data key="d7">Kĩ thuật giao cầu góp phần phát triển thể lực thông qua các năng lực vận động, định hướng và sức mạnh tốc độ.</data>
+  <data key="d8">physical development,skill enhancement</data>
+  <data key="d9">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638022</data>
+</edge>
+<edge source="Kĩ thuật giao cầu" target="Thái độ">
+  <data key="d6">6.0</data>
+  <data key="d7">Việc học kĩ thuật giao cầu giúp hình thành thái độ tích cực, tự giác và hợp tác trong quá trình luyện tập.</data>
+  <data key="d8">attitude formation,learning outcome</data>
+  <data key="d9">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638026</data>
+</edge>
+<edge source="Yêu cầu cần đạt" target="Mục tiêu, yêu cầu cần đạt">
+  <data key="d6">8.0</data>
+  <data key="d7">Mục tiêu, yêu cầu cần đạt là một phần chi tiết trong yêu cầu cần đạt tổng thể của chương trình.</data>
+  <data key="d8">educational framework,sub-component</data>
+  <data key="d9">chunk-335bd2d245c9225c23fc9591b4e66511</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638022</data>
+</edge>
+<edge source="Phương pháp giải quyết vấn đề" target="Tình huống giáo dục">
+  <data key="d6">9.0</data>
+  <data key="d7">Phương pháp giải quyết vấn đề được áp dụng thông qua việc thiết kế và sử dụng tình huống giáo dục để học sinh thực hành giải quyết vấn đề thực tế.</data>
+  <data key="d8">educational methodology,problem-solving</data>
+  <data key="d9">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638026</data>
+</edge>
+<edge source="Tình huống giáo dục" target="GV">
+  <data key="d6">8.0</data>
+  <data key="d7">Giáo viên là người thiết kế, nêu tình huống giáo dục và hướng dẫn học sinh phân tích, giải quyết vấn đề trong tình huống đó.</data>
+  <data key="d8">facilitation,instruction</data>
+  <data key="d9">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638029</data>
+</edge>
+<edge source="Tình huống giáo dục" target="HS">
+  <data key="d6">8.0</data>
+  <data key="d7">Học sinh là người tham gia trực tiếp vào tình huống giáo dục, đóng vai, thảo luận và đưa ra giải pháp cho vấn đề được đặt ra.</data>
+  <data key="d8">learning,participation</data>
+  <data key="d9">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638030</data>
+</edge>
+<edge source="Tình huống giáo dục" target="Tín dụng và vai trò của tín dụng trong đời sống">
+  <data key="d6">8.0</data>
+  <data key="d7">Bài học về tín dụng được sử dụng làm nền tảng để thiết kế tình huống giáo dục nhằm giúp học sinh hiểu rõ hơn về chủ đề này.</data>
+  <data key="d8">application,educational context</data>
+  <data key="d9">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638032</data>
+</edge>
+<edge source="GV" target="HS">
+  <data key="d6">7.0</data>
+  <data key="d7">Giáo viên hướng dẫn, hỗ trợ và điều chỉnh hoạt động học tập của học sinh trong các tình huống giáo dục.</data>
+  <data key="d8">guidance,teaching</data>
+  <data key="d9">chunk-3d3c441ac2ce66f30f5e64585065904c</data>
+  <data key="d10">/kaggle/working/reproduce_MegaRAG/MegaRAG/vdoc_tmp/pages_content.json</data>
+  <data key="d11">1787638032</data>
+</edge>
+</graph></graphml>

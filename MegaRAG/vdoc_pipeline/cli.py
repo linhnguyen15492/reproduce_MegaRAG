@@ -25,8 +25,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 UTILS_DIR = REPO_ROOT / "egs" / "utils"
 CONFIG_FILE = REPO_ROOT / "egs" / "vdoc" / "conf" / "addon_params.yaml"
-WORKING_DIR = REPO_ROOT / "egs" / "vdoc" / "exp" / "vdoc"
-
+# WORKING_DIR = REPO_ROOT / "egs" / "vdoc" / "exp" / "vdoc"
+WORKING_DIR = Path(os.environ.get("VDOC_RUN_DIR", str(REPO_ROOT / "vdoc_run" / "exp" / "vdoc")))
 
 def _stage_env() -> dict:
     """Env for subprocess stages; defaults mirror the Kaggle stage-2 notebook."""
@@ -64,7 +64,7 @@ def stage_ocr() -> None:
     run_ocr.main()
 
 
-def stage_queries() -> None:
+def make_queries() -> None:
     from vdoc_pipeline import make_queries
 
     make_queries.main()
@@ -173,7 +173,7 @@ def _judges_file():
 STAGES = {
     "prep": stage_prep,
     "ocr": stage_ocr,
-    "queries": stage_queries,
+    "make_queries": make_queries,
     "build": stage_build,
     "query": stage_query,
     "baseline": stage_baseline,
