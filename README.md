@@ -147,7 +147,7 @@ Per-experiment knobs (entity types, language, token budgets, concurrency) live i
 
 ## AI Assistance Disclosure
 
-Quá trình reproduce này có sự trợ giúp của AI (LLM coding assistant) trong các công việc:
+Quá trình reproduce này có sự trợ giúp của AI (LLM coding assistant) trong các công việc: dựng code notebook ban đầu,
 refactor code từ notebook thành module Python, tích hợp Stage 2 vào notebook, viết tài liệu
 (README, changelog) và debug. Toàn bộ thay đổi đều được kiểm tra/lưu ý và phê duyệt bởi
 người thực hiện trước khi đưa vào repo.
