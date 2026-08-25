@@ -36,7 +36,7 @@ reproduce_MegaRAG/
 │       └── cli.py                 # python -m vdoc_pipeline {prep|ocr|queries|build|query|baseline|judge|metrics|all}
 ├── LightRAG/                      # Upstream LightRAG v1.4.x (editable install) + reproduce steps
 ├── MinerU/                        # Upstream MinerU/magic-pdf (editable install)
-├── archive_notebooks/             # Archived experiment notebooks (vdoc prototype, kaggle run logs)
+├── archive/                       # Archived experiment notebooks (vdoc prototype, kaggle run logs)
 ├── implementation_plan.md         # Rate-limit fix plan (OpenAI 429s)
 ├── improvement_details.md         # Changelog of all fixes/improvements
 └── walkthrough.md                 # Notes on direct-execution error logging
@@ -59,7 +59,7 @@ reproduce_MegaRAG/
 
 ---
 
-## Running on Kaggle (recommended)
+## Running on Kaggle
 
 1. **Upload** `megarag-mmkg-kaggle-v2.ipynb` to Kaggle (File → Import Notebook) and select a GPU accelerator (2× T4 for Stage 2).
 2. **Add the input dataset** `nguyenngochonglinh/world-history-tiny` (Add Input → Datasets). Cell 0 also pulls it via `kagglehub`.
@@ -106,54 +106,12 @@ Tunable knobs live in the 9.0 cell: `SAMPLE_PAGES` (default 30), `MAX_QUESTIONS_
 
 ---
 
-## Running Locally (CLI)
+## Configuration Reference
 
-After installing Python 3.10+ with CUDA-enabled PyTorch:
-
-```bash
-# 1. Install packages
-pip install -e LightRAG
-pip install -e MegaRAG --no-deps
-pip install "transformers>=4.57,<5" accelerate bitsandbytes datasets pandas \
-            pyyaml tqdm tenacity openai nano-vectordb pipmaster python-dotenv \
-            pillow sentencepiece protobuf qwen_vl_utils
-```
-
-```bash
-# 2. Run the full vdoc pipeline (prep -> ocr -> queries -> build -> query [+ baseline/judge] -> metrics)
-export OPENAI_API_KEY=none            # not needed for qwen_local
-export MEGARAG_LLM_BACKEND=qwen_local # default openai (Stage 1 behavior)
-export MEGARAG_EMBED_BACKEND=gme_compat
-export CUDA_VISIBLE_DEVICES=0,1       # Qwen3-VL sharding
-
-cd MegaRAG
-python -m vdoc_pipeline all
-
-# Or run individual stages:
-python -m vdoc_pipeline prep
-python -m vdoc_pipeline ocr
-python -m vdoc_pipeline queries
-python -m vdoc_pipeline build query metrics
-```
-
-Stage 1 can also be run standalone (any machine):
-
-```bash
-cd MegaRAG
-python egs/utils/construct_mmkg.py \
-  --config-file egs/world_history_tiny/conf/addon_params.yaml \
-  --working-dir exp/World_History_Volume_1 \
-  --input-dir ../World_History_Volume_1_run/dumps/World_History_Volume_1/pages_content.json
-
-python egs/utils/query_mmkg.py \
-  --config-file egs/world_history_tiny/conf/addon_params.yaml \
-  --working-dir exp/World_History_Volume_1 \
-  --input-queries data/queries_short.txt \
-  --output-file exp/World_History_Volume_1/results/results.json \
-  --concurrency 1 --max-retries 3 --query-delay 5.0 --resume
-```
-
-### Key environment variables
+The notebook is the only supported way to run the pipelines today; local/standalone
+execution of the CLI stages has **not been tested yet**. All knobs are set in the
+notebook (Stage 2: Section 9.0 cell; Stage 1: `egs/world_history_tiny/conf/addon_params.yaml`)
+and can be overridden via environment variables:
 
 | Variable                                                         | Default                                  | Purpose                                                        |
 | ---------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------- |
@@ -177,7 +135,7 @@ Per-experiment knobs (entity types, language, token budgets, concurrency) live i
 - [`improvement_details.md`](improvement_details.md) — dated changelog (rate-limit fixes, Stage 2 integration).
 - [`implementation_plan.md`](implementation_plan.md) — analysis & fix plan for OpenAI 429 errors.
 - [`walkthrough.md`](walkthrough.md) — direct-execution/unmasked-error logging notes.
-- `archive_notebooks/` — earlier prototypes (vdoc+Qwen3 prototype, raw Kaggle run dump).
+- `archive/` — earlier prototypes (vdoc+Qwen3 prototype, raw Kaggle run dump).
 
 ## Credits
 
@@ -186,3 +144,10 @@ Per-experiment knobs (entity types, language, token budgets, concurrency) live i
 - [MinerU](https://github.com/opendatalab/MinerU) — OpenDataLab
 - Models: `unsloth/Qwen3-VL-8B-Instruct-bnb-4bit`, `Alibaba-NLP/gme-Qwen2-VL-2B-Instruct`,
   dataset `trannhiem/TranNhiem-Vietnamese-DocumentImage-Reasoning`.
+
+## AI Assistance Disclosure
+
+Quá trình reproduce này có sự trợ giúp của AI (LLM coding assistant) trong các công việc:
+refactor code từ notebook thành module Python, tích hợp Stage 2 vào notebook, viết tài liệu
+(README, changelog) và debug. Toàn bộ thay đổi đều được kiểm tra/lưu ý và phê duyệt bởi
+người thực hiện trước khi đưa vào repo.
