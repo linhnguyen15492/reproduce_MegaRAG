@@ -1,4 +1,5 @@
 import json
+import os
 import time
 import yaml
 import torch
@@ -23,7 +24,21 @@ from lightrag.utils import (
     wrap_embedding_func_with_attrs,
 )
 
+def _resolve_llm_complete():
+    """Pick the LLM backend: 'openai' (default) or 'qwen_local' (local Qwen3-VL)."""
+    backend = os.environ.get("MEGARAG_LLM_BACKEND", "openai")
+    if backend == "qwen_local":
+        from qwen_llm import qwen_gpt_4o_mini_complete
+
+        return qwen_gpt_4o_mini_complete
+    return gpt_4o_mini_complete
+
 def initialize_model():
+    embed_backend = os.environ.get("MEGARAG_EMBED_BACKEND", "hf_gme")
+    if embed_backend == "gme_compat":
+        from gme_compat import load_gme_model
+
+        return load_gme_model()
     device      = "cuda" if torch.cuda.is_available() else "cpu"
     model_name  = "Alibaba-NLP/gme-Qwen2-VL-2B-Instruct"
     embed_model = (
@@ -45,6 +60,7 @@ def load_addon_params(config_path: Path) -> dict:
 
 async def initialize_rag(working_dir: Path, addon_params: dict) -> MegaRAG:
     """Initialise a :class:`MegaRAG` instance for *working_dir* using *addon_params*."""
+    llm_complete = _resolve_llm_complete()
     embed_model = initialize_model()
     @wrap_embedding_func_with_attrs(embedding_dim=1536, max_token_size=32768)
     async def embed_func(texts=[], images=[], is_query=False):
@@ -64,7 +80,7 @@ async def initialize_rag(working_dir: Path, addon_params: dict) -> MegaRAG:
         keyword_extraction=False,
         **kwargs,
     ):
-        results = await gpt_4o_mini_complete(
+        results = await llm_complete(
             prompt=prompt,
             input_images=input_images,
             system_prompt=system_prompt,

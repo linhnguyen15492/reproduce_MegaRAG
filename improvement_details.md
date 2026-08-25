@@ -72,3 +72,58 @@
 - Change: Added token parameters and `image_detail` to the yaml config, modified Section 7 cell command invocation to pass query pacing, retry, and resume CLI arguments, and updated Section 1 repository setup cell to run `git pull` if the repository folder already exists.
 - Why: Forces the Kaggle environment to fetch the latest codebase changes from GitHub on every execution instead of skipping updates and using outdated cached files.
 
+## 2026-08-25
+
+Integrated the Vietnamese-document QA flow (`archive_notebooks/megarag-vietnamdoc-mmkg-qwen3.ipynb`, local Qwen3-VL) as **Stage 2** of the production notebook `megarag-mmkg-kaggle-v2.ipynb`, and eliminated all notebook-runtime code generation/patching by moving logic into version-controlled files under `MegaRAG/`.
+
+### 1. Promoted notebook-generated scripts into real repo files
+
+- Source: `%%writefile` payload cells in `archive_notebooks/megarag-vietnamdoc-mmkg-qwen3.ipynb` (cells 5, 7, 9, 11, 24), extracted byte-for-byte (UTF-8 preserved).
+- Files added:
+  - `MegaRAG/egs/utils/qwen_llm.py` — async local Qwen3-VL wrapper (`qwen_gpt_4o_mini_complete`) compatible with the LightRAG/MegaRAG `llm_func` interface; lazy model load, generation lock, OOM fallback without images.
+  - `MegaRAG/egs/utils/ocr_pages.py` — OCR page images via Qwen3-VL.
+  - `MegaRAG/egs/utils/baseline_direct.py` — no-RAG baseline QA on page images, with resume support.
+  - `MegaRAG/egs/utils/judge_qwen.py` — LLM-as-judge (YES/NO verdict) evaluation.
+  - `MegaRAG/egs/utils/gme_compat.py` — GME-Qwen2-VL-2B embedding wrapper compatible with transformers >= 4.57; exposes `get_text_embeddings` / `get_image_embeddings` / `get_fused_embeddings` so it is a drop-in replacement consumed by the existing `hf_gme_embed`.
+  - `MegaRAG/egs/vdoc/conf/addon_params.yaml` — vdoc recipe config (Vietnamese entity types, batch size 1, reduced token budgets).
+- Why: Code written at runtime via `%%writefile` cannot be linted, tested, reviewed, or diffed; it also drifted between the notebook and the repo.
+
+### 2. Removed runtime regex patching of upstream files
+
+- Files: `MegaRAG/egs/utils/construct_mmkg.py`, `MegaRAG/egs/utils/query_mmkg.py`
+- Change: Replaced the old approach (notebook cells regex-patching imports and rewriting `initialize_model()` after cloning) with first-class backend switches:
+  - `MEGARAG_LLM_BACKEND=openai|qwen_local` (default `openai`) resolved lazily in `_resolve_llm_complete()`.
+  - `MEGARAG_EMBED_BACKEND=hf_gme|gme_compat` (default `hf_gme`) resolved in `initialize_model()`.
+- Compatibility: defaults preserve Stage 1 behavior exactly; diff is ~+17 lines per file.
+- Why: Regex patching failed silently whenever upstream formatting changed, was invisible to review/version control, and made reproduction fragile.
+
+### 3. Added `vdoc_pipeline` Python package (data prep + evaluation)
+
+- Files added under `MegaRAG/vdoc_pipeline/`: `settings.py`, `data_prep.py`, `run_ocr.py`, `make_queries.py`, `metrics.py`, `cli.py`, `__main__.py`, `__init__.py`.
+- Details:
+  - `settings.py` centralizes all paths/constants previously scattered as hardcoded `/kaggle/...` strings across notebook cells; overridable via `VDOC_*` env vars.
+  - `data_prep.py` downloads `TranNhiem/Vietnamese-DocumentImage-Reasoning`, selects top pages by question count, writes `pages_content_preocr.json` + `eval_items.jsonl` (sampling controlled by `SAMPLE_PAGES`, `MAX_QUESTIONS_PER_PAGE`, `MAX_EVAL_QUESTIONS`).
+  - `run_ocr.py` orchestrates Qwen3-VL OCR as a clean subprocess, or writes placeholder text when `USE_OCR=0`.
+  - `metrics.py` splits the EM / Token-F1 / Token-Recall computation into pure testable functions plus a CLI producing `metrics.json` and `predictions.csv` comparing MegaRAG vs baseline (+ LLM-judge accuracy).
+  - `cli.py` exposes one entrypoint: `python -m vdoc_pipeline {prep|ocr|queries|build|query|baseline|judge|metrics|all}` with subprocess stages streaming logs live; sets backend env defaults; baseline stage spreads Qwen3-VL across all visible GPUs.
+- Why: Makes the pipeline runnable headless/CI without the notebook, removes duplicated orchestration, and gives every artifact (metrics, predictions) a stable location under `VDOC_OUT_DIR`.
+
+### 4. Appended Stage 2 (Section 9) to the production notebook
+
+- File: `megarag-mmkg-kaggle-v2.ipynb` (cells 28–44 appended; backup of previous version kept).
+- Cells added:
+  - Section intro documenting the flow and prerequisites.
+  - Config cell: `VDOC_TMP_DIR=/kaggle/tmp/megarag_vdoc`, `VDOC_OUT_DIR=<repo>/vdoc_outputs`, HF caches on `/kaggle/tmp`, sampling flags, optional `RUN_BASELINE` / `RUN_LLM_JUDGE` / `JUDGE_SAMPLE`, Qwen settings (`QWEN_MODEL_ID=unsloth/Qwen3-VL-8B-Instruct-bnb-4bit`, max pixels/input chars), backend env switches, and a reusable `run_stage()` helper that streams subprocess logs into the notebook.
+  - transformers upgrade cell: installs `transformers>=4.57,<5` plus Qwen3-VL deps (`bitsandbytes`, `qwen_vl_utils`, ...) and hard-fails if < 4.57.
+  - One thin cell per stage: prep → OCR → build MMKG (removes stale `egs/vdoc/exp` index first) → query → optional baseline/judge → metrics + per-question preview.
+  - Optional download cell zipping `vdoc_outputs` as `vdoc_results.zip` (reuses the existing `download_kaggle_working()` helper).
+- Known constraint documented in-notebook: Stage 1 pins `transformers==4.51.3` for MinerU while Qwen3-VL requires >= 4.57, so all MinerU steps must complete before the upgrade cell, and must not be re-run afterwards in the same session.
+- Why: Keeps the running notebook as a thin launcher while all logic lives in the repo.
+
+### 5. Verification performed
+
+- `py_compile` passed for all new/modified Python files.
+- Notebook JSON revalidated (nbformat 4); every code cell AST-parses (magics excluded).
+- Unit checks passed for `normalize_answer` / `token_f1` / `token_recall` and settings env overrides.
+- `python -m vdoc_pipeline --help` and stage routing verified locally (pandas-dependent metrics stage verified structurally only, since pandas is not installed in the local environment).
+
